@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>American Bhau – Helping Businesses Earn More Using Social Media</title>
+<link rel="stylesheet" href="_ds/nocturne-a8513cb3-cf8e-403a-a29a-1e62003ef544/styles.css">
+<script src="_ds/nocturne-a8513cb3-cf8e-403a-a29a-1e62003ef544/_ds_bundle.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="preconnect" href="https://unpkg.com" crossorigin="">
+<link rel="preconnect" href="https://i.ytimg.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap">
+<style>
+:root {
+  --color-bg: #fbfbfb; --color-surface: #f1f1f1; --color-text: #141414;
+  --color-accent: #141414; --color-accent-2: #3a3a3a;
+  --color-divider: color-mix(in srgb, #141414 14%, transparent);
+  --color-neutral-100: #161616; --color-neutral-200: #262626; --color-neutral-300: #404040; --color-neutral-400: #5a5a5a; --color-neutral-500: #767676; --color-neutral-600: #949494; --color-neutral-700: #c4c4c4; --color-neutral-800: #e2e2e2; --color-neutral-900: #f2f2f2;
+  --color-accent-100: #161616; --color-accent-200: #262626; --color-accent-300: #404040; --color-accent-400: #5a5a5a; --color-accent-500: #767676; --color-accent-600: #949494; --color-accent-700: #c4c4c4; --color-accent-800: #e2e2e2; --color-accent-900: #f2f2f2;
+  --color-accent-2-100: #161616; --color-accent-2-200: #262626; --color-accent-2-300: #404040; --color-accent-2-400: #5a5a5a; --color-accent-2-500: #767676; --color-accent-2-600: #949494; --color-accent-2-700: #c4c4c4; --color-accent-2-800: #e2e2e2; --color-accent-2-900: #f2f2f2;
+  --color-section: #141414; --color-section-glow: #262626; --color-section-ghost: #5a5a5a;
+  --shadow-sm: 0 1px 2px rgb(0 0 0 / 0.06); --shadow-md: 0 2px 8px rgb(0 0 0 / 0.07); --shadow-lg: 0 8px 24px rgb(0 0 0 / 0.08);
+}
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+html, body { overflow-x: clip; }
+* { -webkit-tap-highlight-color: transparent; }
+img { max-width: 100%; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+.btn { white-space: nowrap; flex: none; }
+body { margin: 0; text-wrap: pretty; min-height: 100vh;
+  background: var(--color-bg); color: var(--color-text); }
+a { color: var(--color-accent); text-decoration: none; }
+a:hover { color: var(--color-accent-300); }
+</style>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;500&amp;family=Cormorant+Garamond:wght@500;600&amp;display=swap">
+  <style>@font-face { font-family: 'Tenez'; src: local('Tenez Regular'), local('Tenez-Regular'), local('Tenez'), url('assets/fonts/Tenez-Regular.woff2') format('woff2'), url('assets/fonts/Tenez-Regular.otf') format('opentype'); font-weight: 400; font-display: swap; }
+  h1, h2, h3, h4, .card-title { font-family: var(--font-heading); font-weight: var(--font-heading-weight); }</style>
+  <style>@keyframes ab-roll { from { transform: translateX(0); } to { transform: translateX(-50%); } } @media (prefers-reduced-motion: reduce) { [style*="ab-roll"] { animation: none !important; } }</style>
+</helmet>
+
+<div style="min-height:100vh;display:flex;flex-direction:column;--font-heading:'Tenez', 'Cormorant Garamond', Georgia, serif;--font-heading-weight:500;--color-bg:{{ th.bg }};--color-surface:{{ th.surface }};--color-text:{{ th.text }};--color-accent:{{ th.accent }};--color-accent-300:{{ th.accentHover }};--color-divider:{{ th.divider }};--color-neutral-500:{{ th.muted }};--color-neutral-600:{{ th.muted }};--color-neutral-700:{{ th.line }};--color-neutral-800:{{ th.surface }};background:var(--color-bg);transition:background-color 500ms ease, color 500ms ease;color:var(--color-text);font-family:var(--font-body)">
+
+  <nav class="nav" style="position:sticky;top:0;z-index:10;flex-wrap:wrap;row-gap:var(--space-2);padding:var(--space-3) clamp(20px,5vw,72px);background:color-mix(in srgb, var(--color-bg) 82%, transparent);backdrop-filter:blur(12px)">
+    <a class="nav-brand" href="#home" style="font-size:18px;color:var(--color-text)">American Bhau</a>
+  </nav>
+
+  <main style="flex:1">
+    <sc-if value="{{ showBack }}" hint-placeholder-val="{{ false }}">
+      <section data-screen-label="Go back" style="max-width:1200px;margin:0 auto;padding:clamp(20px,3vw,32px) clamp(20px,5vw,72px) 0">
+        <div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px 24px;padding:14px 18px;border-radius:var(--radius-md);background:var(--color-surface)">
+          <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap">
+            <button type="button" class="btn btn-primary" onClick="{{ goBack }}"><svg width="16" height="16" viewBox="0 0 256 256" fill="currentColor"><path d="M224,128a8,8,0,0,1-8,8H59.31l58.35,58.34a8,8,0,0,1-11.32,11.32l-72-72a8,8,0,0,1,0-11.32l72-72a8,8,0,0,1,11.32,11.32L59.31,120H216A8,8,0,0,1,224,128Z"></path></svg>Back to the shelf</button>
+            <span style="font-size:13px;letter-spacing:0.06em;text-transform:uppercase;color:var(--color-neutral-600)">{{ backLabel }}</span>
+          </div>
+        </div>
+      </section>
+    </sc-if>
+
+    <sc-if value="{{ is.home }}" hint-placeholder-val="{{ true }}">
+      <div data-screen-label="Home">
+        <section data-screen-label="Home sketchbook" style="position:relative;max-width:1280px;margin:0 auto;padding:clamp(28px,5vw,64px) clamp(12px,3vw,40px) clamp(48px,6vw,80px);min-height:min(78vh,760px);display:flex;align-items:center">
+          <x-import component-from-global-scope="book-intro" from="./book-intro.js" photo="assets/rahul-podcast.webp" style="position:absolute;inset:0;z-index:5;pointer-events:none" hint-size="0px,0px"></x-import>
+          <div style="position:relative;width:100%;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));border-radius:14px;background:url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .08 0'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E&quot;),#f5f3ee;box-shadow:0 1px 0 rgba(0,0,0,0.04),0 24px 48px -18px rgba(40,34,24,0.28),0 2px 6px rgba(40,34,24,0.08)">
+            <div style="position:relative;padding:clamp(28px,4.5vw,64px);border-radius:14px 0 0 14px;background:linear-gradient(270deg,rgba(60,50,35,0.14),rgba(60,50,35,0) 7%);display:flex;align-items:center;justify-content:center">
+              <sc-if value="{{ showHeroPhoto }}" hint-placeholder-val="{{ true }}">
+                <figure style="position:relative;margin:0;width:100%;max-width:440px;transform:rotate(-1.6deg);background:#fdfcf9;padding:12px 12px 44px;box-shadow:0 10px 24px -10px rgba(40,34,24,0.35),0 1px 3px rgba(40,34,24,0.12)">
+                  <span style="position:absolute;top:-12px;left:50%;margin-left:-44px;transform:rotate(-3deg);width:88px;height:26px;background:rgba(214,206,186,0.62);box-shadow:0 1px 2px rgba(0,0,0,0.06);backdrop-filter:blur(0.5px)"></span>
+                  <img src="assets/rahul-podcast.webp" fetchpriority="high" decoding="async" alt="Rahul Patil at the American Bhau podcast microphone" style="display:block;width:100%;aspect-ratio:4/5;object-fit:cover;object-position:50% 20%;background:#2a1c10">
+                  <figcaption style="position:absolute;left:16px;right:16px;bottom:8px;font-family:'Caveat', 'Segoe Print', 'Bradley Hand', cursive;font-size:22px;line-height:1.2;color:#4a4034">Rahul, Dhule → America</figcaption>
+                </figure>
+              </sc-if>
+            </div>
+            <div style="position:relative;padding:clamp(28px,4.5vw,64px) clamp(28px,5vw,72px) clamp(56px,6vw,80px);border-radius:0 14px 14px 0;background:linear-gradient(90deg,rgba(60,50,35,0.12),rgba(60,50,35,0) 6%);display:flex;flex-direction:column;justify-content:center;gap:24px">
+              <div style="position:relative;align-self:flex-start;transform:rotate(2deg);background:#161616;color:#f2f2f2;padding:14px 18px 12px;border-radius:3px;box-shadow:0 8px 18px -8px rgba(0,0,0,0.4)">
+                <span style="position:absolute;top:-11px;left:-24px;width:64px;height:22px;transform:rotate(-38deg);width:88px;height:26px;background:rgba(214,206,186,0.62);box-shadow:0 1px 2px rgba(0,0,0,0.06);backdrop-filter:blur(0.5px)"></span>
+                <div style="font-size:10px;letter-spacing:0.18em;text-transform:uppercase;opacity:0.7">Vol. 01</div>
+                <div style="font-size:15px;letter-spacing:-0.01em;margin-top:4px">The American Bhau Podcast</div>
+              </div>
+              <h1 style="font-family:'Caveat', 'Segoe Print', 'Bradley Hand', cursive;font-weight:500;font-size:clamp(40px,4.6vw,64px);line-height:1.02;letter-spacing:0;margin:8px 0 0;color:#2b2721;max-width:14ch">Helping businesses earn more using social media.</h1>
+              <p style="font-family:'Caveat', 'Segoe Print', 'Bradley Hand', cursive;font-size:clamp(21px,1.8vw,25px);line-height:1.3;margin:0;max-width:34ch;color:#5a5044">American Bhau is dedicated to promoting Marathi businesses, connecting them with global audiences, and empowering entrepreneurs through inspiring stories and visibility.</p>
+              <div style="position:absolute;right:clamp(20px,3vw,36px);bottom:clamp(16px,2.4vw,28px);display:flex;align-items:center;gap:10px;color:#8a4a32">
+                <span style="display:grid;place-items:center;width:34px;height:34px;border:1.5px solid currentColor;border-radius:4px;font-size:11px;letter-spacing:0.04em;transform:rotate(-4deg);opacity:0.85">AB</span>
+                <span style="font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:#5a5044">Est. 2023</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="shelf" data-screen-label="Home collection" style="position:relative;scroll-margin-top:72px;max-width:1400px;margin:0 auto;padding:0 clamp(12px,3vw,40px) clamp(40px,5vw,64px)">
+          <div style="position:relative;height:clamp(640px,64vw,820px)">
+          <div style="position:{{ stage.pos }};inset:0;z-index:{{ stage.z }};border-radius:{{ stage.radius }};overflow:hidden;background:{{ stage.bg }};color:{{ stage.ink }};transition:background-color 700ms ease, color 500ms ease">
+            <div style="position:absolute;left:0;right:0;bottom:0;height:38%;background:linear-gradient(to bottom, transparent, rgba(0,0,0,0.16));pointer-events:none"></div>
+            <x-import component-from-global-scope="book-shelf" from="./book-shelf.js" style="position:absolute;inset:0" hint-size="100%,100%"></x-import>
+            <div style="position:absolute;top:clamp(20px,3vw,32px);left:clamp(20px,3vw,36px);right:clamp(20px,3vw,36px);display:flex;justify-content:space-between;align-items:flex-start;gap:16px;pointer-events:none">
+              <div style="display:flex;flex-direction:column;gap:4px">
+                <span style="font-family:"Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;font-size:clamp(19px,1.8vw,24px);line-height:1;letter-spacing:-0.02em">American Bhau</span>
+                <span style="font-size:10px;letter-spacing:0.15em;text-transform:uppercase;opacity:0.72">{{ browseHint }}</span>
+              </div>
+              <span style="font-size:10px;letter-spacing:0.15em;text-transform:uppercase;opacity:0.72;text-align:right">{{ shelfCur.label }}</span>
+            </div>
+
+            <sc-if value="{{ shelfIdle }}" hint-placeholder-val="{{ true }}">
+              <div style="position:absolute;left:clamp(20px,3vw,36px);right:clamp(20px,3vw,36px);bottom:clamp(18px,2.6vw,28px);display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:16px 28px">
+                <div style="display:grid;grid-template-columns:auto minmax(0,1fr);gap:14px;align-items:start;flex:1 1 260px;min-width:0">
+                  <span style="font-size:10px;letter-spacing:0.15em;padding-top:8px;opacity:0.72;font-feature-settings:'tnum' 1;white-space:nowrap">{{ shelfCount }}</span>
+                  <div style="min-width:0">
+                    <div style="font-family:"Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;font-size:clamp(30px,3.6vw,52px);line-height:0.95;letter-spacing:-0.05em">{{ shelfCur.title }}</div>
+                    <div style="font-size:13px;line-height:1.45;margin-top:8px;opacity:0.8;max-width:42ch">{{ shelfCur.note }}</div>
+                  </div>
+                </div>
+                <div style="display:flex;align-items:center;gap:6px;flex:none">
+                  <button type="button" onClick="{{ shelfPrev }}" aria-label="Previous volume" style="display:grid;place-items:center;width:40px;height:40px;padding:0;border-radius:50%;border:1px solid color-mix(in srgb, currentColor 40%, transparent);background:transparent;color:inherit;cursor:pointer;flex:none" style-hover="background:color-mix(in srgb, currentColor 12%, transparent)"><svg width="15" height="15" viewBox="0 0 256 256" fill="currentColor"><path d="M165.66,202.34a8,8,0,0,1-11.32,11.32l-80-80a8,8,0,0,1,0-11.32l80-80a8,8,0,0,1,11.32,11.32L91.31,128Z"></path></svg></button>
+                  <button type="button" onClick="{{ shelfOpenActive }}" style="display:inline-flex;align-items:center;justify-content:center;min-height:40px;padding:0 20px;border-radius:999px;border:1px solid color-mix(in srgb, currentColor 45%, transparent);background:transparent;color:inherit;font:inherit;font-size:12px;letter-spacing:0.12em;text-transform:uppercase;cursor:pointer;white-space:nowrap;text-decoration:none" style-hover="background:color-mix(in srgb, currentColor 12%, transparent)">Open</button>
+                  <button type="button" onClick="{{ shelfNext }}" aria-label="Next volume" style="display:grid;place-items:center;width:40px;height:40px;padding:0;border-radius:50%;border:1px solid color-mix(in srgb, currentColor 40%, transparent);background:transparent;color:inherit;cursor:pointer;flex:none" style-hover="background:color-mix(in srgb, currentColor 12%, transparent)"><svg width="15" height="15" viewBox="0 0 256 256" fill="currentColor"><path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"></path></svg></button>
+                </div>
+                <div role="tablist" aria-label="Choose a volume" style="display:flex;align-items:center;gap:4px;flex:1 1 200px;justify-content:flex-end">
+                  <sc-for list="{{ shelfMarkers }}" as="m" hint-placeholder-count="8">
+                    <button type="button" role="tab" aria-selected="{{ m.on }}" aria-label="{{ m.title }}" onClick="{{ m.go }}" style="display:grid;place-items:center;width:28px;height:24px;padding:0;border:0;background:transparent;color:inherit;cursor:pointer"><span style="display:block;height:{{ m.h }};width:{{ m.w }};background:currentColor;opacity:{{ m.o }};transition:width 260ms ease, opacity 260ms ease"></span></button>
+                  </sc-for>
+                </div>
+              </div>
+            </sc-if>
+
+            <sc-if value="{{ shelfOpen }}" hint-placeholder-val="{{ false }}">
+              <aside role="dialog" aria-label="{{ shelfCur.title }}" style="position:absolute;top:{{ panel.top }};right:{{ panel.right }};bottom:{{ panel.bottom }};left:{{ panel.left }};width:{{ panel.width }};transform:{{ panel.transform }};max-height:{{ panel.maxH }};overflow:auto;box-sizing:border-box;display:flex;flex-direction:column;gap:18px">
+                <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:16px">
+                  <span style="font-size:11px;letter-spacing:0.14em;text-transform:uppercase;opacity:0.78;padding-top:4px">{{ shelfCur.kicker }}</span>
+                  <button type="button" onClick="{{ closeShelf }}" aria-label="Return to the collection" style="display:grid;place-items:center;width:40px;height:40px;padding:0;border-radius:50%;border:1px solid color-mix(in srgb, currentColor 40%, transparent);background:transparent;color:inherit;cursor:pointer;flex:none" style-hover="background:color-mix(in srgb, currentColor 12%, transparent)"><svg width="15" height="15" viewBox="0 0 256 256" fill="currentColor"><path d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z"></path></svg></button>
+                </div>
+                <h3 style="font-family:"Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;font-weight:400;font-size:clamp(40px,5vw,72px);line-height:0.9;letter-spacing:-0.055em;margin:0">{{ shelfCur.title }}</h3>
+                <p style="margin:0;font-size:clamp(15px,1.3vw,18px);line-height:1.55">{{ shelfCur.desc }}</p>
+                <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px 24px;padding-top:18px;border-top:1px solid color-mix(in srgb, currentColor 26%, transparent)">
+                  <sc-for list="{{ shelfCur.meta }}" as="mt" hint-placeholder-count="4">
+                    <div style="display:flex;flex-direction:column;gap:5px;min-width:0"><span style="font-size:10px;letter-spacing:0.14em;text-transform:uppercase;opacity:0.7">{{ mt.k }}</span><span style="font-size:13px;line-height:1.45">{{ mt.v }}</span></div>
+                  </sc-for>
+                </div>
+                <div style="display:grid;grid-template-columns:40px minmax(0,1fr) 40px;align-items:center;gap:12px;padding-top:18px;border-top:1px solid color-mix(in srgb, currentColor 26%, transparent)">
+                  <button type="button" onClick="{{ pagePrev }}" aria-label="Previous page" style="display:grid;place-items:center;width:40px;height:40px;padding:0;border-radius:50%;border:1px solid color-mix(in srgb, currentColor 40%, transparent);background:transparent;color:inherit;cursor:pointer;flex:none;opacity:{{ pageNav.prevO }}" style-hover="background:color-mix(in srgb, currentColor 12%, transparent)"><svg width="15" height="15" viewBox="0 0 256 256" fill="currentColor"><path d="M165.66,202.34a8,8,0,0,1-11.32,11.32l-80-80a8,8,0,0,1,0-11.32l80-80a8,8,0,0,1,11.32,11.32L91.31,128Z"></path></svg></button>
+                  <div style="display:flex;flex-direction:column;align-items:center;gap:3px;text-align:center;min-width:0"><span style="font-family:"Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;font-size:16px">{{ pageNav.label }}</span><span style="font-size:10px;letter-spacing:0.14em;text-transform:uppercase;opacity:0.72">{{ pageNav.sub }}</span></div>
+                  <button type="button" onClick="{{ pageNext }}" aria-label="Next page" style="display:grid;place-items:center;width:40px;height:40px;padding:0;border-radius:50%;border:1px solid color-mix(in srgb, currentColor 40%, transparent);background:transparent;color:inherit;cursor:pointer;flex:none;opacity:{{ pageNav.nextO }}" style-hover="background:color-mix(in srgb, currentColor 12%, transparent)"><svg width="15" height="15" viewBox="0 0 256 256" fill="currentColor"><path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"></path></svg></button>
+                </div>
+                <div style="display:flex;flex-wrap:wrap;gap:10px;align-items:center">
+                  <button type="button" onClick="{{ toggleCover }}" style="display:inline-flex;align-items:center;justify-content:center;min-height:40px;padding:0 20px;border-radius:999px;border:1px solid color-mix(in srgb, currentColor 45%, transparent);background:transparent;color:inherit;font:inherit;font-size:12px;letter-spacing:0.12em;text-transform:uppercase;cursor:pointer;white-space:nowrap;text-decoration:none" style-hover="background:color-mix(in srgb, currentColor 12%, transparent)">{{ pageNav.toggle }}</button>
+                  <sc-if value="{{ shelfCur.hasPage }}" hint-placeholder-val="{{ true }}"><button type="button" onClick="{{ openFull }}" style="display:inline-flex;align-items:center;justify-content:center;min-height:40px;padding:0 20px;border-radius:999px;border:1px solid color-mix(in srgb, currentColor 45%, transparent);background:transparent;color:inherit;font:inherit;font-size:12px;letter-spacing:0.12em;text-transform:uppercase;cursor:pointer;white-space:nowrap;text-decoration:none;background:color-mix(in srgb, currentColor 14%, transparent)" style-hover="background:color-mix(in srgb, currentColor 24%, transparent)">Open full page →</button></sc-if>
+                </div>
+                <span style="font-size:10px;letter-spacing:0.12em;text-transform:uppercase;opacity:0.6">{{ pageHint }}</span>
+              </aside>
+            </sc-if>
+          </div>
+          </div>
+        </section>
+
+        <section style="background:radial-gradient(900px 420px at 85% -40%, color-mix(in srgb, var(--color-section-glow) 70%, transparent), transparent 64%), var(--color-section);padding:clamp(48px,6vw,72px) 0;color:#f2f2f2">
+          <div style="max-width:1200px;margin:0 auto;padding:0 clamp(20px,5vw,72px);display:flex;flex-direction:column;gap:16px">
+            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr));gap:clamp(24px,4vw,64px);align-items:center">
+              <div style="display:flex;flex-direction:column;gap:20px">
+                <div style="display:flex;align-items:center;gap:12px;font-size:13px;letter-spacing:0.06em;text-transform:uppercase;color:#c4c4c4"><span style="width:28px;height:1px;background:#c4c4c4"></span>Get featured</div>
+                <p style="font-size:clamp(28px,3.6vw,48px);line-height:1.15;letter-spacing:-0.012em;margin:0;max-width:18ch;font-family:var(--font-heading);font-weight:var(--font-heading-weight)">Every day you stay quiet, you become invisible.</p>
+                <p style="font-size:17px;line-height:28px;margin:0;max-width:46ch;color:#c4c4c4">People are scrolling through their phones right now, but are they stopping for you? Stop talking to an empty room! Instead, come stand on my stage.</p>
+                <div style="display:flex;margin-top:8px"><a class="btn btn-secondary" href="#story" style="color:#f2f2f2;border-color:#f2f2f2">Get your business featured</a></div>
+              </div>
+              <div style="height:clamp(460px,52vw,680px);position:relative">
+                <x-import component-from-global-scope="paper-sheet" from="./paper-sheet.js" accent="{{ paperAccent }}" style="position:absolute;inset:0" hint-size="100%,100%"></x-import>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section data-screen-label="Testimonial card" style="max-width:1200px;margin:0 auto;padding:clamp(48px,6vw,96px) clamp(20px,5vw,72px)">
+          <x-import component-from-global-scope="reveal-on" from="./reveal-on.js" hint-size="100%,auto">
+            <figure data-reveal-card="" style="position:relative;margin:0;max-width:760px;box-sizing:border-box;padding:clamp(32px,5vw,64px) clamp(28px,5vw,64px) clamp(28px,4vw,48px);border-radius:14px;overflow:hidden;background:url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .08 0'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E&quot;),#f5f3ee;box-shadow:0 1px 0 rgba(0,0,0,0.04),0 24px 48px -18px rgba(40,34,24,0.28),0 2px 6px rgba(40,34,24,0.08);display:flex;flex-direction:column;gap:28px">
+              <span style="position:absolute;top:-6px;left:clamp(40px,8vw,96px);width:96px;height:26px;background:rgba(214,206,186,0.7);transform:rotate(-3deg)"></span>
+              <span data-reveal-sheen="" style="position:absolute;inset:0;pointer-events:none;opacity:0;background:linear-gradient(100deg,transparent 30%,rgba(255,255,255,0.7) 48%,transparent 64%)"></span>
+              <div data-reveal="" style="display:flex;align-items:center;gap:12px;font-size:12px;letter-spacing:0.14em;text-transform:uppercase;color:#5a5044"><span style="width:28px;height:1px;background:currentColor"></span>What our partners say</div>
+              <blockquote data-reveal="" style="margin:0;font-family:var(--font-heading);font-weight:var(--font-heading-weight);font-size:clamp(24px,2.8vw,36px);line-height:1.3;letter-spacing:-0.01em;text-indent:-0.45em;color:#2b2721;max-width:30ch">“Rahul didn’t just give us a platform—he gave us a voice that connected deeply with the community, boosted our visibility, and drove real sales.”</blockquote>
+              <figcaption data-reveal="" style="display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-top:20px;border-top:1px solid rgba(43,39,33,0.14)">
+                <span style="font-size:15.5px;color:#5a5044">— Spicy Tango</span>
+                <span style="display:grid;place-items:center;width:34px;height:34px;border:1.5px solid #8a4a32;color:#8a4a32;border-radius:4px;font-size:11px;letter-spacing:0.04em;transform:rotate(-4deg);opacity:0.85">AB</span>
+              </figcaption>
+            </figure>
+          </x-import>
+        </section>
+
+        <div style="max-width:1200px;margin:0 auto;padding:0 clamp(20px,5vw,72px)"><div style="height:1px;background:linear-gradient(to right,transparent,var(--color-divider) 48px calc(100% - 48px),transparent)"></div></div>
+
+
+      </div>
+    </sc-if>
+
+
+    <sc-if value="{{ is.whatwedo }}" hint-placeholder-val="{{ false }}">
+      <div data-screen-label="What We Do">
+        <section style="max-width:1200px;margin:0 auto;padding:clamp(40px,7vw,96px) clamp(20px,5vw,72px) clamp(32px,4vw,48px);display:flex;flex-direction:column;gap:28px">
+          <div style="display:flex;align-items:center;gap:12px;font-size:13px;letter-spacing:0.06em;text-transform:uppercase;color:var(--color-accent)"><span style="width:28px;height:1px;background:var(--color-accent)"></span>What we do</div>
+          <h1 style="font-size:clamp(40px,6vw,80px);line-height:1.1;letter-spacing:-0.015em;margin:0;margin-left:-0.04em;max-width:16ch">What we do</h1>
+          <p style="font-size:17px;line-height:28px;margin:0;max-width:52ch;color:color-mix(in srgb, var(--color-text) 82%, transparent)">Video, community and social media, set up to bring your business new customers.</p>
+        </section>
+        <section aria-label="Services" style="padding:0 0 clamp(24px,3vw,40px);overflow:hidden" style-hover="--roll-state:paused">
+          <div style="display:flex;gap:24px;width:max-content;padding:16px 12px;will-change:transform;backface-visibility:hidden;animation:ab-roll 38s linear infinite;animation-play-state:var(--roll-state,running)">
+            <sc-for list="{{ serviceRoll }}" as="s" hint-placeholder-count="6">
+              <article tabindex="0" style="position:relative;flex:none;width:clamp(280px,30vw,360px);aspect-ratio:341/382;box-sizing:border-box;padding:14px;border-radius:22px;background:radial-gradient(120% 80% at 50% 0%,#1c1c1f,#0d0d0f 70%);box-shadow:inset 0 0 0 1px var(--g-line,#2c2c30);color:#b9b9bf;cursor:default;transition:box-shadow 420ms ease, transform 420ms cubic-bezier(.2,.8,.2,1)" style-hover="--g-line:#b89a5e;--g-ink:#d8b978;--g-text:#ece8de;--g-corner:#6f6f74;transform:translateY(-6px);box-shadow:inset 0 0 0 1px #b89a5e, 0 28px 50px -24px rgba(184,154,94,0.45)" style-focus="--g-line:#b89a5e;--g-ink:#d8b978;--g-text:#ece8de;--g-corner:#6f6f74;outline:none">
+                <div style="position:relative;height:100%;box-sizing:border-box;border-radius:14px;box-shadow:inset 0 0 0 1px var(--g-line,#26262a);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:22px;padding:28px 26px;text-align:center;transition:box-shadow 420ms ease">
+                  <span style="position:absolute;left:8px;top:8px;width:46px;height:46px;border-left:1px solid var(--g-corner,#3a3a3e);border-top:1px solid var(--g-corner,#3a3a3e);border-top-left-radius:14px;transition:border-color 420ms ease"></span>
+                  <span style="position:absolute;right:8px;top:8px;width:46px;height:46px;border-right:1px solid var(--g-corner,#3a3a3e);border-top:1px solid var(--g-corner,#3a3a3e);border-top-right-radius:14px;transition:border-color 420ms ease"></span>
+                  <span style="font-size:12px;letter-spacing:0.18em;text-transform:uppercase;font-weight:500;color:var(--g-ink,#6f6f74);transition:color 420ms ease">{{ s.kicker }}</span>
+                  <h2 style="margin:0;font-family:var(--font-heading);font-weight:var(--font-heading-weight);font-size:clamp(26px,2.6vw,32px);line-height:1.2;letter-spacing:-0.005em;color:var(--g-text,#d6d6da);text-wrap:balance;transition:color 420ms ease">{{ s.title }}</h2>
+                  <p style="margin:0;font-family:'Crimson Pro',Georgia,serif;font-size:18px;line-height:1.5;color:var(--g-text,#8d8d93);opacity:0.9;text-wrap:pretty;transition:color 420ms ease">{{ s.short }}</p>
+                </div>
+              </article>
+            </sc-for>
+          </div>
+        </section>
+        <section style="max-width:1200px;margin:0 auto;padding:0 clamp(20px,5vw,72px) clamp(56px,7vw,98px)">
+          <div style="display:flex;gap:var(--space-3);flex-wrap:wrap"><a class="btn btn-primary" href="#consulting">All consulting services</a><a class="btn btn-ghost" href="#story">Contact Us</a></div>
+        </section>
+      </div>
+    </sc-if>
+
+    <sc-if value="{{ is.episodes }}" hint-placeholder-val="{{ false }}">
+      <div data-screen-label="Latest Episodes">
+        <section style="max-width:1200px;margin:0 auto;padding:clamp(40px,7vw,96px) clamp(20px,5vw,72px) clamp(32px,4vw,48px);display:flex;flex-direction:column;gap:28px">
+          <div style="display:flex;align-items:center;gap:12px;font-size:13px;letter-spacing:0.06em;text-transform:uppercase;color:var(--color-accent)"><span style="width:28px;height:1px;background:var(--color-accent)"></span>The American Bhau Podcast</div>
+          <h1 style="font-size:clamp(40px,6vw,80px);line-height:1.1;letter-spacing:-0.015em;margin:0;margin-left:-0.04em;max-width:16ch">Latest episodes</h1>
+          <div style="display:flex;gap:var(--space-3);flex-wrap:wrap">
+            <a class="btn btn-primary" href="https://www.youtube.com/@american-bhau" target="_blank">YouTube</a>
+            <a class="btn btn-secondary" href="https://open.spotify.com/show/4Pr4jZz9lXMZfQ38X34b3Y" target="_blank" style="color:var(--color-text)">Spotify</a>
+            <a class="btn btn-secondary" href="https://podcasts.apple.com/us/podcast/the-american-bhau-podcast/id1785251357" target="_blank" style="color:var(--color-text)">Apple Podcasts</a>
+          </div>
+        </section>
+        <section style="max-width:1200px;margin:0 auto;padding:0 clamp(20px,5vw,72px) clamp(56px,7vw,98px)">
+          <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr));gap:var(--space-4)">
+            <sc-for list="{{ episodes }}" as="e" hint-placeholder-count="3">
+              <a href="{{ e.url }}" target="_blank" rel="noopener" style="display:flex;flex-direction:column;border-radius:var(--radius-md);overflow:hidden;background:var(--color-bg);box-shadow:0 1px 2px rgba(0,0,0,0.05),inset 0 0 0 1px var(--color-divider);text-decoration:none;color:var(--color-text);transition:transform 260ms cubic-bezier(.2,.8,.2,1), box-shadow 260ms ease" style-hover="transform:translateY(-6px);box-shadow:0 22px 40px -18px rgba(0,0,0,0.32),inset 0 0 0 1px var(--color-divider)">
+                <div style="position:relative;aspect-ratio:491/280;background:#111">
+                  <img src="{{ e.src }}" alt="{{ e.title }}" loading="lazy" decoding="async" style="display:block;width:100%;height:100%;object-fit:cover">
+                  <span style="position:absolute;left:12px;bottom:12px;display:inline-flex;align-items:center;gap:6px;padding:6px 10px;border-radius:999px;background:rgba(20,20,20,0.82);color:#f2f2f2;font-size:12px"><svg width="12" height="12" viewBox="0 0 256 256" fill="currentColor"><path d="M232.4,114.49,88.32,26.35a16,16,0,0,0-16.2-.3A15.86,15.86,0,0,0,64,39.87V216.13A15.94,15.94,0,0,0,80,232a16.07,16.07,0,0,0,8.36-2.35L232.4,141.51a15.81,15.81,0,0,0,0-27ZM80,215.94V40l143.83,88Z"></path></svg>Watch on YouTube</span>
+                </div>
+                <div style="display:flex;flex-direction:column;gap:10px;padding:20px 22px 22px;flex:1">
+                  <span style="font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:var(--color-neutral-500)">{{ e.date }}</span>
+                  <h3 style="margin:0;font-size:19px;line-height:1.35;letter-spacing:-0.01em;font-weight:500">{{ e.title }}</h3>
+                  <p style="margin:0;font-size:15px;line-height:1.55;color:color-mix(in srgb, var(--color-text) 72%, transparent)">{{ e.summary }}</p>
+                </div>
+              </a>
+            </sc-for>
+          </div>
+          <div style="display:flex;margin-top:28px"><a class="btn btn-ghost" href="#podcast">About the podcast →</a></div>
+        </section>
+      </div>
+    </sc-if>
+
+
+    <sc-if value="{{ is.story }}" hint-placeholder-val="{{ false }}">
+      <div data-screen-label="Ready to Tell Your Story">
+        <section style="max-width:1200px;margin:0 auto;padding:clamp(56px,9vw,112px) clamp(20px,5vw,72px) clamp(56px,7vw,98px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr));gap:clamp(40px,6vw,96px);align-items:start">
+          <div style="display:flex;flex-direction:column;gap:28px">
+            <div style="display:flex;align-items:center;gap:12px;font-size:13px;letter-spacing:0.06em;text-transform:uppercase;color:var(--color-accent)"><span style="width:28px;height:1px;background:var(--color-accent)"></span>Contact Us</div>
+            <h1 style="font-size:clamp(40px,5.4vw,72px);line-height:1.1;letter-spacing:-0.015em;margin:0;margin-left:-0.04em">Ready to tell your story?</h1>
+            <p style="font-size:17px;line-height:28px;margin:0;max-width:44ch;color:color-mix(in srgb, var(--color-text) 82%, transparent)">Contact American Bhau for social media consulting, podcast features &amp; content that actually works for your business!</p>
+            <div style="display:flex;flex-direction:column;gap:14px;margin-top:8px;font-size:15px">
+              <div style="display:flex;gap:16px;align-items:baseline"><span style="width:88px;flex:none;font-size:13px;color:color-mix(in srgb, var(--color-text) 60%, transparent)">Email</span><a href="mailto:rahul@americanbhau.com">rahul@americanbhau.com</a></div>
+              <div style="display:flex;gap:16px;align-items:baseline"><span style="width:88px;flex:none;font-size:13px;color:color-mix(in srgb, var(--color-text) 60%, transparent)">Instagram</span><a href="https://www.instagram.com/american_bhau/" target="_blank">@american_bhau</a></div>
+              <div style="display:flex;gap:16px;align-items:baseline"><span style="width:88px;flex:none;font-size:13px;color:color-mix(in srgb, var(--color-text) 60%, transparent)">YouTube</span><a href="https://www.youtube.com/@american-bhau" target="_blank">@american-bhau</a></div>
+              <div style="display:flex;gap:16px;align-items:baseline"><span style="width:88px;flex:none;font-size:13px;color:color-mix(in srgb, var(--color-text) 60%, transparent)">LinkedIn</span><a href="https://www.linkedin.com/in/americanbhau/" target="_blank">in/americanbhau</a></div>
+            </div>
+          </div>
+          <div class="card elev-md" style="padding:var(--space-5)">
+            <sc-if value="{{ sent }}" hint-placeholder-val="{{ false }}">
+              <div style="display:flex;flex-direction:column;gap:14px;padding:var(--space-4) 0">
+                <h2 style="font-size:24px;margin:0">Thank you, {{ firstName }}.</h2>
+                <p style="margin:0;font-size:15px;line-height:26px;color:color-mix(in srgb, var(--color-text) 78%, transparent)">Your message is in. Rahul will get back to you soon.</p>
+                <div style="display:flex"><button type="button" class="btn btn-ghost" onClick="{{ reset }}">Send another message</button></div>
+              </div>
+            </sc-if>
+            <sc-if value="{{ notSent }}" hint-placeholder-val="{{ true }}">
+              <form onSubmit="{{ submit }}" style="display:flex;flex-direction:column;gap:var(--space-4)">
+                <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,180px),1fr));gap:var(--space-4)">
+                  <div class="field"><label for="c-name">Name</label><input id="c-name" class="input" name="name" required="" placeholder="Your name" onInput="{{ onName }}"></div>
+                  <div class="field"><label for="c-biz">Business</label><input id="c-biz" class="input" name="business" placeholder="Business name"></div>
+                </div>
+                <div class="field"><label for="c-email">Email or WhatsApp</label><input id="c-email" class="input" name="contact" required="" placeholder="you@business.com"></div>
+                <div class="field"><label for="c-need">I’m interested in</label>
+                  <select id="c-need" class="input" name="need">
+                    <option>Social media consulting</option>
+                    <option>Podcast feature</option>
+                    <option>Video production</option>
+                    <option>Being a podcast guest</option>
+                  </select>
+                </div>
+                <div class="field"><label for="c-msg">Tell us about your business</label><textarea id="c-msg" class="input" name="message" rows="5" placeholder="What you do, who you serve, and what you want to grow"></textarea></div>
+                <input name="website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px">
+                <div style="display:flex"><button type="submit" class="btn btn-primary">Send message</button></div>
+              </form>
+            </sc-if>
+          </div>
+        </section>
+            </div>
+    </sc-if>
+
+    <sc-if value="{{ is.consulting }}" hint-placeholder-val="{{ false }}">
+      <div data-screen-label="Consulting">
+        <section style="max-width:1200px;margin:0 auto;padding:clamp(56px,9vw,112px) clamp(20px,5vw,72px) clamp(40px,5vw,56px);display:flex;flex-direction:column;gap:28px">
+          <div style="display:flex;align-items:center;gap:12px;font-size:13px;letter-spacing:0.06em;text-transform:uppercase;color:var(--color-accent)"><span style="width:28px;height:1px;background:var(--color-accent)"></span>Consulting</div>
+          <h1 style="font-size:clamp(40px,6vw,80px);line-height:1.1;letter-spacing:-0.015em;margin:0;margin-left:-0.04em;max-width:16ch">Social media that brings you customers</h1>
+          <p style="font-size:17px;line-height:28px;margin:0;max-width:56ch;color:color-mix(in srgb, var(--color-text) 82%, transparent)">Most small business owners know they should be on social media. Few have the time to plan it, film it, edit it and keep it going every week. Our consulting covers all of it: we work out what your business should say, make the content with you, put it in front of the right people, and keep improving it based on what actually brings in enquiries.</p>
+        </section>
+        <div style="background:linear-gradient(180deg,#2f3437 0%,#272b2e 100%);color:#eceae6;margin-top:clamp(8px,2vw,24px)">
+        <section aria-label="How we help" style="max-width:1200px;margin:0 auto;padding:clamp(56px,7vw,96px) clamp(20px,5vw,72px) clamp(48px,6vw,80px);display:flex;flex-direction:column;gap:clamp(28px,4vw,44px)">
+          <div style="display:flex;flex-direction:column;gap:14px">
+            <div style="display:flex;align-items:center;gap:12px;font-size:12px;letter-spacing:0.16em;text-transform:uppercase;color:#a9aeb0"><span style="width:28px;height:1px;background:#a9aeb0"></span>Our process</div>
+            <h2 style="font-size:clamp(30px,3.6vw,44px);line-height:1.15;letter-spacing:-0.012em;margin:0;color:#f3f1ed">How we help</h2>
+          </div>
+          <x-import component-from-global-scope="reveal-on" from="./reveal-on.js" each="" hint-size="100%,auto">
+            <div style="display:flex;flex-direction:column;gap:clamp(20px,3vw,32px);padding-bottom:clamp(24px,4vw,48px)">
+              <sc-for list="{{ helpSteps }}" as="h" hint-placeholder-count="4">
+                <article data-reveal-card="" style="position:sticky;top:{{ h.top }};display:grid;grid-template-columns:minmax(72px,auto) minmax(0,1fr);gap:clamp(20px,4vw,64px);align-items:start;min-height:clamp(220px,24vw,270px);box-sizing:border-box;padding:clamp(28px,4vw,52px) clamp(24px,4vw,56px);border-radius:12px;background:{{ h.bg }};color:#22272a;box-shadow:0 0 0 1px rgba(255,255,255,0.06), 0 -20px 40px -28px rgba(0,0,0,0.6), 0 24px 48px -30px rgba(0,0,0,0.55);transform-origin:50% 0">
+                  <div style="display:flex;flex-direction:column;gap:10px;padding-top:4px">
+                    <span style="font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:#6c7275">Step</span>
+                    <span style="font-size:clamp(40px,5vw,64px);line-height:0.9;letter-spacing:-0.02em;font-weight:300;color:#4d5458;font-feature-settings:'tnum' 1">{{ h.num }}</span>
+                  </div>
+                  <div style="display:flex;flex-direction:column;gap:14px;max-width:54ch;padding-top:4px;border-left:1px solid rgba(34,39,42,0.14);padding-left:clamp(20px,3vw,40px)">
+                    <h3 style="margin:0;font-size:clamp(23px,2.4vw,30px);line-height:1.2;letter-spacing:-0.01em;font-weight:500;color:#1d2124">{{ h.title }}</h3>
+                    <p style="margin:0;font-size:16px;line-height:1.7;color:#4a5054">{{ h.body }}</p>
+                  </div>
+                </article>
+              </sc-for>
+            </div>
+          </x-import>
+        </section>
+        </div>
+      </div>
+    </sc-if>
+
+    <sc-if value="{{ is.podcast }}" hint-placeholder-val="{{ false }}">
+      <div data-screen-label="Podcast">
+        <section style="max-width:1200px;margin:0 auto;padding:clamp(56px,9vw,112px) clamp(20px,5vw,72px) clamp(40px,5vw,56px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:clamp(32px,5vw,72px);align-items:center">
+          <div style="display:flex;flex-direction:column;gap:28px">
+            <div style="display:flex;align-items:center;gap:12px;font-size:13px;letter-spacing:0.06em;text-transform:uppercase;color:var(--color-accent)"><span style="width:28px;height:1px;background:var(--color-accent)"></span>Podcast</div>
+            <h1 style="font-size:clamp(40px,5.4vw,72px);line-height:1.1;letter-spacing:-0.015em;margin:0;margin-left:-0.04em">The American Bhau Podcast</h1>
+            <p style="font-size:17px;line-height:28px;margin:0;max-width:52ch;color:color-mix(in srgb, var(--color-text) 82%, transparent)">This podcast is dedicated to promoting Marathi businesses, connecting them with global audiences, and empowering entrepreneurs through inspiring stories and visibility.</p>
+            <p style="font-size:15.5px;line-height:26px;margin:0;max-width:52ch;color:color-mix(in srgb, var(--color-text) 70%, transparent)">Real conversations with business owners, creators and professionals from the global Marathi diaspora. Hosted by Rahul ‘American Bhau’ Patil and creatively led by Pallavi Patil.</p>
+            <div style="display:flex;gap:var(--space-3);flex-wrap:wrap">
+              <a class="btn btn-primary" href="https://www.youtube.com/@american-bhau/videos" target="_blank">YouTube</a>
+              <a class="btn btn-secondary" href="https://open.spotify.com/show/4Pr4jZz9lXMZfQ38X34b3Y" target="_blank" style="color:var(--color-text)">Spotify</a>
+              <a class="btn btn-secondary" href="https://podcasts.apple.com/us/podcast/the-american-bhau-podcast/id1785251357" target="_blank" style="color:var(--color-text)">Apple Podcasts</a>
+            </div>
+          </div>
+          <div style="aspect-ratio:4/3;width:100%;border-radius:var(--radius-md);overflow:hidden;background:#5d6163;box-shadow:var(--shadow-lg)"><img decoding="async" fetchpriority="high" src="assets/podcast-guest.webp" alt="The American Bhau Podcast" style="display:block;width:100%;height:100%;object-fit:cover;object-position:50% 35%"></div>
+        </section>
+        <section style="max-width:1200px;margin:0 auto;padding:clamp(24px,4vw,48px) clamp(20px,5vw,72px) clamp(48px,6vw,84px)">
+          <div style="display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:12px 24px;margin:0 0 28px">
+            <h2 style="font-size:32px;line-height:1.2;letter-spacing:-0.012em;margin:0">From the channel</h2>
+            <a class="btn btn-ghost" href="https://www.youtube.com/@american-bhau/videos" target="_blank" rel="noopener">All videos on YouTube →</a>
+          </div>
+          <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr));gap:var(--space-4)">
+            <sc-for list="{{ podcastVideos }}" as="v" hint-placeholder-count="4">
+              <a href="{{ v.url }}" target="_blank" rel="noopener" class="card" style="padding:var(--space-2);gap:var(--space-3);text-decoration:none;color:var(--color-text);transition:transform 260ms cubic-bezier(.2,.8,.2,1), box-shadow 260ms ease" style-hover="transform:translateY(-6px);box-shadow:var(--shadow-lg)">
+                <div style="position:relative;aspect-ratio:16/9;width:100%;border-radius:6px;overflow:hidden;background:var(--color-neutral-800)">
+                  <img src="{{ v.thumb }}" alt="{{ v.title }}" loading="lazy" decoding="async" style="display:block;width:100%;height:100%;object-fit:cover">
+                  <span style="position:absolute;left:10px;bottom:10px;display:inline-flex;align-items:center;gap:6px;padding:5px 9px;border-radius:999px;background:rgba(14,14,18,0.82);color:var(--color-text);font-size:12px"><svg width="11" height="11" viewBox="0 0 256 256" fill="currentColor"><path d="M232.4,114.49,88.32,26.35a16,16,0,0,0-16.2-.3A15.86,15.86,0,0,0,64,39.87V216.13A15.94,15.94,0,0,0,80,232a16.07,16.07,0,0,0,8.36-2.35L232.4,141.51a15.81,15.81,0,0,0,0-27ZM80,215.94V40l143.83,88Z"></path></svg>Watch</span>
+                </div>
+                <div style="display:flex;flex-direction:column;gap:8px;padding:0 var(--space-2) var(--space-2)">
+                  <span class="card-kicker">{{ v.kicker }}</span>
+                  <h3 class="card-title" style="margin:0">{{ v.title }}</h3>
+                  <p class="card-body" style="line-height:1.55;margin:0">{{ v.summary }}</p>
+                </div>
+              </a>
+            </sc-for>
+          </div>
+        </section>
+        <div style="max-width:1200px;margin:0 auto;padding:0 clamp(20px,5vw,72px)"><div style="height:1px;background:linear-gradient(to right,transparent,var(--color-divider) 48px calc(100% - 48px),transparent)"></div></div>
+        <section style="max-width:1200px;margin:0 auto;padding:clamp(48px,6vw,72px) clamp(20px,5vw,72px);display:flex;flex-direction:column;gap:20px">
+          <h2 style="font-size:28px;line-height:1.2;margin:0">Be a guest</h2>
+          <p style="font-size:15.5px;line-height:28px;margin:0;max-width:56ch;color:color-mix(in srgb, var(--color-text) 78%, transparent)">If you want to be a guest on this podcast, please contact us through our official website.</p>
+          <div style="display:flex"><a class="btn btn-primary" href="#story">Get in touch</a></div>
+        </section>
+      </div>
+    </sc-if>
+
+    <sc-if value="{{ is.brands }}" hint-placeholder-val="{{ false }}">
+      <div data-screen-label="Brands">
+        <section style="max-width:1200px;margin:0 auto;padding:clamp(56px,9vw,112px) clamp(20px,5vw,72px) clamp(40px,5vw,56px);display:flex;flex-direction:column;gap:28px">
+          <div style="display:flex;align-items:center;gap:12px;font-size:13px;letter-spacing:0.06em;text-transform:uppercase;color:var(--color-accent)"><span style="width:28px;height:1px;background:var(--color-accent)"></span>Brands</div>
+          <h1 style="font-size:clamp(40px,6vw,80px);line-height:1.1;letter-spacing:-0.015em;margin:0;margin-left:-0.04em;max-width:16ch">Brands we’ve worked with</h1>
+          <p style="font-size:17px;line-height:28px;margin:0;max-width:52ch;color:color-mix(in srgb, var(--color-text) 82%, transparent)">You don’t have to build an audience from scratch. You “borrow” ours to get instant trust, visibility, and new customers.</p>
+        </section>
+        <section style="max-width:1200px;margin:0 auto;padding:0 clamp(20px,5vw,72px) clamp(48px,6vw,84px)">
+          <h2 style="font-size:clamp(28px,3.4vw,40px);line-height:1.2;letter-spacing:-0.012em;margin:0 0 clamp(28px,4vw,48px);text-align:center">Brands We Have Partnered With !</h2>
+          <div style="display:flex;flex-direction:column;align-items:center;gap:clamp(28px,4vw,48px);max-width:1120px;margin:0 auto">
+            <sc-for list="{{ brandRows }}" as="row" hint-placeholder-count="5">
+              <div style="display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:clamp(24px,4vw,48px) clamp(28px,5.5vw,72px);width:100%">
+                <sc-for list="{{ row }}" as="b" hint-placeholder-count="6">
+                  <a href="{{ b.url }}" target="_blank" rel="noopener" aria-label="{{ b.label }}" title="{{ b.name }}" style="display:grid;place-items:center;width:clamp(84px,9.5vw,120px);height:clamp(84px,9.5vw,120px);text-decoration:none;transition:transform 240ms cubic-bezier(.2,.8,.2,1), filter 240ms ease;filter:drop-shadow(0 3px 6px rgba(0,0,0,0.18))" style-hover="transform:translateY(-6px) scale(1.06);filter:drop-shadow(0 12px 18px rgba(0,0,0,0.26))">
+                    <img src="{{ b.src }}" alt="{{ b.name }} logo" loading="lazy" decoding="async" style="display:block;max-width:100%;max-height:100%;object-fit:contain">
+                  </a>
+                </sc-for>
+              </div>
+            </sc-for>
+          </div>
+        </section>
+        <section style="max-width:1200px;margin:0 auto;padding:0 clamp(20px,5vw,72px) clamp(56px,7vw,98px)">
+          <div style="display:flex;align-items:center;gap:12px;font-size:13px;letter-spacing:0.06em;text-transform:uppercase;color:var(--color-accent);margin-bottom:28px"><span style="width:28px;height:1px;background:var(--color-accent)"></span>What they say</div>
+          <div style="display:flex;flex-wrap:wrap;justify-content:center;align-items:flex-start;padding:clamp(12px,3vw,40px) 0 clamp(24px,4vw,48px);row-gap:28px">
+            <sc-for list="{{ testiCards }}" as="t" hint-placeholder-count="3">
+              <figure role="button" tabindex="0" aria-pressed="{{ t.pressed }}" onClick="{{ t.open }}" onKeyDown="{{ t.key }}" style="position:relative;z-index:{{ t.z }};flex:0 1 380px;min-width:min(100%,280px);margin:{{ t.margin }};box-sizing:border-box;padding:16px;background:#e9dfb8;cursor:pointer;transform:{{ t.transform }};transform-origin:50% 60%;box-shadow:{{ t.shadow }};transition:transform 420ms cubic-bezier(.2,.8,.2,1), box-shadow 420ms ease" style-hover="transform:{{ t.hover }};z-index:20;box-shadow:0 30px 50px -18px rgba(60,48,20,0.45)">
+                <div style="display:flex;flex-direction:column;gap:22px;min-height:340px;padding:clamp(22px,3vw,32px);box-sizing:border-box;background:#faf8f1">
+                  <span style="font-family:var(--font-heading);font-size:56px;line-height:0.6;height:24px;color:#b7a568">“</span>
+                  <blockquote style="margin:0;font-size:16px;line-height:26px;color:#2b2721">{{ t.quote }}</blockquote>
+                  <figcaption style="margin-top:auto;display:flex;align-items:flex-end;justify-content:space-between;gap:12px;padding-top:16px;border-top:1px solid rgba(43,39,33,0.12)">
+                    <span style="display:flex;flex-direction:column;gap:2px"><span style="font-size:14px;color:#2b2721">{{ t.name }}</span><span style="font-size:13px;color:#6f6552">{{ t.role }}</span></span>
+                    <span style="font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:#8a7a45;white-space:nowrap">{{ t.hint }}</span>
+                  </figcaption>
+                </div>
+              </figure>
+            </sc-for>
+          </div>
+        </section>
+      </div>
+    </sc-if>
+
+    <sc-if value="{{ is.about }}" hint-placeholder-val="{{ false }}">
+      <div data-screen-label="About">
+        <section style="max-width:1200px;margin:0 auto;padding-left:clamp(20px,5vw,72px);padding-right:clamp(20px,5vw,72px);padding-top:clamp(56px,9vw,112px);padding-bottom:clamp(40px,5vw,64px);display:flex;flex-direction:column;gap:24px">
+          <div style="display:flex;align-items:center;gap:12px;font-size:13px;letter-spacing:0.06em;text-transform:uppercase;color:var(--color-accent)"><span style="width:28px;height:1px;background:var(--color-accent)"></span>About Us</div>
+          <h1 style="font-size:clamp(40px,6vw,80px);line-height:1.08;letter-spacing:-0.02em;margin:0;margin-left:-0.04em;max-width:14ch">The Humans Behind the Magic</h1>
+        </section>
+
+        <section data-screen-label="Meet American Bhau" style="max-width:1200px;margin:0 auto;padding-left:clamp(20px,5vw,72px);padding-right:clamp(20px,5vw,72px);padding-bottom:clamp(56px,7vw,96px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:clamp(32px,6vw,96px);align-items:start">
+          <div style="display:flex;flex-direction:column;gap:20px;position:sticky;top:96px">
+            <div style="position:relative;width:clamp(180px,20vw,240px);aspect-ratio:1/1;border-radius:50%;padding:6px;background:linear-gradient(135deg,#f3d27a,#e8876a);box-shadow:0 18px 36px -18px rgba(0,0,0,0.35)"><div style="width:100%;height:100%;border-radius:50%;overflow:hidden;background:#eee"><img loading="lazy" decoding="async" src="assets/team/rahul.webp" alt="Rahul Patil, American Bhau" style="display:block;width:100%;height:100%;object-fit:cover;transform:scale(1.1)"></div></div>
+            <div style="display:flex;flex-direction:column;gap:4px"><span style="font-size:22px;letter-spacing:-0.01em">Rahul Patil</span><span style="font-size:14px;color:var(--color-neutral-500)">Founder, American Bhau</span></div>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:22px;font-size:17px;line-height:29px;max-width:62ch;color:color-mix(in srgb, var(--color-text) 80%, transparent);grid-column:span 2 / auto">
+            <h2 style="font-size:clamp(28px,3vw,40px);line-height:1.15;letter-spacing:-0.015em;margin:0 0 6px;color:var(--color-text)">Meet American Bhau</h2>
+            <p style="margin:0">Hey there, I’m <strong style="font-weight:500;color:var(--color-text)">Rahul Patil</strong>. But everyone calls me American Bhau (and yes, there’s a story behind that name).</p>
+            <p style="margin:0">I was born in a small village near <strong style="font-weight:500;color:var(--color-text)">Dhule, Maharashtra</strong>. Farming roots. My dad broke the mold, studied hard, built a banking career, and gave us a stable life. The dream he had for me was the natural next step. <strong style="font-weight:500;color:var(--color-text)">BITS Pilani</strong> for computers. A one-way ticket to America. A comfortable <strong style="font-weight:500;color:var(--color-text)">tech career at Atlassian</strong>. Three generations from farm, to bank, to USA.</p>
+            <p style="margin:0">By every measure, I had made it. <strong style="font-weight:500;color:var(--color-text)">But something was off.</strong></p>
+            <p style="margin:0">I was good at building code. What I really wanted was to build connections. I kept seeing brilliant, hardworking Marathi people around me who had no idea how to grow a business or tell their story. Not because they weren’t capable. Because nobody ever taught us.</p>
+            <p style="margin:0">There’s an old belief in our community: “<strong style="font-weight:500;color:var(--color-text)">मराठी माणूस धंदा नाय करु शकत.</strong>” Marathis are not cut out for business. We got steered toward safe careers. Ambition was kept quiet. That belief has held our people back for generations.</p>
+            <p style="margin:0">Around this time, I found <strong style="font-weight:500;color:var(--color-text)">Naval Ravikant.</strong> He said: find the thing only you can do, built from your unique combination of obsessions and experiences. Bet on yourself before anyone else does. <strong style="font-weight:500;color:var(--color-text)">Creativity and purpose are not luxuries. They are the strategy.</strong></p>
+            <p style="margin:0">That hit different when you’re a Marathi kid from a Dhule village sitting in America, realizing the “safe” life you built was just someone else’s definition of a good one.</p>
+            <blockquote style="margin:8px 0;padding:4px 0 4px 24px;background:linear-gradient(var(--color-text),var(--color-text)) left/2px 100% no-repeat;font-family:var(--font-heading);font-weight:var(--font-heading-weight);font-size:clamp(22px,2.2vw,28px);line-height:1.35;letter-spacing:-0.01em;color:var(--color-text)">In 2023, I quit my job at Atlassian — a place I loved, by every normal measure — and started American Bhau.</blockquote>
+            <p style="margin:0">The first year was tough. Almost no money coming in. What kept us going was the mission. I also started “<strong style="font-weight:500;color:var(--color-text)">Navalai</strong>,” a reels and shorts series where I break down Naval’s principles in simple, conversational Marathi. No jargon. Just the ideas, in the language my people actually think in. The response told me something important: the ideas were never the barrier. The language was.</p>
+            <p style="margin:0">Today, American Bhau has millions of views, a deeply engaged global audience, and America’s #1 Marathi podcast. But the part I’m most proud of is what’s happening off the screen.</p>
+            <p style="margin:0">We started <strong style="font-weight:500;color:var(--color-text)">#BhauChallenge</strong>, a 30-day challenge where <strong style="font-weight:500;color:var(--color-text)">Marathi business owners, professionals and creators</strong> learn to show up on social media, tell their stories, and build real audiences. No fancy gear. No experience needed. Just their phone, their story, and a community behind them.</p>
+            <p style="margin:0">Business owners from Austin to Pune, from Canada to Germany have gone through it. Some have gone from zero presence to thousands of followers. That is what this community is for.</p>
+            <p style="margin:0">We are also building what we believe will be the <strong style="font-weight:500;color:var(--color-text)">world’s largest community of Marathi business owners, professionals, and creators who use social media to grow</strong>. And we are just getting started.</p>
+            <p style="margin:0">American Bhau is proof. Proof that a Marathi kid, three generations from the farm, can leave a corporate job, bet on himself, and build something real.</p>
+            <blockquote style="margin:8px 0;padding:4px 0 4px 24px;background:linear-gradient(var(--color-text),var(--color-text)) left/2px 100% no-repeat;font-family:var(--font-heading);font-weight:var(--font-heading-weight);font-size:clamp(22px,2.2vw,28px);line-height:1.35;letter-spacing:-0.01em;color:var(--color-text)">I want every Marathi person watching to think, “If Bhau can do it, so can I.”</blockquote>
+            <p style="margin:0">That’s the whole point.</p>
+          </div>
+        </section>
+
+        <div style="max-width:1200px;margin:0 auto;padding-left:clamp(20px,5vw,72px);padding-right:clamp(20px,5vw,72px)"><div style="height:1px;background:linear-gradient(to right,transparent,var(--color-divider) 48px calc(100% - 48px),transparent)"></div></div>
+
+        <section data-screen-label="Meet Our Creative Force" style="max-width:1200px;margin:0 auto;padding-left:clamp(20px,5vw,72px);padding-right:clamp(20px,5vw,72px);padding-top:clamp(56px,7vw,96px);padding-bottom:clamp(56px,7vw,96px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:clamp(32px,6vw,96px);align-items:start">
+          <div style="display:flex;flex-direction:column;gap:20px;position:sticky;top:96px">
+            <div style="position:relative;width:clamp(180px,20vw,240px);aspect-ratio:1/1;border-radius:50%;padding:6px;background:linear-gradient(135deg,#f0a35a,#d9722f);box-shadow:0 18px 36px -18px rgba(0,0,0,0.35)"><div style="width:100%;height:100%;border-radius:50%;overflow:hidden;background:#eee"><img loading="lazy" decoding="async" src="assets/team/pallavi.webp" alt="Pallavi Chivte-Patil" style="display:block;width:100%;height:100%;object-fit:cover;transform:scale(1.1)"></div></div>
+            <div style="display:flex;flex-direction:column;gap:4px"><span style="font-size:22px;letter-spacing:-0.01em">Pallavi Chivte-Patil</span><span style="font-size:14px;color:var(--color-neutral-500)">Creative Director &amp; Co-owner</span></div>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:22px;font-size:17px;line-height:29px;max-width:62ch;color:color-mix(in srgb, var(--color-text) 80%, transparent);grid-column:span 2 / auto">
+            <h2 style="font-size:clamp(28px,3vw,40px);line-height:1.15;letter-spacing:-0.015em;margin:0 0 6px;color:var(--color-text)">Meet Our Creative Force</h2>
+            <p style="margin:0"><strong style="font-weight:500;color:var(--color-text)">Hey! I’m Pallavi Chivte-Patil,</strong> the creative brain behind all the magic you see here (and Rahul’s better half, but don’t tell him I said that).</p>
+            <p style="margin:0">Started my journey in <strong style="font-weight:500;color:var(--color-text)">Satara</strong>, then headed to the legendary <strong style="font-weight:500;color:var(--color-text)">JJ School of Arts</strong> in Mumbai to study Architecture. Spent years designing buildings across India and the US, thinking I’d be the next big architect.</p>
+            <p style="margin:0"><strong style="font-weight:500;color:var(--color-text)">Plot twist:</strong> When Covid 2020 turned everything upside down, I decided to add UI/UX certification to my arsenal. While others were perfecting sourdough starters, I was perfecting <strong style="font-weight:500;color:var(--color-text)">user experiences.</strong></p>
+            <p style="margin:0">Now I’m the <strong style="font-weight:500;color:var(--color-text)">Creative Director and co-owner of American Bhau</strong>, which basically means I’m the one making sure our content doesn’t look like it was made in 2005. From the initial “what if we did this crazy idea?” to the final “yes, this is actually going live,” I make sure everything we create hits the right notes with our audience. I manage the entire editing workflow while working with our team below; every cut and frame has to go through my approval before you see it on the American Bhau digital platform.</p>
+            <p style="margin:0"><strong style="font-weight:500;color:var(--color-text)">My superpower:</strong> Turning Rahul’s wild ideas into content that people actually want to watch. Also, I have an unhealthy obsession with making sure our designs are on trend (you’re welcome).</p>
+          </div>
+        </section>
+
+        <section data-screen-label="Our Rockstar Team" style="background:var(--color-surface)">
+          <div style="max-width:1200px;margin:0 auto;padding-left:clamp(20px,5vw,72px);padding-right:clamp(20px,5vw,72px);padding-top:clamp(56px,7vw,96px);padding-bottom:clamp(56px,7vw,96px);display:flex;flex-direction:column;gap:clamp(28px,4vw,44px)">
+            <div style="display:flex;flex-direction:column;gap:16px">
+              <div style="display:flex;align-items:center;gap:12px;font-size:13px;letter-spacing:0.06em;text-transform:uppercase;color:var(--color-accent)"><span style="width:28px;height:1px;background:var(--color-accent)"></span>The team</div>
+              <h2 style="font-size:clamp(28px,3.4vw,44px);line-height:1.15;letter-spacing:-0.015em;margin:0">Our Rockstar Team</h2>
+            </div>
+            <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,190px),1fr));gap:var(--space-4)">
+              <figure style="margin:0;display:flex;flex-direction:column;align-items:center;gap:6px;text-align:center;padding:28px 20px 26px;border-radius:var(--radius-md);background:var(--color-bg);box-shadow:0 1px 2px rgba(0,0,0,0.05),inset 0 0 0 1px var(--color-divider);transition:transform 240ms cubic-bezier(.2,.8,.2,1), box-shadow 240ms ease" style-hover="transform:translateY(-6px);box-shadow:0 20px 36px -18px rgba(0,0,0,0.3),inset 0 0 0 1px var(--color-divider)">
+                <div style="width:132px;height:132px;border-radius:50%;overflow:hidden;margin-bottom:14px;background:#eee"><img src="assets/team/piyush.webp" alt="Piyush N." loading="lazy" decoding="async" style="display:block;width:100%;height:100%;object-fit:cover;transform:scale(1.08)"></div>
+                <figcaption style="display:flex;flex-direction:column;gap:4px"><span style="font-size:19px;letter-spacing:-0.01em;color:var(--color-text)">Piyush N.</span><span style="font-size:13px;color:var(--color-neutral-500)">Community Lead</span></figcaption>
+              </figure>
+              <figure style="margin:0;display:flex;flex-direction:column;align-items:center;gap:6px;text-align:center;padding:28px 20px 26px;border-radius:var(--radius-md);background:var(--color-bg);box-shadow:0 1px 2px rgba(0,0,0,0.05),inset 0 0 0 1px var(--color-divider);transition:transform 240ms cubic-bezier(.2,.8,.2,1), box-shadow 240ms ease" style-hover="transform:translateY(-6px);box-shadow:0 20px 36px -18px rgba(0,0,0,0.3),inset 0 0 0 1px var(--color-divider)">
+                <div style="width:132px;height:132px;border-radius:50%;overflow:hidden;margin-bottom:14px;background:#eee"><img src="assets/team/chetan.webp" alt="Chetan M." loading="lazy" decoding="async" style="display:block;width:100%;height:100%;object-fit:cover;transform:scale(1.08)"></div>
+                <figcaption style="display:flex;flex-direction:column;gap:4px"><span style="font-size:19px;letter-spacing:-0.01em;color:var(--color-text)">Chetan M.</span><span style="font-size:13px;color:var(--color-neutral-500)">Video Editor</span></figcaption>
+              </figure>
+              <figure style="margin:0;display:flex;flex-direction:column;align-items:center;gap:6px;text-align:center;padding:28px 20px 26px;border-radius:var(--radius-md);background:var(--color-bg);box-shadow:0 1px 2px rgba(0,0,0,0.05),inset 0 0 0 1px var(--color-divider);transition:transform 240ms cubic-bezier(.2,.8,.2,1), box-shadow 240ms ease" style-hover="transform:translateY(-6px);box-shadow:0 20px 36px -18px rgba(0,0,0,0.3),inset 0 0 0 1px var(--color-divider)">
+                <div style="width:132px;height:132px;border-radius:50%;overflow:hidden;margin-bottom:14px;background:#eee"><img src="assets/team/mohit.webp" alt="Mohit C." loading="lazy" decoding="async" style="display:block;width:100%;height:100%;object-fit:cover;transform:scale(1.08)"></div>
+                <figcaption style="display:flex;flex-direction:column;gap:4px"><span style="font-size:19px;letter-spacing:-0.01em;color:var(--color-text)">Mohit C.</span><span style="font-size:13px;color:var(--color-neutral-500)">Shorts / Reels Editor</span></figcaption>
+              </figure>
+              <figure style="margin:0;display:flex;flex-direction:column;align-items:center;gap:6px;text-align:center;padding:28px 20px 26px;border-radius:var(--radius-md);background:var(--color-bg);box-shadow:0 1px 2px rgba(0,0,0,0.05),inset 0 0 0 1px var(--color-divider);transition:transform 240ms cubic-bezier(.2,.8,.2,1), box-shadow 240ms ease" style-hover="transform:translateY(-6px);box-shadow:0 20px 36px -18px rgba(0,0,0,0.3),inset 0 0 0 1px var(--color-divider)">
+                <div style="width:132px;height:132px;border-radius:50%;overflow:hidden;margin-bottom:14px;background:#eee"><img src="assets/team/jayesh.webp" alt="Jayesh S." loading="lazy" decoding="async" style="display:block;width:100%;height:100%;object-fit:cover;transform:scale(1.08)"></div>
+                <figcaption style="display:flex;flex-direction:column;gap:4px"><span style="font-size:19px;letter-spacing:-0.01em;color:var(--color-text)">Jayesh S.</span><span style="font-size:13px;color:var(--color-neutral-500)">Shorts / Reels Editor</span></figcaption>
+              </figure>
+              <a href="mailto:rahul@americanbhau.com?subject=Joining%20the%20American%20Bhau%20team" style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;text-align:center;padding:28px 20px 26px;border-radius:var(--radius-md);background:transparent;box-shadow:inset 0 0 0 1px var(--color-neutral-700);text-decoration:none;color:var(--color-text);transition:transform 240ms cubic-bezier(.2,.8,.2,1), background 240ms ease" style-hover="transform:translateY(-6px);background:var(--color-bg)">
+                <div style="display:grid;place-items:center;width:132px;height:132px;border-radius:50%;margin-bottom:14px;box-shadow:inset 0 0 0 1px var(--color-neutral-700);font-size:30px;letter-spacing:-0.02em">You?</div>
+                <span style="font-size:19px;letter-spacing:-0.01em">Join the team</span>
+                <span style="font-size:13px;color:var(--color-neutral-500)">Send us your work →</span>
+              </a>
+            </div>
+            <p style="margin:0;max-width:72ch;font-size:16px;line-height:27px;color:color-mix(in srgb, var(--color-text) 80%, transparent)">We are always looking for <strong style="font-weight:500;color:var(--color-text)">Video Editors, Designers, and Script Writers.</strong> If you’ve got the skills and the drive to create top content, send your resume and details to: <a href="mailto:rahul@americanbhau.com" style="color:var(--color-text);text-decoration:underline;text-underline-offset:3px">rahul@americanbhau.com</a></p>
+          </div>
+        </section>
+      </div>
+    </sc-if>
+
+    <sc-if value="{{ is.contact }}" hint-placeholder-val="{{ false }}">
+      <div data-screen-label="Contact">
+        <section style="max-width:1200px;margin:0 auto;padding:clamp(56px,9vw,112px) clamp(20px,5vw,72px) clamp(56px,7vw,98px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr));gap:clamp(40px,6vw,96px);align-items:start">
+          <div style="display:flex;flex-direction:column;gap:28px">
+            <div style="display:flex;align-items:center;gap:12px;font-size:13px;letter-spacing:0.06em;text-transform:uppercase;color:var(--color-accent)"><span style="width:28px;height:1px;background:var(--color-accent)"></span>Contact Us</div>
+            <h1 style="font-size:clamp(40px,5.4vw,72px);line-height:1.1;letter-spacing:-0.015em;margin:0;margin-left:-0.04em">Ready to tell your story?</h1>
+            <p style="font-size:17px;line-height:28px;margin:0;max-width:44ch;color:color-mix(in srgb, var(--color-text) 82%, transparent)">Contact American Bhau for social media consulting, podcast features &amp; content that actually works for your business!</p>
+            <div style="display:flex;flex-direction:column;gap:14px;margin-top:8px;font-size:15px">
+              <div style="display:flex;gap:16px;align-items:baseline"><span style="width:88px;flex:none;font-size:13px;color:color-mix(in srgb, var(--color-text) 60%, transparent)">Email</span><a href="mailto:rahul@americanbhau.com">rahul@americanbhau.com</a></div>
+              <div style="display:flex;gap:16px;align-items:baseline"><span style="width:88px;flex:none;font-size:13px;color:color-mix(in srgb, var(--color-text) 60%, transparent)">Instagram</span><a href="https://www.instagram.com/american_bhau/" target="_blank">@american_bhau</a></div>
+              <div style="display:flex;gap:16px;align-items:baseline"><span style="width:88px;flex:none;font-size:13px;color:color-mix(in srgb, var(--color-text) 60%, transparent)">YouTube</span><a href="https://www.youtube.com/@american-bhau" target="_blank">@american-bhau</a></div>
+              <div style="display:flex;gap:16px;align-items:baseline"><span style="width:88px;flex:none;font-size:13px;color:color-mix(in srgb, var(--color-text) 60%, transparent)">LinkedIn</span><a href="https://www.linkedin.com/in/americanbhau/" target="_blank">in/americanbhau</a></div>
+            </div>
+          </div>
+          <div class="card elev-md" style="padding:var(--space-5)">
+            <sc-if value="{{ sent }}" hint-placeholder-val="{{ false }}">
+              <div style="display:flex;flex-direction:column;gap:14px;padding:var(--space-4) 0">
+                <h2 style="font-size:24px;margin:0">Thank you, {{ firstName }}.</h2>
+                <p style="margin:0;font-size:15px;line-height:26px;color:color-mix(in srgb, var(--color-text) 78%, transparent)">Your message is in. Rahul will get back to you soon.</p>
+                <div style="display:flex"><button type="button" class="btn btn-ghost" onClick="{{ reset }}">Send another message</button></div>
+              </div>
+            </sc-if>
+            <sc-if value="{{ notSent }}" hint-placeholder-val="{{ true }}">
+              <form onSubmit="{{ submit }}" style="display:flex;flex-direction:column;gap:var(--space-4)">
+                <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,180px),1fr));gap:var(--space-4)">
+                  <div class="field"><label for="c-name">Name</label><input id="c-name" class="input" name="name" required="" placeholder="Your name" onInput="{{ onName }}"></div>
+                  <div class="field"><label for="c-biz">Business</label><input id="c-biz" class="input" name="business" placeholder="Business name"></div>
+                </div>
+                <div class="field"><label for="c-email">Email or WhatsApp</label><input id="c-email" class="input" name="contact" required="" placeholder="you@business.com"></div>
+                <div class="field"><label for="c-need">I’m interested in</label>
+                  <select id="c-need" class="input" name="need">
+                    <option>Social media consulting</option>
+                    <option>Podcast feature</option>
+                    <option>Video production</option>
+                    <option>Being a podcast guest</option>
+                  </select>
+                </div>
+                <div class="field"><label for="c-msg">Tell us about your business</label><textarea id="c-msg" class="input" name="message" rows="5" placeholder="What you do, who you serve, and what you want to grow"></textarea></div>
+                <input name="website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px">
+                <div style="display:flex"><button type="submit" class="btn btn-primary">Send message</button></div>
+              </form>
+            </sc-if>
+          </div>
+        </section>
+      </div>
+    </sc-if>
+
+  </main>
+
+  <footer style="max-width:1200px;width:100%;box-sizing:border-box;margin:0 auto;padding:0 clamp(20px,5vw,72px)">
+    <div style="height:1px;background:linear-gradient(to right,transparent,var(--color-divider) 48px calc(100% - 48px),transparent)"></div>
+    <div style="display:flex;flex-wrap:wrap;gap:24px 56px;justify-content:space-between;padding:40px 0 48px;font-size:13px;color:color-mix(in srgb, var(--color-text) 60%, transparent)">
+      <div style="display:flex;flex-direction:column;gap:10px">
+        <span style="font-family:var(--font-heading);font-weight:var(--font-heading-weight);font-size:16px;color:var(--color-text)">American Bhau</span>
+        <a href="mailto:rahul@americanbhau.com">rahul@americanbhau.com</a>
+      </div>
+      <div style="display:flex;gap:20px;flex-wrap:wrap;align-items:start">
+        <a href="#home" style="color:inherit">Home</a>
+        <a href="#consulting" style="color:inherit">Consulting</a>
+        <a href="#podcast" style="color:inherit">Podcast</a>
+        <a href="#brands" style="color:inherit">Brands</a>
+        <a href="#about" style="color:inherit">About Us</a>
+        <a href="#story" style="color:inherit">Contact</a>
+      </div>
+      <span style="width:100%">Copyright © 2025 American Bhau</span>
+    </div>
+  </footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;startPage&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;home&quot;,&quot;consulting&quot;,&quot;podcast&quot;,&quot;brands&quot;,&quot;about&quot;,&quot;contact&quot;],&quot;default&quot;:&quot;home&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;showHeroPhoto&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;},&quot;paperAccent&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;lime&quot;,&quot;mono&quot;],&quot;default&quot;:&quot;lime&quot;,&quot;tsType&quot;:&quot;string&quot;}}">
+class Component extends DCLogic {
+  state = { page: null, sent: false, name: '' };
+  pages = ['home', 'consulting', 'podcast', 'brands', 'about', 'contact', 'what-we-do', 'episodes', 'story'];
+  componentDidMount() {
+    this.onHash = () => {
+      let h = location.hash.slice(1);
+      if (h === 'contact') { h = 'story'; try { history.replaceState(null, '', '#story'); } catch (err) {} }
+      if (this.pages.includes(h)) {
+        this.setState(h === 'home' ? { page: h, fromShelf: null } : { page: h });
+        window.scrollTo({ top: 0, behavior: 'instant' });
+        if (h === 'home' && this._scrollShelf) {
+          this._scrollShelf = false;
+          setTimeout(() => { const el = document.getElementById('shelf'); if (el) window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY - 72, behavior: 'instant' }); }, 60);
+        }
+      }
+    };
+    addEventListener('hashchange', this.onHash);
+    this.onHash();
+  }
+  componentWillUnmount() { removeEventListener('hashchange', this.onHash); removeEventListener('bookshelf:state', this.onShelfState); removeEventListener('keydown', this.onShelfKey); removeEventListener('resize', this.onVw); document.documentElement.style.overflow = ''; }
+  goPage(e, p) {
+    if (e) e.preventDefault();
+    const bi = document.querySelector('book-intro'); if (bi) bi.style.display = 'none';
+    if (location.hash !== '#' + p) { try { history.pushState(null, '', '#' + p); } catch (err) {} }
+    this.setState({ page: p });
+    window.scrollTo({ top: 0, behavior: 'instant' });
+  }
+  testimonialList = [
+        { quote: 'During the 2025 mango import crisis, it was crucial to explain the realities of USDA regulations and export challenges. Rahul provided a professional, authentic platform to share these hard-earned lessons. The response from fellow business owners has been overwhelming. He doesn’t just tell stories—he helps guide and protect the community.',
+          name: 'Client name', role: 'Mango importer' },
+        { quote: 'Sharing our journey on the American Bhau Podcast was soulful and uplifting, reflecting the real struggles and growth of a Maharashtrian building a business in the U.S. Rahul’s ability to bring out authentic stories with heart makes this platform truly meaningful for the Marathi community.',
+          name: 'Client name', role: 'Podcast guest' },
+        { quote: 'Pallavi and Rahul are true rockstars! Pallavi’s constant motivation helps entrepreneurs grow, scale, and believe in their potential, while partnering with American Bhau became a turning point for Spicy Tango. Rahul didn’t just give us a platform—he gave us a voice that connected deeply with the community, boosted our visibility, and drove real sales.',
+          name: 'Spicy Tango', role: 'Brand partner' }
+      ];
+  // [name, link] — paste each brand's website or Instagram URL as the second item
+  brandLinks = [
+    ['Soul Foods', ''], ['Tikka House', ''], ['Marathi Grocery', ''], ['7 Monk’s Cafe', ''], ['Pav Bhaji Express', ''],
+    ['The Paratha Rollers', ''], ['Lotus', ''], ['Paan & Pearls', ''], ['Inheritage', ''], ['Spicy Tango', ''],
+    ['La Prima Montessori', ''], ['Fresh Mangoes', ''], ['Infinity Content Creations', ''], ['SecureLayer7', ''], ['Mudra', ''],
+    ['Brazos Smiles', ''], ['Samay', ''], ['Two Brothers Organic Farms', ''], ['Farm to Table', ''], ['AyurNutrition', ''],
+    ['Austin Vada Pav', ''], ['Chugh', ''], ['NAFA Film Club', ''], ['Zatka Vada Pav', ''], ['Indie Sportsplex', '']
+  ];
+  shelfCmd(detail) { dispatchEvent(new CustomEvent('bookshelf:command', { detail })); }
+  shelfBooks = [
+    { title: 'What We Do', href: '#what-we-do', label: 'Our services', bg: '#1b2f4a', ink: '#f4f1ea',
+      note: 'Video, community and social media that brings in customers.',
+      desc: 'We come to your location, shoot your story and create professional videos. Then we put your business in front of our community and set up the social media that keeps it growing.',
+      meta: [['Video', 'On location · drone footage'], ['Showcase', 'Videos, vlogs, podcasts, reels'], ['Social', 'Strategy · targeted ads'], ['Result', 'A premium brand']] },
+    { title: 'Consulting', href: '#consulting', label: 'Social media growth', bg: '#a8452a', ink: '#fbf1e6',
+      note: 'Stop talking to an empty room.',
+      desc: 'Stop talking to an empty room! Instead, come stand on my stage. I have spent years building a family of thousands who trust me.',
+      meta: [['For', 'Marathi businesses in the U.S.'], ['Approach', 'Borrow our audience'], ['Channels', 'YouTube · Instagram · Podcast'], ['Goal', 'Visibility that converts']] },
+    { title: 'Latest Episodes', href: '#episodes', label: 'New on the podcast', bg: '#2d5a3d', ink: '#eef2e8',
+      note: 'Fresh conversations with founders and creators.',
+      desc: 'The newest conversations from the American Bhau Podcast: how Tikka House grew to five restaurants across Texas in 12 months, and Sukirt on the truth about his YouTube journey.',
+      meta: [['Featuring', 'Tikka House · Sukirt'], ['Also', 'The American Bhau Show (English)'], ['Listen', 'YouTube · Spotify · Apple'], ['Language', 'Marathi & English']] },
+    { title: 'Podcast', href: '#podcast', label: 'Stories & visibility', bg: '#1f3a94', ink: '#eef2f8',
+      note: 'Marathi businesses, global audiences.',
+      desc: 'This podcast is dedicated to promoting Marathi businesses, connecting them with global audiences, and empowering entrepreneurs through inspiring stories and visibility.',
+      meta: [['Host', 'Rahul Patil'], ['Guests', 'Founders & creators'], ['Listen', 'YouTube · Spotify · Apple'], ['Be a guest', 'Contact us']] },
+    { title: 'Brands', href: '#brands', label: 'Borrow our audience', bg: '#962c25', ink: '#fbece8',
+      note: 'Instant trust from a community that listens.',
+      desc: 'You don’t have to build an audience from scratch. You “borrow” ours to get instant trust, visibility, and new customers.',
+      meta: [['Partners', 'Tikka House · Spicy Tango'], ['Where', 'Across the U.S.'], ['Proof', 'What they say'], ['Outcome', 'Real sales']] },
+    { title: 'About Us', href: '#about', label: 'From Dhule to America', bg: '#244a3b', ink: '#f2eee2',
+      note: 'A Dhule village, a safe job, and a mission.',
+      desc: 'I was born in a small village near Dhule, Maharashtra. In 2023, I quit my job and started American Bhau. What kept us going was the mission.',
+      meta: [['Roots', 'Farming, near Dhule'], ['Founded', '2023'], ['Inspired by', 'Naval Ravikant'], ['Series', 'Navalai, in Marathi']] },
+    { title: 'Ready to Tell Your Story?', href: '#story', label: 'Let’s grow your brand', bg: '#8fb3c4', ink: '#13293a',
+      note: 'Consulting, podcast features and how to reach us.',
+      desc: 'Contact American Bhau for social media consulting, podcast features & content that actually works for your business!',
+      meta: [['Email', 'rahul@americanbhau.com'], ['Instagram', '@american_bhau'], ['YouTube', '@american-bhau'], ['LinkedIn', 'in/americanbhau']] }
+  ];
+  shelfGo(idx) {
+    const href = this.shelfBooks[idx].href;
+    this.shelfCmd({ focus: -1 });
+    this._lock = false; document.documentElement.style.overflow = '';
+    if (href.startsWith('home:')) {
+      setTimeout(() => { const el = document.getElementById(href.slice(5)); if (el) window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY - 72, behavior: 'smooth' }); }, 60);
+    } else { this.setState({ fromShelf: idx }); location.hash = href; }
+  }
+  shelfVals() {
+    if (!this.onShelfState) {
+      this.onShelfState = e => this.setState({ sh: e.detail });
+      this.onShelfKey = e => { if (e.key === 'Escape' && this.state.sh && this.state.sh.selected >= 0) this.shelfCmd({ focus: -1 }); };
+      this.onVw = () => { if (this._vwRaf) return; this._vwRaf = requestAnimationFrame(() => { this._vwRaf = 0; if ((this.state.vw ?? 0) !== innerWidth) this.setState({ vw: innerWidth }); }); };
+      this.coarse = matchMedia('(pointer: coarse)').matches;
+      addEventListener('bookshelf:state', this.onShelfState); addEventListener('keydown', this.onShelfKey); addEventListener('resize', this.onVw);
+    }
+    const st = this.state.sh || { active: 3, selected: -1, open: false, spread: 0, spreads: 3 };
+    const n = this.shelfBooks.length, sel = st.selected, open = sel >= 0;
+    if (typeof document !== 'undefined' && this._lock !== open) { this._lock = open; document.documentElement.style.overflow = open ? 'hidden' : ''; }
+    const ci = open ? sel : st.active, c = this.shelfBooks[ci];
+    const pad = k => String(k + 1).padStart(2, '0');
+    const wide = (this.state.vw ?? (typeof innerWidth === 'number' ? innerWidth : 1200)) >= 900;
+    const labels = ['Title page', 'Inside', 'Next step'];
+    const page = this.state.page || this.props.startPage || 'home';
+    const fs = this.state.fromShelf, has = typeof fs === 'number' && page !== 'home';
+    return {
+      stage: { ...(open ? { pos: 'fixed', z: 60, radius: '0' } : { pos: 'absolute', z: 1, radius: 'var(--radius-md)' }), bg: c.bg, ink: c.ink },
+      shelfIdle: !open, shelfOpen: open,
+      browseHint: this.coarse ? 'Swipe sideways to browse' : 'Scroll up or down on the touchpad to browse',
+      pageHint: this.coarse ? 'Tap the pages to turn them' : 'Click the pages to turn them · Esc to go back',
+      shelfCur: { ...c, hasPage: !!c.href, kicker: 'Volume ' + pad(ci) + ' · ' + c.label, meta: c.meta.map(([k, v]) => ({ k, v })) },
+      shelfCount: pad(ci) + ' / ' + String(n).padStart(2, '0'),
+      shelfPrev: () => this.shelfCmd({ step: -1 }),
+      shelfNext: () => this.shelfCmd({ step: 1 }),
+      shelfOpenActive: () => this.shelfCmd({ focus: st.active }),
+      shelfMarkers: this.shelfBooks.map((bk, k) => ({ title: bk.title, on: k === st.active ? 'true' : 'false', w: k === st.active ? '26px' : '16px', h: k === st.active ? '2px' : '1px', o: k === st.active ? 1 : 0.45, go: () => this.shelfCmd({ center: k }) })),
+      panel: wide
+        ? { top: '50%', right: 'clamp(32px,5vw,80px)', bottom: 'auto', left: 'auto', width: 'min(34vw,440px)', transform: 'translateY(-50%)', maxH: '82vh' }
+        : { top: 'auto', right: '16px', bottom: 'max(16px, env(safe-area-inset-bottom))', left: '16px', width: 'auto', transform: 'none', maxH: '48svh' },
+      pageNav: {
+        label: st.open ? labels[st.spread] : 'Closed',
+        sub: st.open ? pad(st.spread) + ' / ' + String(st.spreads).padStart(2, '0') : 'Click the book to open',
+        prevO: st.open ? 1 : 0.35, nextO: st.open && st.spread >= st.spreads - 1 ? 0.35 : 1,
+        toggle: st.open ? 'Close book' : 'Open book'
+      },
+      closeShelf: () => this.shelfCmd({ focus: -1 }),
+      toggleCover: () => this.shelfCmd({ cover: !st.open }),
+      pagePrev: () => this.shelfCmd({ page: -1 }),
+      pageNext: () => this.shelfCmd({ page: 1 }),
+      openFull: () => this.shelfGo(sel),
+      showBack: has,
+      th: ({
+        'what-we-do': { bg: '#efe6d6', surface: '#e6dac4', text: '#2a2118', accent: '#6b4f2a', accentHover: '#8a6a3a', divider: 'color-mix(in srgb, #2a2118 16%, transparent)', muted: '#6e5d45', line: '#cdbb9b' },
+        consulting: { bg: '#e4e7e2', surface: '#d9ddd7', text: '#1f2426', accent: '#34433f', accentHover: '#4b5c57', divider: 'color-mix(in srgb, #1f2426 15%, transparent)', muted: '#566060', line: '#c2c8c1' }
+      })[this.state.page] || { bg: '', surface: '', text: '', accent: '', accentHover: '', divider: '', muted: '', line: '' },
+      backLabel: has ? 'Volume ' + pad(fs) + ' of ' + String(n).padStart(2, '0') + ' · ' + this.shelfBooks[fs].title : '',
+      goBack: () => { this._scrollShelf = true; location.hash = '#home'; }
+    };
+  }
+  renderVals() {
+    const page = this.state.page || this.props.startPage || 'home';
+    const is = {}, cur = {};
+    this.pages.forEach(p => { is[p.replace(/-/g, '')] = p === page; cur[p] = p === page ? 'page' : 'false'; });
+    return {
+      is, cur,
+      ...this.shelfVals(),
+      goContact: e => this.goPage(e, 'contact'),
+      goPodcast: e => this.goPage(e, 'podcast'),
+      showHeroPhoto: this.props.showHeroPhoto ?? true,
+      paperAccent: (this.props.paperAccent ?? 'lime') === 'lime' ? '#c6f432' : '#d0d0d0',
+      sent: this.state.sent, notSent: !this.state.sent,
+      firstName: (this.state.name.trim().split(' ')[0]) || 'friend',
+      onName: e => this.setState({ name: e.target.value }),
+      submit: e => {
+        e.preventDefault();
+        fetch('/contact.php', { method: 'POST', body: new FormData(e.target) })
+          .then(r => { if (!r.ok) throw 0; this.setState({ sent: true }); })
+          .catch(() => alert('Could not send. Please email rahul@americanbhau.com'));
+      },
+      reset: () => this.setState({ sent: false, name: '' }),
+      services: [
+        { num: '01', title: 'Professional video production',
+          short: 'We come to your location, shoot your story and create professional videos, including drone footage.',
+          lines: ['Come to your location.', 'Shoot your story.', 'Create professional videos.', 'Drone footage.'],
+          outcome: 'Your business will stand out as premium brand.' },
+        { num: '02', title: 'Community showcase',
+          short: 'We showcase your business to our massive, loyal community through videos, vlogs, podcasts and reels/shorts.',
+          lines: ['We showcase your business to our massive, loyal community through our videos, vlogs, podcasts and reels/shorts.', 'You don’t have to build an audience from scratch. You “borrow” ours to get instant trust, visibility, and new customers.'],
+          outcome: 'Drive visibility that converts to potential buyers.' },
+        { num: '03', title: 'Social media management',
+          short: 'Your entire social media strategy and targeted ads, set up to bring in sales while you sleep.',
+          lines: ['Set up your entire social media strategy.', 'Run targeted ads to reach the right people.'],
+          outcome: 'Turn your social media from a “ghost town” into a lead-generation machine that brings in sales while you sleep.' }
+      ],
+      serviceRoll: [0, 1].flatMap(r => [
+        { kicker: 'Video · Drone · Story', title: 'Professional video production', short: 'We come to your location, shoot your story and create professional videos, including drone footage.' },
+        { kicker: 'Videos · Vlogs · Reels', title: 'Community showcase', short: 'We showcase your business to our massive, loyal community through videos, vlogs, podcasts and reels/shorts.' },
+        { kicker: 'Strategy · Ads · Leads', title: 'Social media management', short: 'Your entire social media strategy and targeted ads, set up to bring in sales while you sleep.' }
+      ]),
+      helpSteps: [
+        { num: '01', title: 'Understand your business', body: 'A call to learn who your customers are, what sets you apart and what you want social media to do for you.' },
+        { num: '02', title: 'Build the plan', body: 'A clear content plan: which platforms, what to post, how often, and the story your brand should tell.' },
+        { num: '03', title: 'Create and publish', body: 'We film on location, edit, and publish across our channels and yours, so your business reaches our community.' },
+        { num: '04', title: 'Grow what works', body: 'Targeted ads and regular check-ins. We keep what brings in enquiries and change what doesn’t.' },
+        { num: '05', title: 'Every day you stay quiet, you become invisible.', body: 'People are scrolling through their phones right now, but are they stopping for you? Probably not. You might try filming yourself or hiring strangers who don’t understand our culture, but your videos just sit there with zero likes.' }
+      ].map((h, i) => ({ ...h, top: 'calc(clamp(64px, 9vw, 96px) + ' + i + ' * clamp(12px, 2vw, 22px))', bg: ['#eceae5', '#e3e4e0', '#dcdfdd', '#d8dcdd', '#e4ded6'][i % 5] })),
+      podcastVideos: [
+        { url: 'https://www.youtube.com/watch?v=97Axl8vcTpM', thumb: 'https://i.ytimg.com/vi/97Axl8vcTpM/hqdefault.jpg', kicker: 'Health & tradition', title: 'Ancient Ayurveda and Modern America: Gauri Junnarkar', summary: 'A conversation with Ayurveda expert Gauri Junnarkar on bringing ancient practice to life in the US.' },
+        { url: 'https://www.youtube.com/watch?v=VfeScbPywyA', thumb: 'https://i.ytimg.com/vi/VfeScbPywyA/hqdefault.jpg', kicker: 'Restaurants', title: 'How We Run Multiple Indian Restaurants Business in USA', summary: 'Running several Indian restaurants in the United States, from the people who do it.' },
+        { url: 'https://www.youtube.com/watch?v=DrpAseiNxKQ', thumb: 'https://i.ytimg.com/vi/DrpAseiNxKQ/hqdefault.jpg', kicker: 'Career change', title: 'My Journey From IT to Food Truck Business', summary: 'Leaving a career in IT to start a food truck in America.' },
+        { url: 'https://www.youtube.com/watch?v=c3LQkLSpNOc', thumb: 'https://i.ytimg.com/vi/c3LQkLSpNOc/hqdefault.jpg', kicker: 'Social startup', title: 'How My Social Startup Is Changing Lives in India', summary: 'Amol Bhinge on building a social startup in India.' },
+        { url: 'https://www.youtube.com/watch?v=_U8lV5oD57A', thumb: 'https://i.ytimg.com/vi/_U8lV5oD57A/hqdefault.jpg', kicker: 'Small business', title: 'Petrol Pump Business in USA', summary: 'Three Marathi youths from small towns in Maharashtra on running petrol pumps in America.' },
+        { url: 'https://www.youtube.com/watch?v=8opYYrGFTac', thumb: 'https://i.ytimg.com/vi/8opYYrGFTac/hqdefault.jpg', kicker: 'In English', title: 'The American Bhau Story on Safe Simple Sound', summary: 'Rahul tells the American Bhau story, in English, as a guest on the Safe Simple Sound podcast.' }
+      ],
+      episodes: [
+        { src: 'assets/episodes/ep-1.webp', url: 'https://www.youtube.com/@american-bhau/search?query=Gauri%20Deshmukh', date: 'December 28, 2025', title: 'From Master’s Degrees to YouTube Stardom: Gauri Deshmukh on the American Bhau Podcast',
+          summary: 'Gauri Deshmukh shares her unconventional journey from higher education to YouTube success, creativity, consistency, and personal branding insights.' },
+        { src: 'assets/episodes/ep-2.webp', url: 'https://www.youtube.com/@american-bhau/search?query=Round%20Table', date: 'December 20, 2025', title: 'The American Dream: Insights from the Marathi Entrepreneurs’ Round Table !',
+          summary: 'Marathi entrepreneurs discuss challenges, opportunities, failures, and mindset shifts required to build successful businesses in the United States.' },
+        { src: 'assets/episodes/ep-3.webp', url: 'https://www.youtube.com/@american-bhau/search?query=Sonali%20Patil', date: 'December 16, 2025', title: 'From Cancer Research to Classrooms: How Sonali Patil Built a Montessori Legacy in Texas !',
+          summary: 'Sonali Patil’s inspiring transition from cancer research to founding a successful Montessori education ecosystem in Texas.' }
+      ],
+      get brandRows() { const l = this.brandLogos; return [[0, 6], [6, 12], [12, 18], [18, 22], [22, 25]].map(([s, e]) => l.slice(s, e)); },
+      testiCards: (() => {
+        const list = this.testimonialList || [], act = this.state.testi ?? -1;
+        const rots = [-5, 2.5, -2, 4, -3.5], ys = [18, -10, 26, 0, 12];
+        return list.map((t, i) => {
+          const on = i === act;
+          return { ...t,
+            z: on ? 30 : i + 1,
+            margin: '0 clamp(-36px,-2.5vw,-8px)',
+            transform: on ? 'translateY(-18px) rotate(0deg) scale(1.08)' : 'translateY(' + ys[i % 5] + 'px) rotate(' + rots[i % 5] + 'deg)',
+            hover: on ? 'translateY(-22px) rotate(0deg) scale(1.1)' : 'translateY(' + (ys[i % 5] - 14) + 'px) rotate(' + (rots[i % 5] * 0.4) + 'deg) scale(1.03)',
+            shadow: on ? '0 36px 60px -20px rgba(60,48,20,0.5)' : '0 14px 28px -14px rgba(60,48,20,0.35)',
+            pressed: on ? 'true' : 'false',
+            hint: on ? 'Tap to put back' : 'Tap to read',
+            open: () => this.setState({ testi: on ? -1 : i }),
+            key: e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); this.setState({ testi: on ? -1 : i }); } }
+          };
+        });
+      })(),
+      brandLogos: this.brandLinks.map((b, i) => ({ name: b[0], src: 'assets/brands/' + String(i + 1).padStart(2, '0') + '.png', url: b[1] || ('https://www.google.com/search?q=' + encodeURIComponent(b[0] + ' instagram')), label: 'Open ' + b[0] + ' in a new tab' })),
+      testimonials: this.testimonialList
+    };
+  }
+}
+</script>
+</body>
+</html>
