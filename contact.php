@@ -9,10 +9,16 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') fail(405);
 if (!empty($_POST['website'])) exit; // honeypot: bots fill it, pretend success
 
 $f = [];
-foreach (['name', 'business', 'contact', 'need', 'message'] as $k) {
+foreach (['firstName', 'lastName', 'email', 'countryCode', 'phone', 'message'] as $k) {
     $f[$k] = htmlspecialchars(trim($_POST[$k] ?? ''), ENT_QUOTES, 'UTF-8');
 }
-if ($f['name'] === '' || $f['contact'] === '') fail(400);
+if ($f['firstName'] === '' || !filter_var($f['email'], FILTER_VALIDATE_EMAIL)) fail(400);
+$f = [
+    'name' => trim($f['firstName'] . ' ' . $f['lastName']),
+    'email' => $f['email'],
+    'whatsapp' => trim($f['countryCode'] . ' ' . $f['phone']),
+    'message' => $f['message'],
+];
 
 $html = '';
 foreach ($f as $k => $v) $html .= '<p><b>' . ucfirst($k) . ':</b> ' . nl2br($v) . '</p>';

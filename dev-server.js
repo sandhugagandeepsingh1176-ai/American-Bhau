@@ -8,8 +8,9 @@ const esc = s => String(s || '').trim().replace(/[&<>"']/g, c => '&#' + c.charCo
 async function contact(body) {
   const p = new URLSearchParams(body);
   if (p.get('website')) return 200; // honeypot
-  const f = Object.fromEntries(['name', 'business', 'contact', 'need', 'message'].map(k => [k, esc(p.get(k))]));
-  if (!f.name || !f.contact) return 400;
+  const g = k => esc(p.get(k));
+  if (!g('firstName') || !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(g('email'))) return 400;
+  const f = { name: `${g('firstName')} ${g('lastName')}`.trim(), email: g('email'), whatsapp: `${g('countryCode')} ${g('phone')}`.trim(), message: g('message') };
   if (!cfg.key) { console.log('[dry-run] enquiry:', f); return 200; }
   const r = await fetch('https://us1.platform.bird.com/email', {
     method: 'POST',

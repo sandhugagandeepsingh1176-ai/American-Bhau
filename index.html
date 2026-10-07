@@ -280,21 +280,22 @@ a:hover { color: var(--color-accent-300); }
             <sc-if value="{{ notSent }}" hint-placeholder-val="{{ true }}">
               <form onSubmit="{{ submit }}" style="display:flex;flex-direction:column;gap:var(--space-4)">
                 <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,180px),1fr));gap:var(--space-4)">
-                  <div class="field"><label for="c-name">Name</label><input id="c-name" class="input" name="name" required="" placeholder="Your name" onInput="{{ onName }}"></div>
-                  <div class="field"><label for="c-biz">Business</label><input id="c-biz" class="input" name="business" placeholder="Business name"></div>
+                  <div class="field"><label for="c-first">First name</label><input id="c-first" class="input" name="firstName" required="" autocomplete="given-name" placeholder="Enter your first name" onInput="{{ onName }}"></div>
+                  <div class="field"><label for="c-last">Last name</label><input id="c-last" class="input" name="lastName" required="" autocomplete="family-name" placeholder="Enter your last name"></div>
                 </div>
-                <div class="field"><label for="c-email">Email or WhatsApp</label><input id="c-email" class="input" name="contact" required="" placeholder="you@business.com"></div>
-                <div class="field"><label for="c-need">I’m interested in</label>
-                  <select id="c-need" class="input" name="need">
-                    <option>Social media consulting</option>
-                    <option>Podcast feature</option>
-                    <option>Video production</option>
-                    <option>Being a podcast guest</option>
-                  </select>
+                <div class="field"><label for="c-email">Email</label><input id="c-email" class="input" type="email" name="email" required="" autocomplete="email" placeholder="Enter your email"></div>
+                <div class="field"><label for="c-phone">WhatsApp number</label>
+                  <div style="display:flex;gap:8px">
+                    <select class="input" name="countryCode" aria-label="Select country code" style="flex:none;width:auto;max-width:9.5em">
+                      <sc-for list="{{ countryCodes }}" as="cc" hint-placeholder-count="3"><option value="{{ cc.value }}">{{ cc.label }}</option></sc-for>
+                    </select>
+                    <input id="c-phone" class="input" type="tel" name="phone" required="" pattern="[0-9]{4,15}" title="Digits only, 4 to 15" autocomplete="tel-national" placeholder="Enter WhatsApp number" style="flex:1;min-width:0">
+                  </div>
                 </div>
-                <div class="field"><label for="c-msg">Tell us about your business</label><textarea id="c-msg" class="input" name="message" rows="5" placeholder="What you do, who you serve, and what you want to grow"></textarea></div>
+                <div class="field"><label for="c-msg">Message</label><textarea id="c-msg" class="input" name="message" rows="5" required="" placeholder="Enter your message"></textarea></div>
                 <input name="website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px">
-                <div style="display:flex"><button type="submit" class="btn btn-primary">Send message</button></div>
+                <button type="submit" class="btn btn-primary" style="width:100%">Submit</button>
+                <p style="margin:0;font-size:13px;line-height:20px;color:color-mix(in srgb, var(--color-text) 65%, transparent)">By sharing your email, you are agreeing to receive emails and communication through various channels used by American Bhau.</p>
               </form>
             </sc-if>
           </div>
@@ -533,21 +534,22 @@ a:hover { color: var(--color-accent-300); }
             <sc-if value="{{ notSent }}" hint-placeholder-val="{{ true }}">
               <form onSubmit="{{ submit }}" style="display:flex;flex-direction:column;gap:var(--space-4)">
                 <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,180px),1fr));gap:var(--space-4)">
-                  <div class="field"><label for="c-name">Name</label><input id="c-name" class="input" name="name" required="" placeholder="Your name" onInput="{{ onName }}"></div>
-                  <div class="field"><label for="c-biz">Business</label><input id="c-biz" class="input" name="business" placeholder="Business name"></div>
+                  <div class="field"><label for="c-first">First name</label><input id="c-first" class="input" name="firstName" required="" autocomplete="given-name" placeholder="Enter your first name" onInput="{{ onName }}"></div>
+                  <div class="field"><label for="c-last">Last name</label><input id="c-last" class="input" name="lastName" required="" autocomplete="family-name" placeholder="Enter your last name"></div>
                 </div>
-                <div class="field"><label for="c-email">Email or WhatsApp</label><input id="c-email" class="input" name="contact" required="" placeholder="you@business.com"></div>
-                <div class="field"><label for="c-need">I’m interested in</label>
-                  <select id="c-need" class="input" name="need">
-                    <option>Social media consulting</option>
-                    <option>Podcast feature</option>
-                    <option>Video production</option>
-                    <option>Being a podcast guest</option>
-                  </select>
+                <div class="field"><label for="c-email">Email</label><input id="c-email" class="input" type="email" name="email" required="" autocomplete="email" placeholder="Enter your email"></div>
+                <div class="field"><label for="c-phone">WhatsApp number</label>
+                  <div style="display:flex;gap:8px">
+                    <select class="input" name="countryCode" aria-label="Select country code" style="flex:none;width:auto;max-width:9.5em">
+                      <sc-for list="{{ countryCodes }}" as="cc" hint-placeholder-count="3"><option value="{{ cc.value }}">{{ cc.label }}</option></sc-for>
+                    </select>
+                    <input id="c-phone" class="input" type="tel" name="phone" required="" pattern="[0-9]{4,15}" title="Digits only, 4 to 15" autocomplete="tel-national" placeholder="Enter WhatsApp number" style="flex:1;min-width:0">
+                  </div>
                 </div>
-                <div class="field"><label for="c-msg">Tell us about your business</label><textarea id="c-msg" class="input" name="message" rows="5" placeholder="What you do, who you serve, and what you want to grow"></textarea></div>
+                <div class="field"><label for="c-msg">Message</label><textarea id="c-msg" class="input" name="message" rows="5" required="" placeholder="Enter your message"></textarea></div>
                 <input name="website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px">
-                <div style="display:flex"><button type="submit" class="btn btn-primary">Send message</button></div>
+                <button type="submit" class="btn btn-primary" style="width:100%">Submit</button>
+                <p style="margin:0;font-size:13px;line-height:20px;color:color-mix(in srgb, var(--color-text) 65%, transparent)">By sharing your email, you are agreeing to receive emails and communication through various channels used by American Bhau.</p>
               </form>
             </sc-if>
           </div>
@@ -723,6 +725,12 @@ class Component extends DCLogic {
       showHeroPhoto: this.props.showHeroPhoto ?? true,
       paperAccent: (this.props.paperAccent ?? 'lime') === 'lime' ? '#c6f432' : '#d0d0d0',
       sent: this.state.sent, notSent: !this.state.sent,
+      // Country codes from the Bird form: ISO + dial code + name. Flag is derived from the ISO code.
+      countryCodes: 'AF+93Afghanistan|AX+358-18Åland Islands|AL+355Albania|DZ+213Algeria|AS+1-684American Samoa|AD+376Andorra|AO+244Angola|AI+1-264Anguilla|AG+1-268Antigua & Barbuda|AR+54Argentina|AM+374Armenia|AW+297Aruba|AU+61Australia|AT+43Austria|AZ+994Azerbaijan|BS+1-242Bahamas|BH+973Bahrain|BD+880Bangladesh|BB+1-246Barbados|BY+375Belarus|BE+32Belgium|BZ+501Belize|BJ+229Benin|BM+1-441Bermuda|BT+975Bhutan|BO+591Bolivia|BA+387Bosnia & Herzegovina|BW+267Botswana|BV+47Bouvet Island|BR+55Brazil|IO+246British Indian Ocean Territory|VG+1-284British Virgin Islands|BN+673Brunei|BG+359Bulgaria|BF+226Burkina Faso|BI+257Burundi|KH+855Cambodia|CM+237Cameroon|CA+1Canada|CV+238Cape Verde|BQ+599Caribbean Netherlands|KY+1-345Cayman Islands|CF+236Central African Republic|TD+235Chad|CL+56Chile|CN+86China|CX+61Christmas Island|CC+61Cocos (Keeling) Islands|CO+57Colombia|KM+269Comoros|CG+242Congo - Brazzaville|CD+243Congo - Kinshasa|CK+682Cook Islands|CR+506Costa Rica|CI+225Côte d’Ivoire|HR+385Croatia|CU+53Cuba|CW+599Curaçao|CY+357Cyprus|CZ+420Czechia|DK+45Denmark|DJ+253Djibouti|DM+1-767Dominica|DO+1-809Dominican Republic|DO+1-829Dominican Republic|DO+1-849Dominican Republic|EC+593Ecuador|EG+20Egypt|SV+503El Salvador|GQ+240Equatorial Guinea|ER+291Eritrea|EE+372Estonia|SZ+268Eswatini|ET+251Ethiopia|FO+298Faroe Islands|FJ+679Fiji|FI+358Finland|FR+33France|GF+594French Guiana|PF+689French Polynesia|TF+262French Southern Territories|GA+241Gabon|GM+220Gambia|GE+995Georgia|DE+49Germany|GH+233Ghana|GI+350Gibraltar|GR+30Greece|GL+299Greenland|GD+1-473Grenada|GP+590Guadeloupe|GU+1-671Guam|GT+502Guatemala|GG+44-1481Guernsey|GN+224Guinea|GW+245Guinea-Bissau|GY+592Guyana|HT+509Haiti|HM+61Heard & McDonald Islands|HN+504Honduras|HK+852Hong Kong|HU+36Hungary|IS+354Iceland|IN+91India|ID+62Indonesia|IR+98Iran|IQ+964Iraq|IE+353Ireland|IM+44-1624Isle of Man|IL+972Israel|IT+39Italy|JM+1-876Jamaica|JP+81Japan|JE+44-1534Jersey|JO+962Jordan|KZ+7Kazakhstan|KE+254Kenya|KI+686Kiribati|KW+965Kuwait|KG+996Kyrgyzstan|LA+856Laos|LV+371Latvia|LB+961Lebanon|LS+266Lesotho|LR+231Liberia|LY+218Libya|LI+423Liechtenstein|LT+370Lithuania|LU+352Luxembourg|MO+853Macao|MG+261Madagascar|MW+265Malawi|MY+60Malaysia|MV+960Maldives|ML+223Mali|MT+356Malta|MH+692Marshall Islands|MQ+596Martinique|MR+222Mauritania|MU+230Mauritius|YT+262Mayotte|MX+52Mexico|FM+691Micronesia|MD+373Moldova|MC+377Monaco|MN+976Mongolia|ME+382Montenegro|MS+1-664Montserrat|MA+212Morocco|MZ+258Mozambique|MM+95Myanmar (Burma)|NA+264Namibia|NR+674Nauru|NP+977Nepal|NL+31Netherlands|NC+687New Caledonia|NZ+64New Zealand|NI+505Nicaragua|NE+227Niger|NG+234Nigeria|NU+683Niue|NF+672Norfolk Island|KP+850North Korea|MK+389North Macedonia|MP+1-670Northern Mariana Islands|NO+47Norway|OM+968Oman|PK+92Pakistan|PW+680Palau|PA+507Panama|PG+675Papua New Guinea|PY+595Paraguay|PE+51Peru|PH+63Philippines|PN+64Pitcairn Islands|PL+48Poland|PT+351Portugal|PR+1-787Puerto Rico|QA+974Qatar|RE+262Réunion|RO+40Romania|RU+7Russia|RW+250Rwanda|WS+685Samoa|SM+378San Marino|ST+239São Tomé & Príncipe|SA+966Saudi Arabia|SN+221Senegal|RS+381Serbia|SC+248Seychelles|SL+232Sierra Leone|SG+65Singapore|SX+1-721Sint Maarten|SK+421Slovakia|SI+386Slovenia|SB+677Solomon Islands|SO+252Somalia|ZA+27South Africa|KR+82South Korea|SS+211South Sudan|ES+34Spain|LK+94Sri Lanka|BL+590St. Barthélemy|SH+290St. Helena|KN+1-869St. Kitts & Nevis|LC+1-758St. Lucia|MF+590St. Martin|PM+508St. Pierre & Miquelon|VC+1-784St. Vincent & Grenadines|SD+249Sudan|SR+597Suriname|SJ+47Svalbard & Jan Mayen|SE+46Sweden|CH+41Switzerland|SY+963Syria|TJ+992Tajikistan|TZ+255Tanzania|TH+66Thailand|TL+670Timor-Leste|TG+228Togo|TK+690Tokelau|TO+676Tonga|TT+1-868Trinidad & Tobago|TN+216Tunisia|TR+90Türkiye|TM+993Turkmenistan|TC+1-649Turks & Caicos Islands|TV+688Tuvalu|VI+1-340U.S. Virgin Islands|UG+256Uganda|UA+380Ukraine|AE+971United Arab Emirates|GB+44United Kingdom|US+1United States|UY+598Uruguay|UZ+998Uzbekistan|VU+678Vanuatu|VA+39-06Vatican City|VE+58Venezuela|VN+84Vietnam|WF+681Wallis & Futuna|EH+212Western Sahara|YE+967Yemen|ZM+260Zambia|ZW+263Zimbabwe'.split('|').map(r => {
+        const [, iso, code, name] = r.match(/^([A-Z]{2})(\+[\d-]+)(.+)$/);
+        const flag = String.fromCodePoint(...[...iso].map(c => 0x1F1A5 + c.charCodeAt(0)));
+        return { value: code, label: `${flag} ${code} ${name}`, iso };
+      }).sort((a, b) => (b.iso === 'IN') - (a.iso === 'IN')), // India (+91) first = default
       firstName: (this.state.name.trim().split(' ')[0]) || 'friend',
       onName: e => this.setState({ name: e.target.value }),
       submit: e => {
