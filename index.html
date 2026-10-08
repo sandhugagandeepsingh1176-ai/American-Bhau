@@ -665,6 +665,7 @@ class Component extends DCLogic {
     const page = this.state.page || this.props.startPage || 'home';
     const is = {}, cur = {};
     this.pages.forEach(p => { is[p.replace(/-/g, '')] = p === page; cur[p] = p === page ? 'page' : 'false'; });
+    is.story = is.story || is.home; // "Ready to tell your story?" + Bird form also closes the home page
     return {
       is, cur,
       ...this.shelfVals(),
