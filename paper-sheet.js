@@ -162,7 +162,7 @@ class PaperSheet extends HTMLElement {
     const M = 80;
     x.fillStyle = ink; x.textBaseline = 'alphabetic';
     x.font = F(500, 26); x.fillText('AMERICAN BHAU', M, 118);
-    x.textAlign = 'right'; x.fillStyle = mute; x.fillText('SEASON 2025', W - M, 118); x.textAlign = 'left';
+    x.textAlign = 'right'; x.fillStyle = mute; x.fillText('SEASON ' + new Date().getFullYear(), W - M, 118); x.textAlign = 'left';
     x.fillStyle = ink; x.fillRect(M, 146, W - 2 * M, 3);
     x.font = F(500, 150); x.fillText('Featured', M - 6, 330); x.fillText('Business', M - 6, 480);
     x.fillStyle = mute; x.font = F(400, 30);
@@ -173,7 +173,7 @@ class PaperSheet extends HTMLElement {
     x.fillStyle = ink; x.textAlign = 'center';
     x.font = F(500, 22); x.fillText('ON THE', cx, cy - 30);
     x.font = F(500, 50); x.fillText('STAGE', cx, cy + 20);
-    x.font = F(500, 22); x.fillText('2025', cx, cy + 58); x.textAlign = 'left';
+    x.font = F(500, 22); x.fillText(String(new Date().getFullYear()), cx, cy + 58); x.textAlign = 'left';
     x.fillStyle = mute; x.font = F(500, 22); x.fillText('AWARDED TO', M, 700);
     x.fillStyle = ink; x.font = F(500, 58); x.fillText('Your Business', M, 780);
     x.fillRect(M, 808, W - 2 * M, 2);
