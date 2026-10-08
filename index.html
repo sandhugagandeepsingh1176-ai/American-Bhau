@@ -51,6 +51,12 @@ a:hover { color: var(--color-accent-300); }
   @supports (animation-timeline: view()) { @media (prefers-reduced-motion: no-preference) {
     .ab-bio-text > * { animation:ab-rise linear both; animation-timeline:view(); animation-range:entry 0% entry 60%; }
   } }
+  .btn-primary { background:var(--color-accent); color:var(--color-bg); border-color:var(--color-accent); }
+  .btn-primary:hover { background:var(--color-accent-300, var(--color-accent)); border-color:var(--color-accent-300, var(--color-accent)); color:var(--color-bg); }
+  .story-band { background:#eef5f8; box-shadow:0 0 0 100vmax #eef5f8; clip-path:inset(0 -100vmax); --color-accent:#1d5673; --color-accent-300:#276f93; }
+  @media (max-width:720px) { .brand-grid { display:flex !important; flex-flow:row wrap !important; justify-content:center; gap:16px !important; } .brand-grid > div { display:contents !important; } }
+  .story-band .card { background:#fff; }
+  .brand-tile { background:#fff; border-radius:18px; padding:12px; box-sizing:border-box; box-shadow:0 1px 2px rgb(0 0 0 / .06), 0 8px 20px -12px rgb(0 0 0 / .25); }
   @keyframes ab-rise { from { opacity:0; transform:translateY(36px); } to { opacity:1; transform:none; } }
   </style>
 </helmet>
@@ -268,7 +274,7 @@ a:hover { color: var(--color-accent-300); }
 
     <sc-if value="{{ is.story }}" hint-placeholder-val="{{ false }}">
       <div data-screen-label="Ready to Tell Your Story">
-        <section style="max-width:1200px;margin:0 auto;padding:clamp(56px,9vw,112px) clamp(20px,5vw,72px) clamp(56px,7vw,98px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr));gap:clamp(40px,6vw,96px);align-items:start">
+        <section class="story-band" style="max-width:1200px;margin:0 auto;padding:clamp(56px,9vw,112px) clamp(20px,5vw,72px) clamp(56px,7vw,98px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr));gap:clamp(40px,6vw,96px);align-items:start">
           <div style="display:flex;flex-direction:column;gap:28px">
             <div style="display:flex;align-items:center;gap:12px;font-size:13px;letter-spacing:0.06em;text-transform:uppercase;color:var(--color-accent)"><span style="width:28px;height:1px;background:var(--color-accent)"></span>Contact Us</div>
             <h1 style="font-size:clamp(40px,5.4vw,72px);line-height:1.1;letter-spacing:-0.015em;margin:0;margin-left:-0.04em">Ready to tell your story?</h1>
@@ -281,7 +287,7 @@ a:hover { color: var(--color-accent-300); }
             </div>
           </div>
           <div class="card elev-md" style="padding:var(--space-5);display:flex;flex-direction:column;gap:var(--space-4)">
-            <h3 style="font-size:24px;margin:0">Get In Touch !</h3>
+            <h3 style="font-size:24px;margin:0">Get in touch</h3>
             <bird-popup project-id="37ab73f2-ef33-4047-b523-ce1c1e4e9dfb" workspace-id="3e095f83-870c-4703-ba19-cd605dcb93d1"></bird-popup>
           </div>
         </section>
@@ -295,10 +301,10 @@ a:hover { color: var(--color-accent-300); }
           <h1 style="font-size:clamp(40px,6vw,80px);line-height:1.1;letter-spacing:-0.015em;margin:0;margin-left:-0.04em;max-width:16ch">Social media that brings you customers</h1>
           <p style="font-size:17px;line-height:28px;margin:0;max-width:56ch;color:color-mix(in srgb, var(--color-text) 82%, transparent)">Most small business owners know they should be on social media. Few have the time to plan it, film it, edit it and keep it going every week. Our consulting covers all of it: we work out what your business should say, make the content with you, put it in front of the right people, and keep improving it based on what actually brings in enquiries.</p>
         </section>
-        <div style="background:linear-gradient(180deg,#2f3437 0%,#272b2e 100%);color:#eceae6;margin-top:clamp(8px,2vw,24px)">
+        <div style="background:linear-gradient(180deg,#4a2418 0%,#331710 100%);color:#f6e9e2;margin-top:clamp(8px,2vw,24px)">
         <section aria-label="How we help" style="max-width:1200px;margin:0 auto;padding:clamp(56px,7vw,96px) clamp(20px,5vw,72px) clamp(48px,6vw,80px);display:flex;flex-direction:column;gap:clamp(28px,4vw,44px)">
           <div style="display:flex;flex-direction:column;gap:14px">
-            <div style="display:flex;align-items:center;gap:12px;font-size:12px;letter-spacing:0.16em;text-transform:uppercase;color:#a9aeb0"><span style="width:28px;height:1px;background:#a9aeb0"></span>Our process</div>
+            <div style="display:flex;align-items:center;gap:12px;font-size:12px;letter-spacing:0.16em;text-transform:uppercase;color:#e8b9a3"><span style="width:28px;height:1px;background:#e8b9a3"></span>Our process</div>
             <h2 style="font-size:clamp(30px,3.6vw,44px);line-height:1.15;letter-spacing:-0.012em;margin:0;color:#f3f1ed">How we help</h2>
           </div>
           <x-import component-from-global-scope="reveal-on" from="./reveal-on.js" each="" hint-size="100%,auto">
@@ -306,8 +312,8 @@ a:hover { color: var(--color-accent-300); }
               <sc-for list="{{ helpSteps }}" as="h" hint-placeholder-count="4">
                 <article data-reveal-card="" style="position:sticky;top:{{ h.top }};display:grid;grid-template-columns:minmax(72px,auto) minmax(0,1fr);gap:clamp(20px,4vw,64px);align-items:start;min-height:clamp(220px,24vw,270px);box-sizing:border-box;padding:clamp(28px,4vw,52px) clamp(24px,4vw,56px);border-radius:12px;background:{{ h.bg }};color:#22272a;box-shadow:0 0 0 1px rgba(255,255,255,0.06), 0 -20px 40px -28px rgba(0,0,0,0.6), 0 24px 48px -30px rgba(0,0,0,0.55);transform-origin:50% 0">
                   <div style="display:flex;flex-direction:column;gap:10px;padding-top:4px">
-                    <span style="font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:#6c7275">Step</span>
-                    <span style="font-size:clamp(40px,5vw,64px);line-height:0.9;letter-spacing:-0.02em;font-weight:300;color:#4d5458;font-feature-settings:'tnum' 1">{{ h.num }}</span>
+                    <span style="font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:#a8452a">Step</span>
+                    <span style="font-size:clamp(40px,5vw,64px);line-height:0.9;letter-spacing:-0.02em;font-weight:300;color:#a8452a;font-feature-settings:'tnum' 1">{{ h.num }}</span>
                   </div>
                   <div style="display:flex;flex-direction:column;gap:14px;max-width:54ch;padding-top:4px;border-left:1px solid rgba(34,39,42,0.14);padding-left:clamp(20px,3vw,40px)">
                     <h3 style="margin:0;font-size:clamp(23px,2.4vw,30px);line-height:1.2;letter-spacing:-0.01em;font-weight:500;color:#1d2124">{{ h.title }}</h3>
@@ -362,7 +368,7 @@ a:hover { color: var(--color-accent-300); }
         <div style="max-width:1200px;margin:0 auto;padding:0 clamp(20px,5vw,72px)"><div style="height:1px;background:linear-gradient(to right,transparent,var(--color-divider) 48px calc(100% - 48px),transparent)"></div></div>
         <section style="max-width:1200px;margin:0 auto;padding:clamp(48px,6vw,72px) clamp(20px,5vw,72px);display:flex;flex-direction:column;gap:20px">
           <h2 style="font-size:28px;line-height:1.2;margin:0">Be a guest</h2>
-          <p style="font-size:15.5px;line-height:28px;margin:0;max-width:56ch;color:color-mix(in srgb, var(--color-text) 78%, transparent)">If you want to be a guest on this podcast, please contact us through our official website.</p>
+          <p style="font-size:15.5px;line-height:28px;margin:0;max-width:56ch;color:color-mix(in srgb, var(--color-text) 78%, transparent)">Have a story worth telling? We are always looking for Marathi founders, creators and professionals to feature on the show. Tell us a little about yourself and we will get back to you.</p>
           <div style="display:flex"><a class="btn btn-primary" href="#story">Get in touch</a></div>
         </section>
       </div>
@@ -376,12 +382,12 @@ a:hover { color: var(--color-accent-300); }
           <p style="font-size:17px;line-height:28px;margin:0;max-width:52ch;color:color-mix(in srgb, var(--color-text) 82%, transparent)">You don’t have to build an audience from scratch. You “borrow” ours to get instant trust, visibility, and new customers.</p>
         </section>
         <section style="max-width:1200px;margin:0 auto;padding:0 clamp(20px,5vw,72px) clamp(48px,6vw,84px)">
-          <h2 style="font-size:clamp(28px,3.4vw,40px);line-height:1.2;letter-spacing:-0.012em;margin:0 0 clamp(28px,4vw,48px);text-align:center">Brands We Have Partnered With !</h2>
-          <div style="display:flex;flex-direction:column;align-items:center;gap:clamp(28px,4vw,48px);max-width:1120px;margin:0 auto">
+          <h2 style="font-size:clamp(28px,3.4vw,40px);line-height:1.2;letter-spacing:-0.012em;margin:0 0 clamp(28px,4vw,48px);text-align:center">25 brands and counting</h2>
+          <div class="brand-grid" style="display:flex;flex-direction:column;align-items:center;gap:clamp(28px,4vw,48px);max-width:1120px;margin:0 auto">
             <sc-for list="{{ brandRows }}" as="row" hint-placeholder-count="5">
               <div style="display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:clamp(24px,4vw,48px) clamp(28px,5.5vw,72px);width:100%">
                 <sc-for list="{{ row }}" as="b" hint-placeholder-count="6">
-                  <a href="{{ b.url }}" target="_blank" rel="noopener" aria-label="{{ b.label }}" title="{{ b.name }}" style="display:grid;place-items:center;width:clamp(84px,9.5vw,120px);height:clamp(84px,9.5vw,120px);text-decoration:none;transition:transform 240ms cubic-bezier(.2,.8,.2,1), filter 240ms ease;filter:drop-shadow(0 3px 6px rgba(0,0,0,0.18))" style-hover="transform:translateY(-6px) scale(1.06);filter:drop-shadow(0 12px 18px rgba(0,0,0,0.26))">
+                  <a class="brand-tile" href="{{ b.url }}" target="_blank" rel="noopener" aria-label="{{ b.label }}" title="{{ b.name }}" style="display:grid;place-items:center;width:clamp(84px,9.5vw,120px);height:clamp(84px,9.5vw,120px);text-decoration:none;transition:transform 240ms cubic-bezier(.2,.8,.2,1), filter 240ms ease;filter:drop-shadow(0 3px 6px rgba(0,0,0,0.18))" style-hover="transform:translateY(-6px) scale(1.06);filter:drop-shadow(0 12px 18px rgba(0,0,0,0.26))">
                     <img src="{{ b.src }}" alt="{{ b.name }} logo" loading="lazy" decoding="async" style="display:block;max-width:100%;max-height:100%;object-fit:contain">
                   </a>
                 </sc-for>
@@ -418,7 +424,7 @@ a:hover { color: var(--color-accent-300); }
 
         <section class="ab-bio" data-screen-label="Meet American Bhau" style="max-width:1200px;margin:0 auto;padding-left:clamp(20px,5vw,72px);padding-right:clamp(20px,5vw,72px);padding-bottom:clamp(56px,7vw,96px);">
           <div class="ab-bio-photo">
-            <div class="ab-ring" style="position:relative;width:clamp(180px,22vw,280px);aspect-ratio:1/1;border-radius:50%;padding:6px;background:linear-gradient(135deg,#f3d27a,#e8876a);box-shadow:0 18px 36px -18px rgba(0,0,0,0.35)"><div style="width:100%;height:100%;border-radius:50%;overflow:hidden;background:#eee"><img loading="lazy" decoding="async" src="assets/team/rahul.webp" alt="Rahul Patil, American Bhau" style="display:block;width:100%;height:100%;object-fit:cover;transform:scale(1.1)"></div></div>
+            <div class="ab-ring" style="position:relative;width:clamp(180px,22vw,280px);aspect-ratio:1/1;border-radius:50%;padding:6px;background:linear-gradient(135deg,#f3d27a,#e8876a);box-shadow:0 18px 36px -18px rgba(0,0,0,0.35)"><div style="width:100%;height:100%;border-radius:50%;overflow:hidden;background:#eee"><img loading="lazy" decoding="async" src="assets/team/rahul.png" alt="Rahul Patil, American Bhau" style="display:block;width:100%;height:100%;object-fit:cover;transform:scale(1.1)"></div></div>
             <div style="display:flex;flex-direction:column;gap:4px"><span style="font-size:22px;letter-spacing:-0.01em">Rahul Patil</span><span style="font-size:14px;color:var(--color-neutral-500)">Founder, American Bhau</span></div>
           </div>
           <div style="display:flex;flex-direction:column;gap:22px;font-size:17px;line-height:29px;max-width:62ch;color:color-mix(in srgb, var(--color-text) 80%, transparent)" class="ab-bio-text">
@@ -446,7 +452,7 @@ a:hover { color: var(--color-accent-300); }
 
         <section class="ab-bio" data-screen-label="Meet Our Creative Force" style="max-width:1200px;margin:0 auto;padding-left:clamp(20px,5vw,72px);padding-right:clamp(20px,5vw,72px);padding-top:clamp(56px,7vw,96px);padding-bottom:clamp(56px,7vw,96px);">
           <div class="ab-bio-photo">
-            <div class="ab-ring" style="position:relative;width:clamp(180px,22vw,280px);aspect-ratio:1/1;border-radius:50%;padding:6px;background:linear-gradient(135deg,#f0a35a,#d9722f);box-shadow:0 18px 36px -18px rgba(0,0,0,0.35)"><div style="width:100%;height:100%;border-radius:50%;overflow:hidden;background:#eee"><img loading="lazy" decoding="async" src="assets/team/pallavi.webp" alt="Pallavi Chivte-Patil" style="display:block;width:100%;height:100%;object-fit:cover;transform:scale(1.1)"></div></div>
+            <div class="ab-ring" style="position:relative;width:clamp(180px,22vw,280px);aspect-ratio:1/1;border-radius:50%;padding:6px;background:linear-gradient(135deg,#f0a35a,#d9722f);box-shadow:0 18px 36px -18px rgba(0,0,0,0.35)"><div style="width:100%;height:100%;border-radius:50%;overflow:hidden;background:#eee"><img loading="lazy" decoding="async" src="assets/team/pallavi.png" alt="Pallavi Chivte-Patil" style="display:block;width:100%;height:100%;object-fit:cover;transform:scale(1.1)"></div></div>
             <div style="display:flex;flex-direction:column;gap:4px"><span style="font-size:22px;letter-spacing:-0.01em">Pallavi Chivte-Patil</span><span style="font-size:14px;color:var(--color-neutral-500)">Creative Director &amp; Co-owner</span></div>
           </div>
           <div style="display:flex;flex-direction:column;gap:22px;font-size:17px;line-height:29px;max-width:62ch;color:color-mix(in srgb, var(--color-text) 80%, transparent)" class="ab-bio-text">
@@ -509,7 +515,7 @@ a:hover { color: var(--color-accent-300); }
             </div>
           </div>
           <div class="card elev-md" style="padding:var(--space-5);display:flex;flex-direction:column;gap:var(--space-4)">
-            <h3 style="font-size:24px;margin:0">Get In Touch !</h3>
+            <h3 style="font-size:24px;margin:0">Get in touch</h3>
             <bird-popup project-id="37ab73f2-ef33-4047-b523-ce1c1e4e9dfb" workspace-id="3e095f83-870c-4703-ba19-cd605dcb93d1"></bird-popup>
           </div>
         </section>
@@ -533,7 +539,7 @@ a:hover { color: var(--color-accent-300); }
         <a href="#about" style="color:inherit">About Us</a>
         <a href="#story" style="color:inherit">Contact</a>
       </div>
-      <span style="width:100%">Copyright © 2025 American Bhau</span>
+      <span style="width:100%">© {{ year }} American Bhau</span>
     </div>
   </footer>
 </div>
@@ -568,9 +574,9 @@ class Component extends DCLogic {
   }
   testimonialList = [
         { quote: 'During the 2025 mango import crisis, it was crucial to explain the realities of USDA regulations and export challenges. Rahul provided a professional, authentic platform to share these hard-earned lessons. The response from fellow business owners has been overwhelming. He doesn’t just tell stories—he helps guide and protect the community.',
-          name: 'Client name', role: 'Mango importer' },
+          name: 'Mango importer', role: 'Business owner, U.S.' },
         { quote: 'Sharing our journey on the American Bhau Podcast was soulful and uplifting, reflecting the real struggles and growth of a Maharashtrian building a business in the U.S. Rahul’s ability to bring out authentic stories with heart makes this platform truly meaningful for the Marathi community.',
-          name: 'Client name', role: 'Podcast guest' },
+          name: 'Podcast guest', role: 'Marathi entrepreneur, U.S.' },
         { quote: 'Pallavi and Rahul are true rockstars! Pallavi’s constant motivation helps entrepreneurs grow, scale, and believe in their potential, while partnering with American Bhau became a turning point for Spicy Tango. Rahul didn’t just give us a platform—he gave us a voice that connected deeply with the community, boosted our visibility, and drove real sales.',
           name: 'Spicy Tango', role: 'Brand partner' }
       ];
@@ -666,7 +672,13 @@ class Component extends DCLogic {
       showBack: has,
       th: ({
         'what-we-do': { bg: '#efe6d6', surface: '#e6dac4', text: '#2a2118', accent: '#6b4f2a', accentHover: '#8a6a3a', divider: 'color-mix(in srgb, #2a2118 16%, transparent)', muted: '#6e5d45', line: '#cdbb9b' },
-        consulting: { bg: '#e4e7e2', surface: '#d9ddd7', text: '#1f2426', accent: '#34433f', accentHover: '#4b5c57', divider: 'color-mix(in srgb, #1f2426 15%, transparent)', muted: '#566060', line: '#c2c8c1' }
+        consulting: { bg: '#f7ede6', surface: '#efdfd4', text: '#2a1a13', accent: '#a8452a', accentHover: '#c4573a', divider: 'color-mix(in srgb, #2a1a13 15%, transparent)', muted: '#7a5a4c', line: '#e0c6b6' },
+        episodes: { bg: '#eef4ec', surface: '#dfeadb', text: '#14241a', accent: '#2d5a3d', accentHover: '#3d7552', divider: 'color-mix(in srgb, #14241a 15%, transparent)', muted: '#566a5c', line: '#c4d6c0' },
+        podcast: { bg: '#eff2fb', surface: '#e0e6f6', text: '#111a36', accent: '#1f3a94', accentHover: '#2f4fbf', divider: 'color-mix(in srgb, #111a36 14%, transparent)', muted: '#55607f', line: '#c7d0ec' },
+        brands: { bg: '#fbefec', surface: '#f4dfd9', text: '#2b1412', accent: '#962c25', accentHover: '#b73a31', divider: 'color-mix(in srgb, #2b1412 14%, transparent)', muted: '#7c5552', line: '#e8c8c1' },
+        about: { bg: '#f1f4ee', surface: '#e3eadf', text: '#15231d', accent: '#244a3b', accentHover: '#33634f', divider: 'color-mix(in srgb, #15231d 14%, transparent)', muted: '#58685f', line: '#c9d6c9' },
+        story: { bg: '#eef5f8', surface: '#dceaf0', text: '#13293a', accent: '#1d5673', accentHover: '#276f93', divider: 'color-mix(in srgb, #13293a 14%, transparent)', muted: '#557080', line: '#bdd5e0' },
+        contact: { bg: '#eef5f8', surface: '#dceaf0', text: '#13293a', accent: '#1d5673', accentHover: '#276f93', divider: 'color-mix(in srgb, #13293a 14%, transparent)', muted: '#557080', line: '#bdd5e0' }
       })[this.state.page] || { bg: '', surface: '', text: '', accent: '', accentHover: '', divider: '', muted: '', line: '' },
       backLabel: has ? 'Volume ' + pad(fs) + ' of ' + String(n).padStart(2, '0') + ' · ' + this.shelfBooks[fs].title : '',
       goBack: () => { this._scrollShelf = true; location.hash = '#home'; }
@@ -678,7 +690,7 @@ class Component extends DCLogic {
     this.pages.forEach(p => { is[p.replace(/-/g, '')] = p === page; cur[p] = p === page ? 'page' : 'false'; });
     is.story = is.story || is.home; // "Ready to tell your story?" + Bird form also closes the home page
     return {
-      is, cur,
+      is, cur, year: new Date().getFullYear(),
       ...this.shelfVals(),
       goContact: e => this.goPage(e, 'contact'),
       goPodcast: e => this.goPage(e, 'podcast'),
@@ -709,24 +721,24 @@ class Component extends DCLogic {
         { num: '03', title: 'Create and publish', body: 'We film on location, edit, and publish across our channels and yours, so your business reaches our community.' },
         { num: '04', title: 'Grow what works', body: 'Targeted ads and regular check-ins. We keep what brings in enquiries and change what doesn’t.' },
         { num: '05', title: 'Every day you stay quiet, you become invisible.', body: 'People are scrolling through their phones right now, but are they stopping for you? Probably not. You might try filming yourself or hiring strangers who don’t understand our culture, but your videos just sit there with zero likes.' }
-      ].map((h, i) => ({ ...h, top: 'calc(clamp(64px, 9vw, 96px) + ' + i + ' * clamp(12px, 2vw, 22px))', bg: ['#eceae5', '#e3e4e0', '#dcdfdd', '#d8dcdd', '#e4ded6'][i % 5] })),
+      ].map((h, i) => ({ ...h, top: 'calc(clamp(64px, 9vw, 96px) + ' + i + ' * clamp(12px, 2vw, 22px))', bg: ['#fbf3ee', '#f7e9e0', '#f3e0d4', '#efd7c9', '#f8ece4'][i % 5] })),
       podcastVideos: [
-        { url: 'https://www.youtube.com/watch?v=97Axl8vcTpM', thumb: 'https://i.ytimg.com/vi/97Axl8vcTpM/hqdefault.jpg', kicker: 'Health & tradition', title: 'Ancient Ayurveda and Modern America: Gauri Junnarkar', summary: 'A conversation with Ayurveda expert Gauri Junnarkar on bringing ancient practice to life in the US.' },
-        { url: 'https://www.youtube.com/watch?v=VfeScbPywyA', thumb: 'https://i.ytimg.com/vi/VfeScbPywyA/hqdefault.jpg', kicker: 'Restaurants', title: 'How We Run Multiple Indian Restaurants Business in USA', summary: 'Running several Indian restaurants in the United States, from the people who do it.' },
-        { url: 'https://www.youtube.com/watch?v=DrpAseiNxKQ', thumb: 'https://i.ytimg.com/vi/DrpAseiNxKQ/hqdefault.jpg', kicker: 'Career change', title: 'My Journey From IT to Food Truck Business', summary: 'Leaving a career in IT to start a food truck in America.' },
-        { url: 'https://www.youtube.com/watch?v=c3LQkLSpNOc', thumb: 'https://i.ytimg.com/vi/c3LQkLSpNOc/hqdefault.jpg', kicker: 'Social startup', title: 'How My Social Startup Is Changing Lives in India', summary: 'Amol Bhinge on building a social startup in India.' },
-        { url: 'https://www.youtube.com/watch?v=_U8lV5oD57A', thumb: 'https://i.ytimg.com/vi/_U8lV5oD57A/hqdefault.jpg', kicker: 'Small business', title: 'Petrol Pump Business in USA', summary: 'Three Marathi youths from small towns in Maharashtra on running petrol pumps in America.' },
-        { url: 'https://www.youtube.com/watch?v=8opYYrGFTac', thumb: 'https://i.ytimg.com/vi/8opYYrGFTac/hqdefault.jpg', kicker: 'In English', title: 'The American Bhau Story on Safe Simple Sound', summary: 'Rahul tells the American Bhau story, in English, as a guest on the Safe Simple Sound podcast.' }
+        { url: 'https://www.youtube.com/watch?v=97Axl8vcTpM', thumb: 'https://i.ytimg.com/vi/97Axl8vcTpM/maxresdefault.jpg', kicker: 'Health & tradition', title: 'Ancient Ayurveda and Modern America: Gauri Junnarkar', summary: 'A conversation with Ayurveda expert Gauri Junnarkar on bringing ancient practice to life in the US.' },
+        { url: 'https://www.youtube.com/watch?v=VfeScbPywyA', thumb: 'https://i.ytimg.com/vi/VfeScbPywyA/maxresdefault.jpg', kicker: 'Restaurants', title: 'How We Run Multiple Indian Restaurants Business in USA', summary: 'Running several Indian restaurants in the United States, from the people who do it.' },
+        { url: 'https://www.youtube.com/watch?v=DrpAseiNxKQ', thumb: 'https://i.ytimg.com/vi/DrpAseiNxKQ/maxresdefault.jpg', kicker: 'Career change', title: 'My Journey From IT to Food Truck Business', summary: 'Leaving a career in IT to start a food truck in America.' },
+        { url: 'https://www.youtube.com/watch?v=c3LQkLSpNOc', thumb: 'https://i.ytimg.com/vi/c3LQkLSpNOc/maxresdefault.jpg', kicker: 'Social startup', title: 'How My Social Startup Is Changing Lives in India', summary: 'Amol Bhinge on building a social startup in India.' },
+        { url: 'https://www.youtube.com/watch?v=_U8lV5oD57A', thumb: 'https://i.ytimg.com/vi/_U8lV5oD57A/maxresdefault.jpg', kicker: 'Small business', title: 'Petrol Pump Business in USA', summary: 'Three Marathi youths from small towns in Maharashtra on running petrol pumps in America.' },
+        { url: 'https://www.youtube.com/watch?v=8opYYrGFTac', thumb: 'https://i.ytimg.com/vi/8opYYrGFTac/sddefault.jpg', kicker: 'In English', title: 'The American Bhau Story on Safe Simple Sound', summary: 'Rahul tells the American Bhau story, in English, as a guest on the Safe Simple Sound podcast.' }
       ],
       episodes: [
         { src: 'assets/episodes/ep-1.webp', url: 'https://www.youtube.com/@american-bhau/search?query=Gauri%20Deshmukh', date: 'December 28, 2025', title: 'From Master’s Degrees to YouTube Stardom: Gauri Deshmukh on the American Bhau Podcast',
           summary: 'Gauri Deshmukh shares her unconventional journey from higher education to YouTube success, creativity, consistency, and personal branding insights.' },
-        { src: 'assets/episodes/ep-2.webp', url: 'https://www.youtube.com/@american-bhau/search?query=Round%20Table', date: 'December 20, 2025', title: 'The American Dream: Insights from the Marathi Entrepreneurs’ Round Table !',
+        { src: 'assets/episodes/ep-2.webp', url: 'https://www.youtube.com/@american-bhau/search?query=Round%20Table', date: 'December 20, 2025', title: 'The American Dream: Insights from the Marathi Entrepreneurs’ Round Table',
           summary: 'Marathi entrepreneurs discuss challenges, opportunities, failures, and mindset shifts required to build successful businesses in the United States.' },
-        { src: 'assets/episodes/ep-3.webp', url: 'https://www.youtube.com/@american-bhau/search?query=Sonali%20Patil', date: 'December 16, 2025', title: 'From Cancer Research to Classrooms: How Sonali Patil Built a Montessori Legacy in Texas !',
+        { src: 'assets/episodes/ep-3.webp', url: 'https://www.youtube.com/@american-bhau/search?query=Sonali%20Patil', date: 'December 16, 2025', title: 'From Cancer Research to Classrooms: How Sonali Patil Built a Montessori Legacy in Texas',
           summary: 'Sonali Patil’s inspiring transition from cancer research to founding a successful Montessori education ecosystem in Texas.' }
       ],
-      get brandRows() { const l = this.brandLogos; return [[0, 6], [6, 12], [12, 18], [18, 22], [22, 25]].map(([s, e]) => l.slice(s, e)); },
+      get brandRows() { const l = this.brandLogos; return [[0, 5], [5, 10], [10, 15], [15, 20], [20, 25]].map(([s, e]) => l.slice(s, e)); },
       testiCards: (() => {
         const list = this.testimonialList || [], act = this.state.testi ?? -1;
         const rots = [-5, 2.5, -2, 4, -3.5], ys = [18, -10, 26, 0, 12];
