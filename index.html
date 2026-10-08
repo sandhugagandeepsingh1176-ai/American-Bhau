@@ -44,18 +44,14 @@ a:hover { color: var(--color-accent-300); }
   <style>@keyframes ab-roll { from { transform: translateX(0); } to { transform: translateX(-50%); } } @media (prefers-reduced-motion: reduce) { [style*="ab-roll"] { animation: none !important; } }</style>
   <style>
   /* About: photo column left (sticky), story right; stacks on phones */
-  .ab-bio { display:grid; grid-template-columns:minmax(180px,300px) minmax(0,1fr); gap:clamp(32px,6vw,96px); align-items:start; view-timeline-name:--bio; }
+  .ab-bio { display:grid; grid-template-columns:minmax(180px,300px) minmax(0,1fr); gap:clamp(32px,6vw,96px); align-items:start; }
   .ab-bio-photo { display:flex; flex-direction:column; gap:20px; position:sticky; top:96px; }
   @media (max-width:720px) { .ab-bio { grid-template-columns:1fr; } .ab-bio-photo { position:static; } }
-  /* Scroll animations: paragraphs rise in, photo drifts (parallax). Browsers without scroll timelines just show everything. */
+  /* Scroll animation: paragraphs rise in (photos stay still). Browsers without scroll timelines just show everything. */
   @supports (animation-timeline: view()) { @media (prefers-reduced-motion: no-preference) {
     .ab-bio-text > * { animation:ab-rise linear both; animation-timeline:view(); animation-range:entry 0% entry 60%; }
-    .ab-bio-photo { animation:ab-in linear both; animation-timeline:--bio; animation-range:entry 0% entry 35%; }
-    .ab-ring img { animation:ab-parallax linear both; animation-timeline:--bio; animation-range:cover; }
   } }
   @keyframes ab-rise { from { opacity:0; transform:translateY(36px); } to { opacity:1; transform:none; } }
-  @keyframes ab-in { from { opacity:0; transform:translateX(-40px) scale(.94); } to { opacity:1; transform:none; } }
-  @keyframes ab-parallax { from { transform:scale(1.25) translateY(-8%); } to { transform:scale(1.25) translateY(8%); } }
   </style>
 </helmet>
 
