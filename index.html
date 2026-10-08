@@ -39,7 +39,7 @@ body { margin: 0; text-wrap: pretty; min-height: 100vh;
 a { color: var(--color-accent); text-decoration: none; }
 a:hover { color: var(--color-accent-300); }
 </style>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400..600&amp;family=DM+Sans:opsz,wght@9..40,400..600&amp;display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..600;1,9..144,400..600&amp;family=DM+Sans:opsz,wght@9..40,400..600&amp;display=swap">
   <style>h1, h2, h3, h4, .card-title { font-family: var(--font-heading); font-weight: var(--font-heading-weight); }</style>
   <style>@keyframes ab-roll { from { transform: translateX(0); } to { transform: translateX(-50%); } } @media (prefers-reduced-motion: reduce) { [style*="ab-roll"] { animation: none !important; } }</style>
   <style>
@@ -55,6 +55,7 @@ a:hover { color: var(--color-accent-300); }
   .btn-primary:hover { background:var(--color-accent-300, var(--color-accent)); border-color:var(--color-accent-300, var(--color-accent)); color:var(--color-bg); }
   .story-band { background:#eef5f8; box-shadow:0 0 0 100vmax #eef5f8; clip-path:inset(0 -100vmax); --color-accent:#1d5673; --color-accent-300:#276f93; }
   @media (max-width:720px) { .brand-grid { display:flex !important; flex-flow:row wrap !important; justify-content:center; gap:16px !important; } .brand-grid > div { display:contents !important; } }
+  .hl { background:linear-gradient(transparent 58%, rgba(255,182,39,0.65) 58%, rgba(255,182,39,0.65) 90%, transparent 90%); padding:0 .08em; border-radius:2px; }
   .story-band .card { background:#fff; }
   .brand-tile { background:#fff; border-radius:18px; padding:12px; box-sizing:border-box; box-shadow:0 1px 2px rgb(0 0 0 / .06), 0 8px 20px -12px rgb(0 0 0 / .25); }
   @keyframes ab-rise { from { opacity:0; transform:translateY(36px); } to { opacity:1; transform:none; } }
@@ -83,7 +84,7 @@ a:hover { color: var(--color-accent-300); }
       <div data-screen-label="Home">
         <section data-screen-label="Home sketchbook" style="position:relative;max-width:1280px;margin:0 auto;padding:clamp(28px,5vw,64px) clamp(12px,3vw,40px) clamp(48px,6vw,80px);min-height:min(78vh,760px);display:flex;align-items:center">
           <x-import component-from-global-scope="book-intro" from="./book-intro.js" photo="assets/rahul-podcast.webp" style="position:absolute;inset:0;z-index:5;pointer-events:none" hint-size="0px,0px"></x-import>
-          <div style="position:relative;width:100%;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));border-radius:14px;background:url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .08 0'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E&quot;),#f5f3ee;box-shadow:0 1px 0 rgba(0,0,0,0.04),0 24px 48px -18px rgba(40,34,24,0.28),0 2px 6px rgba(40,34,24,0.08)">
+          <div style="position:relative;width:100%;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));border-radius:14px;background:url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .08 0'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E&quot;),#fbf1df;box-shadow:0 1px 0 rgba(0,0,0,0.04),0 24px 48px -18px rgba(40,34,24,0.28),0 2px 6px rgba(40,34,24,0.08)">
             <div style="position:relative;padding:clamp(28px,4.5vw,64px);border-radius:14px 0 0 14px;background:linear-gradient(270deg,rgba(60,50,35,0.14),rgba(60,50,35,0) 7%);display:flex;align-items:center;justify-content:center">
               <sc-if value="{{ showHeroPhoto }}" hint-placeholder-val="{{ true }}">
                 <figure style="position:relative;margin:0;width:100%;max-width:440px;transform:rotate(-1.6deg);background:#fdfcf9;padding:12px 12px 44px;box-shadow:0 10px 24px -10px rgba(40,34,24,0.35),0 1px 3px rgba(40,34,24,0.12)">
@@ -99,8 +100,8 @@ a:hover { color: var(--color-accent-300); }
                 <div style="font-size:10px;letter-spacing:0.18em;text-transform:uppercase;opacity:0.7">Vol. 01</div>
                 <div style="font-size:15px;letter-spacing:-0.01em;margin-top:4px">The American Bhau Podcast</div>
               </div>
-              <h1 style="font-family:'Caveat', 'Segoe Print', 'Bradley Hand', cursive;font-weight:500;font-size:clamp(40px,4.6vw,64px);line-height:1.02;letter-spacing:0;margin:8px 0 0;color:#2b2721;max-width:14ch">Helping businesses earn more using social media.</h1>
-              <p style="font-family:'Caveat', 'Segoe Print', 'Bradley Hand', cursive;font-size:clamp(21px,1.8vw,25px);line-height:1.3;margin:0;max-width:34ch;color:#5a5044">American Bhau is dedicated to promoting Marathi businesses, connecting them with global audiences, and empowering entrepreneurs through inspiring stories and visibility.</p>
+              <h1 style="font-family:'Caveat', 'Segoe Print', 'Bradley Hand', cursive;font-weight:500;font-size:clamp(40px,4.6vw,64px);line-height:1.02;letter-spacing:0;margin:8px 0 0;color:#2b2721;max-width:14ch">Helping businesses <span class="hl">earn more</span> using social media.</h1>
+              <p style="font-size:clamp(16px,1.3vw,18px);line-height:1.65;margin:0;max-width:40ch;color:#5a5044">American Bhau is dedicated to promoting Marathi businesses, connecting them with global audiences, and empowering entrepreneurs through inspiring stories and visibility.</p>
               <div style="position:absolute;right:clamp(20px,3vw,36px);bottom:clamp(16px,2.4vw,28px);display:flex;align-items:center;gap:10px;color:#8a4a32">
                 <span style="display:grid;place-items:center;width:34px;height:34px;border:1.5px solid currentColor;border-radius:4px;font-size:11px;letter-spacing:0.04em;transform:rotate(-4deg);opacity:0.85">AB</span>
                 <span style="font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:#5a5044">Est. 2023</span>
@@ -173,14 +174,14 @@ a:hover { color: var(--color-accent-300); }
           </div>
         </section>
 
-        <section style="background:radial-gradient(900px 420px at 85% -40%, color-mix(in srgb, var(--color-section-glow) 70%, transparent), transparent 64%), var(--color-section);padding:clamp(48px,6vw,72px) 0;color:#f2f2f2">
+        <section style="background:radial-gradient(900px 480px at 85% -30%, rgba(255,150,40,0.28), transparent 62%), radial-gradient(700px 400px at 0% 110%, rgba(180,40,60,0.35), transparent 60%), linear-gradient(160deg,#3a1018 0%,#24090f 100%);padding:clamp(56px,7vw,88px) 0;color:#fbefe3">
           <div style="max-width:1200px;margin:0 auto;padding:0 clamp(20px,5vw,72px);display:flex;flex-direction:column;gap:16px">
             <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr));gap:clamp(24px,4vw,64px);align-items:center">
               <div style="display:flex;flex-direction:column;gap:20px">
-                <div style="display:flex;align-items:center;gap:12px;font-size:13px;letter-spacing:0.06em;text-transform:uppercase;color:#c4c4c4"><span style="width:28px;height:1px;background:#c4c4c4"></span>Get featured</div>
-                <p style="font-size:clamp(28px,3.6vw,48px);line-height:1.15;letter-spacing:-0.012em;margin:0;max-width:18ch;font-family:var(--font-heading);font-weight:var(--font-heading-weight)">Every day you stay quiet, you become invisible.</p>
-                <p style="font-size:17px;line-height:28px;margin:0;max-width:46ch;color:#c4c4c4">People are scrolling through their phones right now, but are they stopping for you? Stop talking to an empty room! Instead, come stand on my stage.</p>
-                <div style="display:flex;margin-top:8px"><a class="btn btn-secondary" href="#story" style="color:#f2f2f2;border-color:#f2f2f2">Get your business featured</a></div>
+                <div style="display:flex;align-items:center;gap:12px;font-size:13px;letter-spacing:0.06em;text-transform:uppercase;color:#ffb366"><span style="width:28px;height:1px;background:#ffb366"></span>Get featured</div>
+                <p style="font-size:clamp(28px,3.6vw,48px);line-height:1.15;letter-spacing:-0.012em;margin:0;max-width:18ch;font-family:var(--font-heading);font-weight:var(--font-heading-weight)">Every day you stay quiet, you become <em style="font-style:italic;color:#ffb366">invisible.</em></p>
+                <p style="font-size:17px;line-height:28px;margin:0;max-width:46ch;color:#e9cfc2">People are scrolling through their phones right now, but are they stopping for you? Stop talking to an empty room! Instead, come stand on my stage.</p>
+                <div style="display:flex;margin-top:8px"><a class="btn btn-secondary" href="#story" style="color:#2a0b10;background:#ffb366;border-color:#ffb366;padding-inline:20px">Get your business featured →</a></div>
               </div>
               <div style="height:clamp(460px,52vw,680px);position:relative">
                 <x-import component-from-global-scope="paper-sheet" from="./paper-sheet.js" accent="{{ paperAccent }}" style="position:absolute;inset:0" hint-size="100%,100%"></x-import>
@@ -191,10 +192,10 @@ a:hover { color: var(--color-accent-300); }
 
         <section data-screen-label="Testimonial card" style="max-width:1200px;margin:0 auto;padding:clamp(48px,6vw,96px) clamp(20px,5vw,72px)">
           <x-import component-from-global-scope="reveal-on" from="./reveal-on.js" hint-size="100%,auto">
-            <figure data-reveal-card="" style="position:relative;margin:0;max-width:760px;box-sizing:border-box;padding:clamp(32px,5vw,64px) clamp(28px,5vw,64px) clamp(28px,4vw,48px);border-radius:14px;overflow:hidden;background:url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .08 0'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E&quot;),#f5f3ee;box-shadow:0 1px 0 rgba(0,0,0,0.04),0 24px 48px -18px rgba(40,34,24,0.28),0 2px 6px rgba(40,34,24,0.08);display:flex;flex-direction:column;gap:28px">
+            <figure data-reveal-card="" style="position:relative;margin:0;max-width:760px;box-sizing:border-box;padding:clamp(32px,5vw,64px) clamp(28px,5vw,64px) clamp(28px,4vw,48px);border-radius:14px;overflow:hidden;background:url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .08 0'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E&quot;),#fbf1df;box-shadow:0 1px 0 rgba(0,0,0,0.04),0 24px 48px -18px rgba(40,34,24,0.28),0 2px 6px rgba(40,34,24,0.08);display:flex;flex-direction:column;gap:28px">
               <span style="position:absolute;top:-6px;left:clamp(40px,8vw,96px);width:96px;height:26px;background:rgba(214,206,186,0.7);transform:rotate(-3deg)"></span>
               <span data-reveal-sheen="" style="position:absolute;inset:0;pointer-events:none;opacity:0;background:linear-gradient(100deg,transparent 30%,rgba(255,255,255,0.7) 48%,transparent 64%)"></span>
-              <div data-reveal="" style="display:flex;align-items:center;gap:12px;font-size:12px;letter-spacing:0.14em;text-transform:uppercase;color:#5a5044"><span style="width:28px;height:1px;background:currentColor"></span>What our partners say</div>
+              <div data-reveal="" style="display:flex;align-items:center;gap:12px;font-size:12px;letter-spacing:0.14em;text-transform:uppercase;color:var(--color-accent)"><span style="width:28px;height:1px;background:currentColor"></span>What our partners say</div>
               <blockquote data-reveal="" style="margin:0;font-family:var(--font-heading);font-weight:var(--font-heading-weight);font-size:clamp(24px,2.8vw,36px);line-height:1.3;letter-spacing:-0.01em;text-indent:-0.45em;color:#2b2721;max-width:30ch">“Rahul didn’t just give us a platform—he gave us a voice that connected deeply with the community, boosted our visibility, and drove real sales.”</blockquote>
               <figcaption data-reveal="" style="display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-top:20px;border-top:1px solid rgba(43,39,33,0.14)">
                 <span style="font-size:15.5px;color:#5a5044">— Spicy Tango</span>
@@ -672,6 +673,7 @@ class Component extends DCLogic {
       showBack: has,
       th: ({
         'what-we-do': { bg: '#efe6d6', surface: '#e6dac4', text: '#2a2118', accent: '#6b4f2a', accentHover: '#8a6a3a', divider: 'color-mix(in srgb, #2a2118 16%, transparent)', muted: '#6e5d45', line: '#cdbb9b' },
+        home: { bg: '#fbf6ee', surface: '#f3ebdd', text: '#1f1a14', accent: '#b4501a', accentHover: '#cf6224', divider: 'color-mix(in srgb, #1f1a14 13%, transparent)', muted: '#7a6a58', line: '#e4d6c0' },
         consulting: { bg: '#f7ede6', surface: '#efdfd4', text: '#2a1a13', accent: '#a8452a', accentHover: '#c4573a', divider: 'color-mix(in srgb, #2a1a13 15%, transparent)', muted: '#7a5a4c', line: '#e0c6b6' },
         episodes: { bg: '#eef4ec', surface: '#dfeadb', text: '#14241a', accent: '#2d5a3d', accentHover: '#3d7552', divider: 'color-mix(in srgb, #14241a 15%, transparent)', muted: '#566a5c', line: '#c4d6c0' },
         podcast: { bg: '#eff2fb', surface: '#e0e6f6', text: '#111a36', accent: '#1f3a94', accentHover: '#2f4fbf', divider: 'color-mix(in srgb, #111a36 14%, transparent)', muted: '#55607f', line: '#c7d0ec' },
@@ -679,7 +681,7 @@ class Component extends DCLogic {
         about: { bg: '#f1f4ee', surface: '#e3eadf', text: '#15231d', accent: '#244a3b', accentHover: '#33634f', divider: 'color-mix(in srgb, #15231d 14%, transparent)', muted: '#58685f', line: '#c9d6c9' },
         story: { bg: '#eef5f8', surface: '#dceaf0', text: '#13293a', accent: '#1d5673', accentHover: '#276f93', divider: 'color-mix(in srgb, #13293a 14%, transparent)', muted: '#557080', line: '#bdd5e0' },
         contact: { bg: '#eef5f8', surface: '#dceaf0', text: '#13293a', accent: '#1d5673', accentHover: '#276f93', divider: 'color-mix(in srgb, #13293a 14%, transparent)', muted: '#557080', line: '#bdd5e0' }
-      })[this.state.page] || { bg: '', surface: '', text: '', accent: '', accentHover: '', divider: '', muted: '', line: '' },
+      })[this.state.page || 'home'] || { bg: '', surface: '', text: '', accent: '', accentHover: '', divider: '', muted: '', line: '' },
       backLabel: has ? 'Volume ' + pad(fs) + ' of ' + String(n).padStart(2, '0') + ' · ' + this.shelfBooks[fs].title : '',
       goBack: () => { this._scrollShelf = true; location.hash = '#home'; }
     };
@@ -695,7 +697,7 @@ class Component extends DCLogic {
       goContact: e => this.goPage(e, 'contact'),
       goPodcast: e => this.goPage(e, 'podcast'),
       showHeroPhoto: this.props.showHeroPhoto ?? true,
-      paperAccent: (this.props.paperAccent ?? 'lime') === 'lime' ? '#c6f432' : '#d0d0d0',
+      paperAccent: (this.props.paperAccent ?? 'lime') === 'lime' ? '#ffb627' : '#d0d0d0',
       services: [
         { num: '01', title: 'Professional video production',
           short: 'We come to your location, shoot your story and create professional videos, including drone footage.',
