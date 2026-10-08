@@ -269,34 +269,9 @@ a:hover { color: var(--color-accent-300); }
               <div style="display:flex;gap:16px;align-items:baseline"><span style="width:88px;flex:none;font-size:13px;color:color-mix(in srgb, var(--color-text) 60%, transparent)">LinkedIn</span><a href="https://www.linkedin.com/in/americanbhau/" target="_blank">in/americanbhau</a></div>
             </div>
           </div>
-          <div class="card elev-md" style="padding:var(--space-5)">
-            <sc-if value="{{ sent }}" hint-placeholder-val="{{ false }}">
-              <div style="display:flex;flex-direction:column;gap:14px;padding:var(--space-4) 0">
-                <h2 style="font-size:24px;margin:0">Thank you, {{ firstName }}.</h2>
-                <p style="margin:0;font-size:15px;line-height:26px;color:color-mix(in srgb, var(--color-text) 78%, transparent)">Your message is in. Rahul will get back to you soon.</p>
-                <div style="display:flex"><button type="button" class="btn btn-ghost" onClick="{{ reset }}">Send another message</button></div>
-              </div>
-            </sc-if>
-            <sc-if value="{{ notSent }}" hint-placeholder-val="{{ true }}">
-              <form onSubmit="{{ submit }}" style="display:flex;flex-direction:column;gap:var(--space-4)">
-                <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,180px),1fr));gap:var(--space-4)">
-                  <div class="field"><label for="c-name">Name</label><input id="c-name" class="input" name="name" required="" placeholder="Your name" onInput="{{ onName }}"></div>
-                  <div class="field"><label for="c-biz">Business</label><input id="c-biz" class="input" name="business" placeholder="Business name"></div>
-                </div>
-                <div class="field"><label for="c-email">Email or WhatsApp</label><input id="c-email" class="input" name="contact" required="" placeholder="you@business.com"></div>
-                <div class="field"><label for="c-need">I’m interested in</label>
-                  <select id="c-need" class="input" name="need">
-                    <option>Social media consulting</option>
-                    <option>Podcast feature</option>
-                    <option>Video production</option>
-                    <option>Being a podcast guest</option>
-                  </select>
-                </div>
-                <div class="field"><label for="c-msg">Tell us about your business</label><textarea id="c-msg" class="input" name="message" rows="5" placeholder="What you do, who you serve, and what you want to grow"></textarea></div>
-                <input name="website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px">
-                <div style="display:flex"><button type="submit" class="btn btn-primary">Send message</button></div>
-              </form>
-            </sc-if>
+          <div class="card elev-md" style="padding:var(--space-5);display:flex;flex-direction:column;gap:var(--space-4)">
+            <h3 style="font-size:24px;margin:0">Get In Touch !</h3>
+            <bird-popup project-id="37ab73f2-ef33-4047-b523-ce1c1e4e9dfb" workspace-id="3e095f83-870c-4703-ba19-cd605dcb93d1"></bird-popup>
           </div>
         </section>
             </div>
@@ -522,34 +497,9 @@ a:hover { color: var(--color-accent-300); }
               <div style="display:flex;gap:16px;align-items:baseline"><span style="width:88px;flex:none;font-size:13px;color:color-mix(in srgb, var(--color-text) 60%, transparent)">LinkedIn</span><a href="https://www.linkedin.com/in/americanbhau/" target="_blank">in/americanbhau</a></div>
             </div>
           </div>
-          <div class="card elev-md" style="padding:var(--space-5)">
-            <sc-if value="{{ sent }}" hint-placeholder-val="{{ false }}">
-              <div style="display:flex;flex-direction:column;gap:14px;padding:var(--space-4) 0">
-                <h2 style="font-size:24px;margin:0">Thank you, {{ firstName }}.</h2>
-                <p style="margin:0;font-size:15px;line-height:26px;color:color-mix(in srgb, var(--color-text) 78%, transparent)">Your message is in. Rahul will get back to you soon.</p>
-                <div style="display:flex"><button type="button" class="btn btn-ghost" onClick="{{ reset }}">Send another message</button></div>
-              </div>
-            </sc-if>
-            <sc-if value="{{ notSent }}" hint-placeholder-val="{{ true }}">
-              <form onSubmit="{{ submit }}" style="display:flex;flex-direction:column;gap:var(--space-4)">
-                <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,180px),1fr));gap:var(--space-4)">
-                  <div class="field"><label for="c-name">Name</label><input id="c-name" class="input" name="name" required="" placeholder="Your name" onInput="{{ onName }}"></div>
-                  <div class="field"><label for="c-biz">Business</label><input id="c-biz" class="input" name="business" placeholder="Business name"></div>
-                </div>
-                <div class="field"><label for="c-email">Email or WhatsApp</label><input id="c-email" class="input" name="contact" required="" placeholder="you@business.com"></div>
-                <div class="field"><label for="c-need">I’m interested in</label>
-                  <select id="c-need" class="input" name="need">
-                    <option>Social media consulting</option>
-                    <option>Podcast feature</option>
-                    <option>Video production</option>
-                    <option>Being a podcast guest</option>
-                  </select>
-                </div>
-                <div class="field"><label for="c-msg">Tell us about your business</label><textarea id="c-msg" class="input" name="message" rows="5" placeholder="What you do, who you serve, and what you want to grow"></textarea></div>
-                <input name="website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px">
-                <div style="display:flex"><button type="submit" class="btn btn-primary">Send message</button></div>
-              </form>
-            </sc-if>
+          <div class="card elev-md" style="padding:var(--space-5);display:flex;flex-direction:column;gap:var(--space-4)">
+            <h3 style="font-size:24px;margin:0">Get In Touch !</h3>
+            <bird-popup project-id="37ab73f2-ef33-4047-b523-ce1c1e4e9dfb" workspace-id="3e095f83-870c-4703-ba19-cd605dcb93d1"></bird-popup>
           </div>
         </section>
       </div>
@@ -579,7 +529,7 @@ a:hover { color: var(--color-accent-300); }
 </x-dc>
 <script type="text/x-dc" data-dc-script data-props="{&quot;startPage&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;home&quot;,&quot;consulting&quot;,&quot;podcast&quot;,&quot;brands&quot;,&quot;about&quot;,&quot;contact&quot;],&quot;default&quot;:&quot;home&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;showHeroPhoto&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;},&quot;paperAccent&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;lime&quot;,&quot;mono&quot;],&quot;default&quot;:&quot;lime&quot;,&quot;tsType&quot;:&quot;string&quot;}}">
 class Component extends DCLogic {
-  state = { page: null, sent: false, name: '' };
+  state = { page: null };
   pages = ['home', 'consulting', 'podcast', 'brands', 'about', 'contact', 'what-we-do', 'episodes', 'story'];
   componentDidMount() {
     this.onHash = () => {
@@ -722,16 +672,6 @@ class Component extends DCLogic {
       goPodcast: e => this.goPage(e, 'podcast'),
       showHeroPhoto: this.props.showHeroPhoto ?? true,
       paperAccent: (this.props.paperAccent ?? 'lime') === 'lime' ? '#c6f432' : '#d0d0d0',
-      sent: this.state.sent, notSent: !this.state.sent,
-      firstName: (this.state.name.trim().split(' ')[0]) || 'friend',
-      onName: e => this.setState({ name: e.target.value }),
-      submit: e => {
-        e.preventDefault();
-        fetch('/contact.php', { method: 'POST', body: new FormData(e.target) })
-          .then(r => { if (!r.ok) throw 0; this.setState({ sent: true }); })
-          .catch(() => alert('Could not send. Please email rahul@americanbhau.com'));
-      },
-      reset: () => this.setState({ sent: false, name: '' }),
       services: [
         { num: '01', title: 'Professional video production',
           short: 'We come to your location, shoot your story and create professional videos, including drone footage.',
@@ -799,5 +739,7 @@ class Component extends DCLogic {
   }
 }
 </script>
+<!-- Bird "Get In Touch" form. Only renders on domains allowed in Bird (currently test.americanbhau.in). -->
+<script src="https://embeddables.p.mbirdcdn.net/sdk/v0/bird-sdk.js" data-config-url="https://api.bird.com/workspaces/3e095f83-870c-4703-ba19-cd605dcb93d1/applications/9a964d06-4262-47cf-96e6-9d3fec842dcf/signature/2024-06-17T17-12-51_3eb34a0fff"></script>
 </body>
 </html>
