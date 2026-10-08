@@ -25,6 +25,7 @@
   --color-accent-100: #161616; --color-accent-200: #262626; --color-accent-300: #404040; --color-accent-400: #5a5a5a; --color-accent-500: #767676; --color-accent-600: #949494; --color-accent-700: #c4c4c4; --color-accent-800: #e2e2e2; --color-accent-900: #f2f2f2;
   --color-accent-2-100: #161616; --color-accent-2-200: #262626; --color-accent-2-300: #404040; --color-accent-2-400: #5a5a5a; --color-accent-2-500: #767676; --color-accent-2-600: #949494; --color-accent-2-700: #c4c4c4; --color-accent-2-800: #e2e2e2; --color-accent-2-900: #f2f2f2;
   --color-section: #141414; --color-section-glow: #262626; --color-section-ghost: #5a5a5a;
+  --font-body: 'DM Sans', system-ui, sans-serif;
   --shadow-sm: 0 1px 2px rgb(0 0 0 / 0.06); --shadow-md: 0 2px 8px rgb(0 0 0 / 0.07); --shadow-lg: 0 8px 24px rgb(0 0 0 / 0.08);
 }
 html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
@@ -38,13 +39,27 @@ body { margin: 0; text-wrap: pretty; min-height: 100vh;
 a { color: var(--color-accent); text-decoration: none; }
 a:hover { color: var(--color-accent-300); }
 </style>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;500&amp;family=Cormorant+Garamond:wght@500;600&amp;display=swap">
-  <style>@font-face { font-family: 'Tenez'; src: local('Tenez Regular'), local('Tenez-Regular'), local('Tenez'), url('assets/fonts/Tenez-Regular.woff2') format('woff2'), url('assets/fonts/Tenez-Regular.otf') format('opentype'); font-weight: 400; font-display: swap; }
-  h1, h2, h3, h4, .card-title { font-family: var(--font-heading); font-weight: var(--font-heading-weight); }</style>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400..600&amp;family=DM+Sans:opsz,wght@9..40,400..600&amp;display=swap">
+  <style>h1, h2, h3, h4, .card-title { font-family: var(--font-heading); font-weight: var(--font-heading-weight); }</style>
   <style>@keyframes ab-roll { from { transform: translateX(0); } to { transform: translateX(-50%); } } @media (prefers-reduced-motion: reduce) { [style*="ab-roll"] { animation: none !important; } }</style>
+  <style>
+  /* About: photo column left (sticky), story right; stacks on phones */
+  .ab-bio { display:grid; grid-template-columns:minmax(180px,300px) minmax(0,1fr); gap:clamp(32px,6vw,96px); align-items:start; view-timeline-name:--bio; }
+  .ab-bio-photo { display:flex; flex-direction:column; gap:20px; position:sticky; top:96px; }
+  @media (max-width:720px) { .ab-bio { grid-template-columns:1fr; } .ab-bio-photo { position:static; } }
+  /* Scroll animations: paragraphs rise in, photo drifts (parallax). Browsers without scroll timelines just show everything. */
+  @supports (animation-timeline: view()) { @media (prefers-reduced-motion: no-preference) {
+    .ab-bio-text > * { animation:ab-rise linear both; animation-timeline:view(); animation-range:entry 0% entry 60%; }
+    .ab-bio-photo { animation:ab-in linear both; animation-timeline:--bio; animation-range:entry 0% entry 35%; }
+    .ab-ring img { animation:ab-parallax linear both; animation-timeline:--bio; animation-range:cover; }
+  } }
+  @keyframes ab-rise { from { opacity:0; transform:translateY(36px); } to { opacity:1; transform:none; } }
+  @keyframes ab-in { from { opacity:0; transform:translateX(-40px) scale(.94); } to { opacity:1; transform:none; } }
+  @keyframes ab-parallax { from { transform:scale(1.25) translateY(-8%); } to { transform:scale(1.25) translateY(8%); } }
+  </style>
 </helmet>
 
-<div style="min-height:100vh;display:flex;flex-direction:column;--font-heading:'Tenez', 'Cormorant Garamond', Georgia, serif;--font-heading-weight:500;--color-bg:{{ th.bg }};--color-surface:{{ th.surface }};--color-text:{{ th.text }};--color-accent:{{ th.accent }};--color-accent-300:{{ th.accentHover }};--color-divider:{{ th.divider }};--color-neutral-500:{{ th.muted }};--color-neutral-600:{{ th.muted }};--color-neutral-700:{{ th.line }};--color-neutral-800:{{ th.surface }};background:var(--color-bg);transition:background-color 500ms ease, color 500ms ease;color:var(--color-text);font-family:var(--font-body)">
+<div style="min-height:100vh;display:flex;flex-direction:column;--font-heading:'Fraunces', Georgia, serif;--font-heading-weight:500;--color-bg:{{ th.bg }};--color-surface:{{ th.surface }};--color-text:{{ th.text }};--color-accent:{{ th.accent }};--color-accent-300:{{ th.accentHover }};--color-divider:{{ th.divider }};--color-neutral-500:{{ th.muted }};--color-neutral-600:{{ th.muted }};--color-neutral-700:{{ th.line }};--color-neutral-800:{{ th.surface }};background:var(--color-bg);transition:background-color 500ms ease, color 500ms ease;color:var(--color-text);font-family:var(--font-body)">
 
   <nav class="nav" style="position:sticky;top:0;z-index:10;flex-wrap:wrap;row-gap:var(--space-2);padding:var(--space-3) clamp(20px,5vw,72px);background:color-mix(in srgb, var(--color-bg) 82%, transparent);backdrop-filter:blur(12px)">
     <a class="nav-brand" href="#home" style="font-size:18px;color:var(--color-text)">American Bhau</a>
@@ -405,12 +420,12 @@ a:hover { color: var(--color-accent-300); }
           <h1 style="font-size:clamp(40px,6vw,80px);line-height:1.08;letter-spacing:-0.02em;margin:0;margin-left:-0.04em;max-width:14ch">The Humans Behind the Magic</h1>
         </section>
 
-        <section data-screen-label="Meet American Bhau" style="max-width:1200px;margin:0 auto;padding-left:clamp(20px,5vw,72px);padding-right:clamp(20px,5vw,72px);padding-bottom:clamp(56px,7vw,96px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:clamp(32px,6vw,96px);align-items:start">
-          <div style="display:flex;flex-direction:column;gap:20px;position:sticky;top:96px">
-            <div style="position:relative;width:clamp(180px,20vw,240px);aspect-ratio:1/1;border-radius:50%;padding:6px;background:linear-gradient(135deg,#f3d27a,#e8876a);box-shadow:0 18px 36px -18px rgba(0,0,0,0.35)"><div style="width:100%;height:100%;border-radius:50%;overflow:hidden;background:#eee"><img loading="lazy" decoding="async" src="assets/team/rahul.webp" alt="Rahul Patil, American Bhau" style="display:block;width:100%;height:100%;object-fit:cover;transform:scale(1.1)"></div></div>
+        <section class="ab-bio" data-screen-label="Meet American Bhau" style="max-width:1200px;margin:0 auto;padding-left:clamp(20px,5vw,72px);padding-right:clamp(20px,5vw,72px);padding-bottom:clamp(56px,7vw,96px);">
+          <div class="ab-bio-photo">
+            <div class="ab-ring" style="position:relative;width:clamp(180px,22vw,280px);aspect-ratio:1/1;border-radius:50%;padding:6px;background:linear-gradient(135deg,#f3d27a,#e8876a);box-shadow:0 18px 36px -18px rgba(0,0,0,0.35)"><div style="width:100%;height:100%;border-radius:50%;overflow:hidden;background:#eee"><img loading="lazy" decoding="async" src="assets/team/rahul.webp" alt="Rahul Patil, American Bhau" style="display:block;width:100%;height:100%;object-fit:cover;transform:scale(1.1)"></div></div>
             <div style="display:flex;flex-direction:column;gap:4px"><span style="font-size:22px;letter-spacing:-0.01em">Rahul Patil</span><span style="font-size:14px;color:var(--color-neutral-500)">Founder, American Bhau</span></div>
           </div>
-          <div style="display:flex;flex-direction:column;gap:22px;font-size:17px;line-height:29px;max-width:62ch;color:color-mix(in srgb, var(--color-text) 80%, transparent);grid-column:span 2 / auto">
+          <div style="display:flex;flex-direction:column;gap:22px;font-size:17px;line-height:29px;max-width:62ch;color:color-mix(in srgb, var(--color-text) 80%, transparent)" class="ab-bio-text">
             <h2 style="font-size:clamp(28px,3vw,40px);line-height:1.15;letter-spacing:-0.015em;margin:0 0 6px;color:var(--color-text)">Meet American Bhau</h2>
             <p style="margin:0">Hey there, I’m <strong style="font-weight:500;color:var(--color-text)">Rahul Patil</strong>. But everyone calls me American Bhau (and yes, there’s a story behind that name).</p>
             <p style="margin:0">I was born in a small village near <strong style="font-weight:500;color:var(--color-text)">Dhule, Maharashtra</strong>. Farming roots. My dad broke the mold, studied hard, built a banking career, and gave us a stable life. The dream he had for me was the natural next step. <strong style="font-weight:500;color:var(--color-text)">BITS Pilani</strong> for computers. A one-way ticket to America. A comfortable <strong style="font-weight:500;color:var(--color-text)">tech career at Atlassian</strong>. Three generations from farm, to bank, to USA.</p>
@@ -433,12 +448,12 @@ a:hover { color: var(--color-accent-300); }
 
         <div style="max-width:1200px;margin:0 auto;padding-left:clamp(20px,5vw,72px);padding-right:clamp(20px,5vw,72px)"><div style="height:1px;background:linear-gradient(to right,transparent,var(--color-divider) 48px calc(100% - 48px),transparent)"></div></div>
 
-        <section data-screen-label="Meet Our Creative Force" style="max-width:1200px;margin:0 auto;padding-left:clamp(20px,5vw,72px);padding-right:clamp(20px,5vw,72px);padding-top:clamp(56px,7vw,96px);padding-bottom:clamp(56px,7vw,96px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:clamp(32px,6vw,96px);align-items:start">
-          <div style="display:flex;flex-direction:column;gap:20px;position:sticky;top:96px">
-            <div style="position:relative;width:clamp(180px,20vw,240px);aspect-ratio:1/1;border-radius:50%;padding:6px;background:linear-gradient(135deg,#f0a35a,#d9722f);box-shadow:0 18px 36px -18px rgba(0,0,0,0.35)"><div style="width:100%;height:100%;border-radius:50%;overflow:hidden;background:#eee"><img loading="lazy" decoding="async" src="assets/team/pallavi.webp" alt="Pallavi Chivte-Patil" style="display:block;width:100%;height:100%;object-fit:cover;transform:scale(1.1)"></div></div>
+        <section class="ab-bio" data-screen-label="Meet Our Creative Force" style="max-width:1200px;margin:0 auto;padding-left:clamp(20px,5vw,72px);padding-right:clamp(20px,5vw,72px);padding-top:clamp(56px,7vw,96px);padding-bottom:clamp(56px,7vw,96px);">
+          <div class="ab-bio-photo">
+            <div class="ab-ring" style="position:relative;width:clamp(180px,22vw,280px);aspect-ratio:1/1;border-radius:50%;padding:6px;background:linear-gradient(135deg,#f0a35a,#d9722f);box-shadow:0 18px 36px -18px rgba(0,0,0,0.35)"><div style="width:100%;height:100%;border-radius:50%;overflow:hidden;background:#eee"><img loading="lazy" decoding="async" src="assets/team/pallavi.webp" alt="Pallavi Chivte-Patil" style="display:block;width:100%;height:100%;object-fit:cover;transform:scale(1.1)"></div></div>
             <div style="display:flex;flex-direction:column;gap:4px"><span style="font-size:22px;letter-spacing:-0.01em">Pallavi Chivte-Patil</span><span style="font-size:14px;color:var(--color-neutral-500)">Creative Director &amp; Co-owner</span></div>
           </div>
-          <div style="display:flex;flex-direction:column;gap:22px;font-size:17px;line-height:29px;max-width:62ch;color:color-mix(in srgb, var(--color-text) 80%, transparent);grid-column:span 2 / auto">
+          <div style="display:flex;flex-direction:column;gap:22px;font-size:17px;line-height:29px;max-width:62ch;color:color-mix(in srgb, var(--color-text) 80%, transparent)" class="ab-bio-text">
             <h2 style="font-size:clamp(28px,3vw,40px);line-height:1.15;letter-spacing:-0.015em;margin:0 0 6px;color:var(--color-text)">Meet Our Creative Force</h2>
             <p style="margin:0"><strong style="font-weight:500;color:var(--color-text)">Hey! I’m Pallavi Chivte-Patil,</strong> the creative brain behind all the magic you see here (and Rahul’s better half, but don’t tell him I said that).</p>
             <p style="margin:0">Started my journey in <strong style="font-weight:500;color:var(--color-text)">Satara</strong>, then headed to the legendary <strong style="font-weight:500;color:var(--color-text)">JJ School of Arts</strong> in Mumbai to study Architecture. Spent years designing buildings across India and the US, thinking I’d be the next big architect.</p>
