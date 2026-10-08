@@ -32,7 +32,7 @@ http.createServer(async (req, res) => {
     res.writeHead(await contact(fields)).end();
     return;
   }
-  const file = path.join(__dirname, url === '/' ? 'American Bhau.dc.html' : decodeURIComponent(url));
+  const file = path.join(__dirname, url === '/' ? 'index.html' : decodeURIComponent(url));
   if (!file.startsWith(__dirname) || !fs.existsSync(file) || fs.statSync(file).isDirectory()) return res.writeHead(404).end();
   res.writeHead(200, { 'Content-Type': types[path.extname(file)] || 'application/octet-stream' });
   fs.createReadStream(file).pipe(res);
