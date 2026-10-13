@@ -287,6 +287,15 @@ footer .logo small{color:#cfe0ff}
 .socials a{display:inline-flex;align-items:center;gap:8px}
 .socials a svg{color:var(--c)}
 .socials a:hover{border-color:var(--c);color:var(--c)}
+
+/* challenge video: real episode thumbnail behind the play button */
+.video{aspect-ratio:16/9}
+.video img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .5s cubic-bezier(.2,.8,.2,1)}
+.video::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(8,15,40,.85),rgba(8,15,40,.15) 50%,rgba(8,15,40,.35))}
+.video:hover img{transform:scale(1.04)}
+.video .tag,.video .play,.video .cap{z-index:1}
+.video .cap{position:absolute;left:18px;right:18px;bottom:16px;color:#fff;font:600 1.05rem/1.3 var(--display)}
+.video .cap small{display:block;font:600 .66rem var(--mono);letter-spacing:.12em;text-transform:uppercase;opacity:.75;margin-bottom:4px}
 </style>
 
 <!-- NAV -->
@@ -442,10 +451,10 @@ footer .logo small{color:#cfe0ff}
           <a href="#challenge-steps" class="btn arrow" style="color:#fff;border-color:rgba(255,255,255,.4)">See how it works</a>
         </div>
       </div>
-      <a class="video" href="https://www.youtube.com/@american-bhau" target="_blank" rel="noopener" aria-label="Watch the Bhau Challenge intro on YouTube">
-        <span class="tag">● CLICK TO WATCH</span>
+      <a class="video" href="https://www.youtube.com/@american-bhau/search?query=Round%20Table" target="_blank" rel="noopener" aria-label="Watch the Marathi Entrepreneurs' Round Table on YouTube">
+        <img src="assets/episodes/ep-2.webp" alt="" width="980" height="560" loading="lazy" decoding="async">
         <span class="play">▶</span>
-        <span class="deva" aria-hidden="true">भाऊ</span>
+        <span class="cap"><small>American Bhau Podcast</small>Marathi Entrepreneurs' Round Table</span>
       </a>
     </div>
     <div class="steps" id="challenge-steps">
