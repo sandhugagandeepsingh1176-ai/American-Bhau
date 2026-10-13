@@ -248,6 +248,21 @@ footer .logo small{color:#cfe0ff}
 .rv{opacity:0;transform:translateY(22px);transition:opacity .6s ease,transform .6s cubic-bezier(.2,.8,.2,1)}
 .rv.in{opacity:1;transform:none}
 @media (prefers-reduced-motion:reduce){.track{animation:none;flex-wrap:wrap;width:auto;justify-content:center}.rv{opacity:1;transform:none}}
+
+/* latest episodes */
+.latest-head{flex-direction:row;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:18px}
+.ep-links{display:flex;gap:8px;flex-wrap:wrap}
+.eps{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.ep{display:flex;flex-direction:column;gap:10px;color:var(--fg)}
+.ep-art{position:relative;display:block;border-radius:18px;overflow:hidden;background:var(--tint);aspect-ratio:1/1}
+.ep-art.wide{aspect-ratio:16/9}
+.ep-art img{width:100%;height:100%;object-fit:cover;transition:transform .4s cubic-bezier(.2,.8,.2,1)}
+.ep:hover .ep-art img{transform:scale(1.04)}
+.ep-art.wide::after{content:"▶";position:absolute;right:12px;bottom:12px;width:40px;height:40px;border-radius:50%;background:var(--blue);color:#fff;display:grid;place-items:center;font-size:.85rem}
+.ep-meta{font:600 .72rem/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--blue)}
+.ep-title{font:600 1.02rem/1.35 var(--display);letter-spacing:-.01em;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden}
+@media (max-width:900px){.eps{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.eps{grid-template-columns:1fr}}
 </style>
 
 <!-- NAV -->
@@ -289,10 +304,10 @@ footer .logo small{color:#cfe0ff}
       <span>Trusted by 25+ Marathi-owned brands across the U.S.</span>
     </div>
     <div class="stats" aria-label="American Bhau in numbers">
-      <div class="stat"><b>#1</b><span>Marathi podcast in America</span></div>
-      <div class="stat"><b data-count="25" data-suffix="+">25+</b><span>brands featured</span></div>
-      <div class="stat"><b>Millions</b><span>of views on YouTube &amp; Instagram</span></div>
-      <div class="stat"><b>2023</b><span>the year we started</span></div>
+      <div class="stat"><b data-live="yt-subs">42.9K</b><span>YouTube subscribers</span></div>
+      <div class="stat"><b>4.9M+</b><span>views on YouTube</span></div>
+      <div class="stat"><b data-live="pod-count">59</b><span>podcast episodes</span></div>
+      <div class="stat"><b>25+</b><span>brands featured</span></div>
     </div>
   </div>
   <div class="deva-bg" aria-hidden="true">अमेरिकन भाऊ</div>
@@ -353,6 +368,31 @@ footer .logo small{color:#cfe0ff}
       <article class="offer"><span class="eyebrow">30-day sprint</span><h3>Bhau Challenge</h3><p>Thirty days of daily prompts, weekly reviews and accountability to make posting a habit.</p><a class="btn btn-white btn-sm arrow" href="#challenge">Join the challenge</a></article>
       <article class="offer"><span class="eyebrow">1:1 sessions</span><h3>Consulting</h3><p>A focused strategy call on your content, offer and local marketing, with a written plan after.</p><a class="btn btn-white btn-sm arrow" href="#consulting">Book a call</a></article>
       <article class="offer" id="club"><span class="eyebrow">Community</span><h3>Bhau Club</h3><p>A members' circle of owners who trade what's working, meet up in person and send each other customers.</p><a class="btn btn-white btn-sm arrow" href="#newsletter">Join the waitlist</a></article>
+    </div>
+  </div>
+</section>
+
+<!-- LATEST EPISODES (refreshed live from Apple Podcasts, and YouTube via youtube.php) -->
+<section id="latest" style="padding-top:20px">
+  <div class="wrap">
+    <div class="head latest-head">
+      <div style="display:flex;flex-direction:column;gap:14px">
+        <span class="eyebrow">Just dropped</span>
+        <h2>Latest from American Bhau</h2>
+      </div>
+      <div class="ep-links">
+        <a class="btn btn-ghost btn-sm arrow" href="https://www.youtube.com/@american-bhau" target="_blank" rel="noopener">YouTube</a>
+        <a class="btn btn-ghost btn-sm arrow" href="https://open.spotify.com/show/4Pr4jZz9lXMZfQ38X34b3Y" target="_blank" rel="noopener">Spotify</a>
+        <a class="btn btn-ghost btn-sm arrow" href="https://podcasts.apple.com/us/podcast/the-american-bhau-podcast/id1785251357" target="_blank" rel="noopener">Apple Podcasts</a>
+      </div>
+    </div>
+    <div class="eps" id="eps">
+      <a class="ep" href="https://podcasts.apple.com/us/podcast/50-%E0%A4%A4-%E0%A4%95-%E0%A4%9F-300-%E0%A4%A4-%E0%A4%95-%E0%A4%9F-mandar-bhide-american-bhau-podcast/id1785251357" target="_blank" rel="noopener"><span class="ep-art"><img src="https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/7e/47/c9/7e47c9a9-9e85-0e53-2ec2-183f799ac769/mza_3175673556566550782.jpg/600x600bb.jpg" alt="" width="600" height="600" loading="lazy" decoding="async"></span><span class="ep-meta">Oct 2, 2026 · 61 min</span><span class="ep-title">50 तिकीट ❌ 300 तिकीट ✅ 🤯 Mandar Bhide | American Bhau Podcast</span></a>
+      <a class="ep" href="https://podcasts.apple.com/us/podcast/%E0%A4%A8%E0%A4%97%E0%A4%B0%E0%A4%9A-%E0%A4%AF-%E0%A4%B6-%E0%A4%A4-%E0%A4%A4-%E0%A4%A8-%E0%A4%A5-%E0%A4%9F-switzerland-an-engineers/id1785251357" target="_blank" rel="noopener"><span class="ep-art"><img src="https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/4b/ad/b0/4badb0bc-a0ce-8497-d287-994de0a9d36e/mza_5593360133584651946.jpg/600x600bb.jpg" alt="" width="600" height="600" loading="lazy" decoding="async"></span><span class="ep-meta">Sep 11, 2026 · 82 min</span><span class="ep-title">नगरच्या शेतातून थेट Switzerland | An Engineer's Incredible Journey | American Bhau Podcast</span></a>
+      <a class="ep" href="https://podcasts.apple.com/us/podcast/%E0%A4%AA-%E0%A4%B8-%E0%A4%95-%E0%A4%B8-%E0%A4%96-%E0%A4%A8%E0%A4%B5%E0%A4%B2-%E0%A4%B0%E0%A4%B5-%E0%A4%95-%E0%A4%A4%E0%A4%9A-%E0%A4%85%E0%A4%AB%E0%A4%B2-%E0%A4%A4-%E0%A4%A8-%E0%A4%A7%E0%A4%A1-american-bhau-podcast/id1785251357" target="_blank" rel="noopener"><span class="ep-art"><img src="https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/4a/df/2c/4adf2caf-43fd-904c-93b5-9891b48ecc46/mza_10155783556818475036.jpg/600x600bb.jpg" alt="" width="600" height="600" loading="lazy" decoding="async"></span><span class="ep-meta">Aug 14, 2026 · 78 min</span><span class="ep-title">पैसा की सुख ? नवल रविकांतचे अफलातून धडे | American Bhau Podcast</span></a>
+      <a class="ep" href="https://podcasts.apple.com/us/podcast/%E0%A4%85%E0%A4%AE-%E0%A4%B0-%E0%A4%95-%E0%A4%B8-%E0%A4%A1-%E0%A4%A8-%E0%A4%95-%E0%A4%A8%E0%A4%A1-%E0%A4%95-%E0%A4%9F-%E0%A4%9F-%E0%A4%86%E0%A4%A3-a-amerikecha-american-bhau-club/id1785251357" target="_blank" rel="noopener"><span class="ep-art"><img src="https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/63/8e/44/638e442d-844e-8550-6cd5-4c824d12eb5e/mza_14863513144171131566.jpg/600x600bb.jpg" alt="" width="600" height="600" loading="lazy" decoding="async"></span><span class="ep-meta">Aug 7, 2026 · 56 min</span><span class="ep-title">अमेरिका सोडून कॅनडा ? कंटेंट आणि A Amerikecha | American Bhau Club</span></a>
+      <a class="ep" href="https://podcasts.apple.com/us/podcast/%E0%A4%95-%E0%A4%B0-%E0%A4%9C-%E0%A4%B6-%E0%A4%AA-%E0%A4%B5%E0%A4%B0-%E0%A4%A4-%E0%A4%B0-%E0%A4%97-%E0%A4%86%E0%A4%A3-%E0%A4%AE-%E0%A4%B0-%E0%A4%A6-%E0%A4%98%E0%A4%B0-american-bhau-podcast/id1785251357" target="_blank" rel="noopener"><span class="ep-art"><img src="https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/25/3b/3a/253b3a73-6412-4303-4154-bf3e5f2ba784/mza_10397364915847252763.jpg/600x600bb.jpg" alt="" width="600" height="600" loading="lazy" decoding="async"></span><span class="ep-meta">Jul 31, 2026 · 75 min</span><span class="ep-title">क्रूज शिप वर तुरुंग आणि मुर्दाघर 😱 American Bhau Podcast</span></a>
+      <a class="ep" href="https://podcasts.apple.com/us/podcast/%E0%A4%85%E0%A4%AE-%E0%A4%B0-%E0%A4%95%E0%A4%A8-%E0%A4%AD-%E0%A4%8A-%E0%A4%9A-%E0%A4%B8-%E0%A4%B0-%E0%A4%B5-%E0%A4%A4-american-bhau/id1785251357" target="_blank" rel="noopener"><span class="ep-art"><img src="https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/88/cd/bd/88cdbd64-09b8-e36f-575e-817d95fcff5c/mza_6201242681841162140.jpg/600x600bb.jpg" alt="" width="600" height="600" loading="lazy" decoding="async"></span><span class="ep-meta">Jul 24, 2026 · 42 min</span><span class="ep-title">अमेरिकन भाऊ ची सुरुवात ? American Bhau</span></a>
     </div>
   </div>
 </section>
@@ -531,6 +571,33 @@ footer .logo small{color:#cfe0ff}
 })();
 </script>
 
+<script>
+// Live data. Each source is optional: if it fails, the numbers and episodes already in the page stay.
+(()=>{
+  const $=s=>document.querySelector(s), grid=$('#eps');
+  const esc=t=>String(t).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+  const day=d=>new Date(d+'T12:00:00').toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'});
+  const views=n=>n>=1e6?(n/1e6).toFixed(1).replace(/\.0$/,'')+'M views':n>=1e3?(n/1e3).toFixed(1).replace(/\.0$/,'')+'K views':n+' views';
+  const card=(u,img,meta,title,wide)=>'<a class="ep" href="'+esc(u)+'" target="_blank" rel="noopener"><span class="ep-art'+(wide?' wide':'')+'"><img src="'+esc(img)+'" alt="" loading="lazy" decoding="async"></span><span class="ep-meta">'+esc(meta)+'</span><span class="ep-title">'+esc(title)+'</span></a>';
+  let haveYT=false;
+
+  // YouTube (served by youtube.php on the host): newest videos + subscriber count
+  fetch('youtube.php',{cache:'no-store'}).then(r=>r.ok?r.json():Promise.reject()).then(d=>{
+    if(d.subscribers) $('[data-live="yt-subs"]').textContent=d.subscribers;
+    if(d.items&&d.items.length){
+      haveYT=true;
+      grid.innerHTML=d.items.slice(0,6).map(v=>card(v.url,v.thumb,day(v.date)+(v.views!=null?' · '+views(v.views):''),v.title,true)).join('');
+    }
+  }).catch(()=>{});
+
+  // Apple Podcasts (public, works in the browser): episode count + newest episodes
+  fetch('https://itunes.apple.com/lookup?id=1785251357&entity=podcastEpisode&limit=7').then(r=>r.json()).then(d=>{
+    const [show,...eps]=d.results||[];
+    if(show&&show.trackCount) $('[data-live="pod-count"]').textContent=show.trackCount;
+    if(!haveYT&&eps.length) grid.innerHTML=eps.slice(0,6).map(e=>card(e.trackViewUrl.split('?')[0],e.artworkUrl600||e.artworkUrl160,day(e.releaseDate.slice(0,10))+' · '+Math.round((e.trackTimeMillis||0)/60000)+' min',e.trackName,false)).join('');
+  }).catch(()=>{});
+})();
+</script>
 <!-- Bird "Get In Touch" form -->
 <script src="https://embeddables.p.mbirdcdn.net/sdk/v0/bird-sdk.js" data-config-url="https://api.bird.com/workspaces/3e095f83-870c-4703-ba19-cd605dcb93d1/applications/9a964d06-4262-47cf-96e6-9d3fec842dcf/signature/2024-06-17T17-12-51_3eb34a0fff"></script>
 </body></html>
