@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /youtube.php
+Disallow: /contact.php
+
+Sitemap: https://test.americanbhau.in/sitemap.xml
