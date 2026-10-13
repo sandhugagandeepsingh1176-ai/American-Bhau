@@ -1,551 +1,536 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<script src="./support.js"></script>
-</head>
-<body>
-<x-dc>
-<helmet>
-<title>American Bhau – Get Your Business Seen by the Marathi Community</title>
-<link rel="stylesheet" href="_ds/nocturne-a8513cb3-cf8e-403a-a29a-1e62003ef544/styles.css">
-<script src="_ds/nocturne-a8513cb3-cf8e-403a-a29a-1e62003ef544/_ds_bundle.js"></script>
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<title>American Bhau | Get your Marathi business seen in America</title>
+<meta name="description" content="American Bhau puts Marathi business owners in the U.S. on YouTube, America's #1 Marathi podcast and social media, so the right customers find them.">
+<meta name="theme-color" content="#0b5cff">
+<meta property="og:type" content="website">
+<meta property="og:title" content="American Bhau | Get your Marathi business seen in America">
+<meta property="og:description" content="Stories of Marathi business owners in the U.S., on YouTube, the podcast and social media.">
+<meta property="og:image" content="assets/podcast-host.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%230b5cff'/%3E%3Ctext x='32' y='44' font-size='32' text-anchor='middle' fill='white' font-family='serif'%3E%E0%A4%AD%E0%A4%BE%3C/text%3E%3C/svg%3E"><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-<link rel="preconnect" href="https://i.ytimg.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&amp;family=Crimson+Pro:wght@400;500&amp;family=Fraunces:ital,opsz,wght@0,9..144,400..600;1,9..144,400..600&amp;family=DM+Sans:opsz,wght@9..40,400..600&amp;display=swap">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800&family=Geist+Mono:wght@500;600&family=Tiro+Devanagari+Marathi&display=swap">
 <style>
-:root {
-  --color-bg: #fbfbfb; --color-surface: #f1f1f1; --color-text: #141414;
-  --color-accent: #141414; --color-accent-2: #3a3a3a;
-  --color-divider: color-mix(in srgb, #141414 14%, transparent);
-  --color-neutral-500: #767676; --color-neutral-600: #949494; --color-neutral-700: #c4c4c4; --color-neutral-800: #e2e2e2;
-  --color-accent-300: #404040; --color-accent-400: #5a5a5a; --color-accent-800: #e2e2e2; --color-accent-900: #f2f2f2;
-  --font-heading: 'Fraunces', Georgia, serif; --font-heading-weight: 500; --font-body: 'DM Sans', system-ui, sans-serif;
+/* Layout: floating pill nav, centered editorial hero, white sections broken by ink-navy card grids and electric-blue bands (Creator Science reference). Single light look by choice. */
+:root{
+  color-scheme: light;
+  --blue:#0b5cff; --blue-deep:#0846c7; --blue-soft:#eaf1ff; --blue-line:#cfe0ff;
+  --ink:#0b0f1f; --ink-2:#151b33; --fg:#14161c; --muted:#5d6475; --line:#e6e9f0; --bg:#ffffff; --tint:#f6f8fc;
+  --on-blue:#ffffff; --on-ink:#ffffff; --on-ink-muted:#a9b1c7;
+  --display:"Geist", "Helvetica Neue", Arial, sans-serif;
+  --body:"Geist", "Helvetica Neue", Arial, sans-serif;
+  --mono:"Geist Mono", ui-monospace, Menlo, monospace;
+  --deva:"Tiro Devanagari Marathi", "Noto Serif Devanagari", serif;
+  --wrap:1120px; --r:20px;
 }
-html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
-html, body { overflow-x: clip; }
-* { -webkit-tap-highlight-color: transparent; }
-img { max-width: 100%; }
-body { margin: 0; text-wrap: pretty; background: #fbfbfb; color: #141414; }
-a { color: #141414; text-decoration: none; }
-a:hover { color: #8a4a32; }
-.btn { white-space: nowrap; flex: none; }
-@keyframes ab-roll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
-@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } [style*="ab-roll"] { animation: none !important; } }
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{background:var(--bg);color:var(--fg);font:16px/1.6 var(--body);-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:3px solid var(--blue);outline-offset:3px;border-radius:8px}
+.wrap{max-width:var(--wrap);margin-inline:auto;padding-inline:20px}
+h1,h2,h3{font-family:var(--display);letter-spacing:-.035em;line-height:1.05;text-wrap:balance;margin:0;color:var(--fg)}
+h1{font-size:clamp(2.6rem,6.4vw,4.75rem);font-weight:700}
+h2{font-size:clamp(1.9rem,4vw,2.9rem);font-weight:700}
+h3{font-size:1.3rem;font-weight:700;letter-spacing:-.02em}
+p{margin:0}
+.eyebrow{font:600 .72rem/1 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--blue)}
+.pill{display:inline-flex;align-items:center;gap:8px;padding:8px 14px;border-radius:99px;background:var(--blue-soft);color:var(--blue)}
+.lead{color:var(--muted);font-size:1.12rem;max-width:62ch}
+section{padding-block:96px}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;gap:8px;font:600 .95rem/1 var(--body);padding:14px 22px;border-radius:99px;border:1.5px solid transparent;cursor:pointer;transition:transform .15s,background .15s,box-shadow .15s;white-space:nowrap}
+.btn:hover{transform:translateY(-1px)}
+.btn-blue{background:var(--blue);color:var(--on-blue);box-shadow:0 6px 20px -6px rgba(11,92,255,.6)}
+.btn-blue:hover{background:var(--blue-deep)}
+.btn-ghost{border-color:var(--blue-line);color:var(--blue);background:var(--bg)}
+.btn-white{background:#fff;color:var(--ink)}
+.btn-dark{background:var(--ink);color:#fff}
+.btn-sm{padding:10px 16px;font-size:.88rem}
+.arrow::after{content:"→";transition:transform .15s}
+.btn:hover .arrow::after,.btn.arrow:hover::after{transform:translateX(3px)}
+
+/* nav */
+.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;padding-block:14px;background:rgba(255,255,255,.82);backdrop-filter:blur(14px);border-bottom:1px solid transparent;transition:border-color .2s}
+.nav.scrolled{border-bottom-color:var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px}
+.logo{display:flex;align-items:center;gap:10px;font:700 1.08rem/1 var(--display);letter-spacing:-.03em;color:var(--blue)}
+.logo .mark{width:38px;height:38px;border-radius:50%;background:var(--blue);color:#fff;display:grid;place-items:center;font:400 1.1rem/1 var(--deva);position:relative}
+.logo .mark::after{content:"";position:absolute;inset:-4px;border:1.5px solid var(--blue);border-radius:50%;opacity:.35}
+.logo small{display:block;font:500 .62rem/1.2 var(--mono);letter-spacing:.14em;color:var(--muted);text-transform:uppercase;margin-top:3px}
+.links{display:flex;gap:2px;padding:5px;border:1px solid var(--line);border-radius:99px;background:var(--bg)}
+.links a{padding:8px 14px;border-radius:99px;font-size:.9rem;color:#3a4050;transition:background .15s}
+.links a:hover{background:var(--tint);color:var(--fg)}
+.nav-cta{display:flex;gap:8px;align-items:center}
+.burger{display:none;background:none;border:1px solid var(--line);border-radius:99px;width:42px;height:42px;cursor:pointer;color:var(--fg)}
+@media (max-width:960px){
+  .links{display:none;position:absolute;top:70px;left:16px;right:16px;flex-direction:column;border-radius:18px;padding:10px;box-shadow:0 20px 40px -20px rgba(11,15,31,.25)}
+  .links.open{display:flex}
+  .burger{display:grid;place-items:center}
+  .nav-cta .btn-ghost{display:none}
+}
+
+/* hero */
+.hero{padding-block:72px 40px;text-align:center;position:relative;overflow:hidden}
+.hero .wrap{display:flex;flex-direction:column;align-items:center;gap:26px}
+.hero h1 em{font-style:normal;color:var(--blue)}
+.hero .lead{text-align:center}
+.cta-row{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
+.proof{display:flex;align-items:center;gap:12px;font-size:.88rem;color:var(--muted)}
+.faces{display:flex}
+.faces span{width:32px;height:32px;border-radius:50%;border:2px solid #fff;margin-left:-8px;display:grid;place-items:center;font:600 .7rem var(--body);color:#fff}
+.faces span:first-child{margin-left:0}
+.stars{color:#f5b301;letter-spacing:2px}
+.hero{isolation:isolate}
+.deva-bg{opacity:.45;text-align:center;position:absolute;inset:auto 0 -90px;font:400 clamp(8rem,22vw,17rem)/1 var(--deva);color:var(--blue-soft);z-index:-1;pointer-events:none;user-select:none;white-space:nowrap}
+
+/* stats */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;width:100%;margin-top:18px}
+.stat{background:var(--blue-soft);border-radius:16px;padding:22px 12px;text-align:center}
+.stat b{display:block;font:700 2rem/1 var(--display);letter-spacing:-.04em;color:var(--blue);font-variant-numeric:tabular-nums}
+.stat span{font-size:.86rem;color:var(--muted)}
+.stat-note{font-size:.8rem;color:#8a90a0}
+@media (max-width:720px){.stats{grid-template-columns:repeat(2,1fr)}}
+
+/* path card (dark swirl) */
+.path{background:var(--ink);color:var(--on-ink);border-radius:28px;padding:44px;position:relative;overflow:hidden;display:grid;grid-template-columns:1.2fr 1fr;gap:30px;align-items:center}
+.path::before{content:"";position:absolute;right:-120px;top:50%;width:520px;height:520px;transform:translateY(-50%);border-radius:50%;
+  background:repeating-radial-gradient(circle at center,rgba(60,120,255,.0) 0 14px,rgba(60,120,255,.35) 15px 16px),radial-gradient(circle,#0b5cff55,transparent 65%);animation:spin 60s linear infinite}
+@keyframes spin{to{transform:translateY(-50%) rotate(360deg)}}
+.path>*{position:relative}
+.path h2{color:#fff;font-size:clamp(1.6rem,3vw,2.2rem)}
+.path p{color:var(--on-ink-muted);margin-top:10px}
+.path .eyebrow{color:#7fa6ff}
+.chips{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.chip{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:14px 16px;border-radius:14px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);font-size:.92rem;font-weight:500;transition:background .15s,border-color .15s}
+.chip:hover{background:rgba(11,92,255,.25);border-color:#3d7bff}
+.chip::after{content:"→";color:#7fa6ff}
+@media (max-width:820px){.path{grid-template-columns:1fr;padding:30px 22px}.chips{grid-template-columns:1fr}}
+
+/* beliefs */
+.head{display:flex;flex-direction:column;gap:14px;margin-bottom:44px}
+.beliefs{display:grid;grid-template-columns:repeat(4,1fr);gap:28px}
+.belief{border-top:1.5px solid var(--fg);padding-top:18px;display:flex;flex-direction:column;gap:10px}
+.belief .n{font:600 .75rem var(--mono);color:var(--blue)}
+.belief p{color:var(--muted);font-size:.95rem}
+@media (max-width:900px){.beliefs{grid-template-columns:1fr 1fr}}
+@media (max-width:520px){.beliefs{grid-template-columns:1fr}}
+
+/* offer grid */
+.offers{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.offer{background:var(--ink);color:var(--on-ink);border-radius:var(--r);padding:28px;display:flex;flex-direction:column;gap:12px;transition:transform .2s,box-shadow .2s}
+.offer:hover{transform:translateY(-4px);box-shadow:0 24px 40px -24px rgba(11,15,31,.6)}
+.offer .eyebrow{color:#7fa6ff}
+.offer h3{color:#fff}
+.offer p{color:var(--on-ink-muted);font-size:.95rem;flex:1}
+.offer .btn{align-self:flex-start;margin-top:8px}
+@media (max-width:900px){.offers{grid-template-columns:1fr 1fr}}
+@media (max-width:600px){.offers{grid-template-columns:1fr}}
+
+/* challenge band */
+.band{background:var(--blue);color:var(--on-blue);position:relative;overflow:hidden}
+.band h2,.band h3{color:#fff}
+.band .eyebrow{color:#cfe0ff}
+.band::before{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.14) 1px,transparent 1px);background-size:22px 22px;mask-image:linear-gradient(to bottom,#000,transparent 80%)}
+.band>.wrap{position:relative}
+.challenge{display:grid;grid-template-columns:1fr 1.05fr;gap:48px;align-items:center}
+.challenge .lead{color:#dbe7ff}
+.count{display:inline-flex;gap:6px;align-items:center;padding:8px 14px;border-radius:99px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);font:600 .74rem var(--mono);letter-spacing:.1em;margin-bottom:22px}
+.count b{font-variant-numeric:tabular-nums;color:#fff;background:rgba(0,0,0,.18);padding:3px 6px;border-radius:6px}
+.video{aspect-ratio:16/10;max-width:100%;border-radius:22px;background:linear-gradient(140deg,#0a1a4d,#0b0f1f 70%);border:6px solid rgba(255,255,255,.18);position:relative;display:grid;place-items:center;overflow:hidden}
+.video .play{width:78px;height:78px;border-radius:50%;background:#fff;display:grid;place-items:center;color:var(--blue);font-size:1.6rem;box-shadow:0 0 0 12px rgba(255,255,255,.15);transition:transform .2s}
+.video:hover .play{transform:scale(1.07)}
+.video .tag{position:absolute;top:16px;left:16px;font:600 .68rem var(--mono);letter-spacing:.12em;background:rgba(255,255,255,.14);padding:7px 11px;border-radius:99px}
+.video .deva{position:absolute;bottom:-26px;right:14px;font:400 7rem/1 var(--deva);color:rgba(255,255,255,.07)}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:56px}
+.step{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);border-radius:16px;padding:20px;display:flex;flex-direction:column;gap:6px}
+.step .n{width:28px;height:28px;border-radius:50%;background:#fff;color:var(--blue);display:grid;place-items:center;font:700 .82rem var(--body)}
+.step p{color:#dbe7ff;font-size:.92rem}
+@media (max-width:860px){.challenge{grid-template-columns:1fr}.steps{grid-template-columns:1fr}}
+
+/* events + consulting */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.panel{border:1px solid var(--line);border-radius:24px;padding:30px;background:var(--bg);display:flex;flex-direction:column;gap:18px;min-width:0}
+.panel.tint{background:var(--tint)}
+.event{display:flex;gap:18px;align-items:flex-start;padding:18px;border-radius:16px;background:var(--bg);border:1px solid var(--line)}
+.date{flex:none;width:64px;border-radius:12px;overflow:hidden;text-align:center;border:1px solid var(--blue-line)}
+.date span{display:block;background:var(--blue);color:#fff;font:600 .66rem/1 var(--mono);letter-spacing:.1em;padding:6px 0}
+.date b{display:block;font:700 1.5rem/1 var(--display);padding:9px 0;color:var(--fg)}
+.event h3{font-size:1.08rem}
+.event p{color:var(--muted);font-size:.9rem}
+.badge{display:inline-block;font:600 .66rem var(--mono);letter-spacing:.1em;text-transform:uppercase;padding:4px 8px;border-radius:6px;background:var(--blue-soft);color:var(--blue);margin-bottom:6px}
+form{display:grid;gap:12px}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+label{font-size:.82rem;font-weight:600;color:#3a4050;display:grid;gap:6px}
+input,select,textarea{font:inherit;font-size:.95rem;padding:12px 14px;border-radius:12px;border:1px solid #d6dae4;background:#fff;color:var(--fg);width:100%;transition:border-color .15s,box-shadow .15s}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--blue);box-shadow:0 0 0 4px var(--blue-soft)}
+textarea{resize:vertical;min-height:90px}
+.ok{display:none;padding:14px 16px;border-radius:12px;background:#e9f9ef;color:#146c35;font-size:.92rem;font-weight:500}
+form.done .ok{display:block}
+form.done .fields{display:none}
+.fields{display:grid;gap:12px}
+.list{display:grid;gap:10px;padding:0;margin:0;list-style:none}
+.list li{display:flex;gap:10px;font-size:.95rem;color:#3a4050}
+.list li::before{content:"✓";flex:none;width:20px;height:20px;border-radius:6px;background:var(--blue);color:#fff;display:grid;place-items:center;font-size:.72rem;margin-top:2px}
+@media (max-width:860px){.split{grid-template-columns:1fr}}
+@media (max-width:480px){.row2{grid-template-columns:1fr}.panel{padding:22px}}
+
+/* host */
+.host{display:grid;grid-template-columns:.8fr 1.2fr;gap:56px;align-items:center}
+.portrait{aspect-ratio:4/5;max-width:100%;border-radius:26px;background:linear-gradient(160deg,var(--blue) 0%,#062e88 100%);position:relative;overflow:hidden;display:grid;place-items:end start;padding:24px;color:#fff}
+.portrait .deva{position:absolute;top:8%;left:50%;transform:translateX(-50%);font:400 10rem/1 var(--deva);color:rgba(255,255,255,.16)}
+.portrait img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.portrait::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(8,30,90,.85),rgba(11,92,255,.15) 45%,transparent 70%)}
+.portrait>div{position:relative;z-index:1}
+.portrait b{font:700 1.3rem var(--display);position:relative}
+.portrait small{display:block;font:500 .72rem var(--mono);letter-spacing:.12em;opacity:.8;text-transform:uppercase}
+.socials{display:flex;gap:8px;flex-wrap:wrap}
+.socials a{padding:9px 14px;border:1px solid var(--line);border-radius:99px;font-size:.88rem;font-weight:500;transition:border-color .15s,color .15s}
+.socials a:hover{border-color:var(--blue);color:var(--blue)}
+@media (max-width:860px){.host{grid-template-columns:1fr;gap:30px}.portrait{max-width:380px}}
+
+/* quotes */
+.quotes{columns:3 280px;column-gap:18px}
+.quote{break-inside:avoid;margin-bottom:18px;border:1px solid var(--line);border-radius:18px;padding:24px;background:var(--bg)}
+.quote p{font-size:.98rem;color:#2a2f3c}
+.quote .who{display:flex;gap:10px;align-items:center;margin-top:16px;font-size:.85rem}
+.quote .who i{width:34px;height:34px;border-radius:50%;background:var(--blue-soft);color:var(--blue);display:grid;place-items:center;font:600 .78rem var(--body);font-style:normal}
+.quote .who span{color:var(--muted);display:block;font-size:.78rem}
+
+/* newsletter */
+.news{text-align:center}
+.news .wrap{display:flex;flex-direction:column;align-items:center;gap:18px}
+.news h2{font-size:clamp(2.2rem,5vw,3.6rem)}
+.news .lead{color:#dbe7ff;text-align:center}
+.inline-form{display:flex;gap:8px;background:#fff;padding:6px;border-radius:99px;width:min(520px,100%)}
+.inline-form input{border:0;border-radius:99px;box-shadow:none}
+.inline-form input:focus{box-shadow:none}
+.inline-form.done{background:transparent;justify-content:center}
+.inline-form.done input,.inline-form.done button{display:none}
+.inline-form .ok{background:#fff}
+
+/* footer */
+footer{background:var(--blue);color:#fff;padding-block:64px 28px;position:relative;overflow:hidden;border-top:1px solid rgba(255,255,255,.15)}
+footer .ring{position:absolute;right:-110px;bottom:-140px;width:440px;height:440px;border-radius:50%;border:1.5px solid rgba(255,255,255,.18);display:grid;place-items:center;font:400 9rem/1 var(--deva);color:rgba(255,255,255,.12)}
+footer .ring::before{content:"";position:absolute;inset:40px;border:1.5px dashed rgba(255,255,255,.14);border-radius:50%}
+.fgrid{display:grid;grid-template-columns:1.4fr repeat(3,1fr);gap:32px;position:relative}
+.fgrid h4{font:600 .78rem var(--mono);letter-spacing:.12em;text-transform:uppercase;margin:0 0 14px;color:#cfe0ff}
+.fgrid ul{list-style:none;margin:0;padding:0;display:grid;gap:8px;font-size:.92rem}
+.fgrid a:hover{text-decoration:underline}
+footer .logo{color:#fff}
+footer .logo .mark{background:#fff;color:var(--blue)}
+footer .logo .mark::after{border-color:#fff}
+footer .logo small{color:#cfe0ff}
+.fbase{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-top:48px;padding-top:20px;border-top:1px solid rgba(255,255,255,.2);font-size:.82rem;color:#cfe0ff;position:relative}
+@media (max-width:820px){.fgrid{grid-template-columns:1fr 1fr}}
+
+.totop{position:fixed;right:20px;bottom:calc(20px + env(safe-area-inset-bottom,0px));width:46px;height:46px;border-radius:50%;background:#fff;border:1px solid var(--line);box-shadow:0 8px 24px -10px rgba(11,15,31,.35);display:grid;place-items:center;cursor:pointer;opacity:0;pointer-events:none;transition:opacity .2s;color:var(--fg);font-size:1.1rem;z-index:40}
+.totop.show{opacity:1;pointer-events:auto}
+
+/* real brand logos in the proof row and testimonial */
+.faces.logos img{width:34px;height:34px;border-radius:50%;border:2px solid #fff;margin-left:-8px;object-fit:cover;background:#fff;box-shadow:0 2px 6px rgba(11,15,31,.12)}
+.faces.logos img:first-child{margin-left:0}
+.quote .who img{width:34px;height:34px;border-radius:50%;object-fit:cover;background:#fff;border:1px solid var(--line)}
+/* Bird form cards */
+.bird-card{background:#fff;border-radius:18px;padding:8px;box-shadow:0 1px 2px rgba(11,15,31,.06),0 18px 40px -24px rgba(11,15,31,.35)}
+#consulting .bird-card{box-shadow:none;border:1px solid var(--line)}
+/* brands marquee */
+.brands{padding-block:24px 8px;overflow:hidden}
+.marquee{margin-top:18px;mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+.track{display:flex;gap:18px;width:max-content;animation:ab-marquee 60s linear infinite}
+.marquee:hover .track{animation-play-state:paused}
+.track img{width:72px;height:72px;border-radius:18px;object-fit:contain;background:#fff;padding:6px;border:1px solid var(--line);flex:none}
+@keyframes ab-marquee{to{transform:translateX(-50%)}}
+/* scroll reveal (class is added by the script, so content still shows without JS) */
+.rv{opacity:0;transform:translateY(22px);transition:opacity .6s ease,transform .6s cubic-bezier(.2,.8,.2,1)}
+.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.track{animation:none;flex-wrap:wrap;width:auto;justify-content:center}.rv{opacity:1;transform:none}}
 </style>
-</helmet>
 
-<div style="min-height:100vh;display:flex;flex-direction:column;background:#fbfbfb;color:#141414;font-family:var(--font-body)">
-
-  <nav class="nav" style="position:sticky;top:0;z-index:30;flex-wrap:wrap;gap:10px 28px;padding:12px clamp(20px,5vw,72px);background:color-mix(in srgb, #fbfbfb 86%, transparent);backdrop-filter:blur(12px);border-bottom:1px solid rgba(20,20,20,0.06)">
-    <a class="nav-brand" href="#top" style="font-family:var(--font-heading);font-size:20px;color:#141414">American Bhau</a>
-    <div style="display:flex;align-items:center;gap:6px 22px;flex-wrap:wrap;font-size:14px;margin-left:auto">
-      <a href="#latest" style="color:#3a3a3a">Just posted</a>
-      <a href="#benefits" style="color:#3a3a3a">What you get</a>
-      <a href="#fit" style="color:#3a3a3a">Find your fit</a>
-      <a href="#results" style="color:#3a3a3a">Results</a>
-      <a href="#work" style="color:#3a3a3a">Ways to work</a>
-      <a class="btn btn-primary" href="#contact" style="color:#141414;border-color:#141414">Get featured</a>
+<!-- NAV -->
+<header class="nav" id="nav">
+  <div class="wrap">
+    <a href="#top" class="logo" aria-label="American Bhau home">
+      <span class="mark">भा</span>
+      <span>American Bhau<small>Get loud</small></span>
+    </a>
+    <nav class="links" id="links" aria-label="Primary">
+      <a href="#start">Start here</a>
+      <a href="#work">What we do</a>
+      <a href="#challenge">Bhau Challenge</a>
+      <a href="#events">Events</a>
+      <a href="#consulting">Consulting</a>
+      <a href="#about">About</a>
+    </nav>
+    <div class="nav-cta">
+      <a href="#club" class="btn btn-ghost btn-sm">Bhau Club</a>
+      <a href="#consulting" class="btn btn-blue btn-sm">Get in touch</a>
+      <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="links">☰</button>
     </div>
-  </nav>
+  </div>
+</header>
 
-  <main id="top" style="flex:1">
-
-    <section data-screen-label="Opening" style="position:relative;max-width:1280px;margin:0 auto;padding:clamp(28px,5vw,64px) clamp(12px,3vw,40px) clamp(48px,6vw,80px);min-height:min(78vh,760px);display:flex;align-items:center">
-      <x-import component-from-global-scope="book-intro" from="./book-intro.js" photo="assets/rahul-podcast.webp" style="position:absolute;inset:0;z-index:5;pointer-events:none" hint-size="0px,0px"></x-import>
-      <div style="position:relative;width:100%;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));border-radius:14px;background:url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .08 0'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E&quot;),#f5f3ee;box-shadow:0 1px 0 rgba(0,0,0,0.04),0 24px 48px -18px rgba(40,34,24,0.28),0 2px 6px rgba(40,34,24,0.08)">
-        <div style="position:relative;padding:clamp(28px,4.5vw,64px);border-radius:14px 0 0 14px;background:linear-gradient(270deg,rgba(60,50,35,0.14),rgba(60,50,35,0) 7%);display:flex;align-items:center;justify-content:center">
-          <sc-if value="{{ showHeroPhoto }}" hint-placeholder-val="{{ true }}">
-            <figure style="position:relative;margin:0;width:100%;max-width:440px;transform:rotate(-1.6deg);background:#fdfcf9;padding:12px 12px 44px;box-shadow:0 10px 24px -10px rgba(40,34,24,0.35),0 1px 3px rgba(40,34,24,0.12)">
-              <span style="position:absolute;top:-12px;left:50%;margin-left:-44px;transform:rotate(-3deg);width:88px;height:26px;background:rgba(214,206,186,0.62);box-shadow:0 1px 2px rgba(0,0,0,0.06)"></span>
-              <img src="assets/rahul-podcast.webp" fetchpriority="high" decoding="async" alt="Rahul Patil at the American Bhau podcast microphone" style="display:block;width:100%;aspect-ratio:4/5;object-fit:cover;object-position:50% 20%;background:#2a1c10">
-              <figcaption style="position:absolute;left:16px;right:16px;bottom:8px;font-family:'Caveat', 'Segoe Print', cursive;font-size:22px;line-height:1.2;color:#4a4034">Rahul, Dhule → America</figcaption>
-            </figure>
-          </sc-if>
-        </div>
-        <div style="position:relative;padding:clamp(28px,4.5vw,64px) clamp(28px,5vw,72px) clamp(56px,6vw,80px);border-radius:0 14px 14px 0;background:linear-gradient(90deg,rgba(60,50,35,0.12),rgba(60,50,35,0) 6%);display:flex;flex-direction:column;justify-content:center;gap:24px">
-          <div style="position:relative;align-self:flex-start;transform:rotate(2deg);background:#161616;color:#f2f2f2;padding:14px 18px 12px;border-radius:3px;box-shadow:0 8px 18px -8px rgba(0,0,0,0.4)">
-            <span style="position:absolute;top:-11px;left:-24px;transform:rotate(-38deg);width:88px;height:26px;background:rgba(214,206,186,0.62)"></span>
-            <div style="font-size:10px;letter-spacing:0.18em;text-transform:uppercase;opacity:0.7">Vol. 01</div>
-            <div style="font-size:15px;letter-spacing:-0.01em;margin-top:4px">The American Bhau Podcast</div>
-          </div>
-          <h1 style="font-family:'Caveat', 'Segoe Print', cursive;font-weight:500;font-size:clamp(40px,4.6vw,64px);line-height:1.02;margin:8px 0 0;color:#2b2721;max-width:14ch">Helping businesses earn more using social media.</h1>
-          <p style="font-size:clamp(16px,1.3vw,18px);line-height:1.65;margin:0;max-width:40ch;color:#5a5044">American Bhau is dedicated to promoting Marathi businesses, connecting them with global audiences, and empowering entrepreneurs through inspiring stories and visibility.</p>
-          <div style="position:absolute;right:clamp(20px,3vw,36px);bottom:clamp(16px,2.4vw,28px);display:flex;align-items:center;gap:10px;color:#8a4a32">
-            <span style="display:grid;place-items:center;width:34px;height:34px;border:1.5px solid currentColor;border-radius:4px;font-size:11px;letter-spacing:0.04em;transform:rotate(-4deg);opacity:0.85">AB</span>
-            <span style="font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:#5a5044">Est. 2023</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="latest" data-screen-label="Just posted" style="scroll-margin-top:80px;max-width:1200px;margin:0 auto;padding:clamp(8px,2vw,24px) clamp(20px,5vw,72px) clamp(64px,8vw,112px);display:flex;flex-direction:column;gap:clamp(28px,4vw,44px)">
-      <div style="display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:20px 48px">
-        <div style="display:flex;flex-direction:column;gap:16px;max-width:620px">
-          <div style="display:flex;align-items:center;gap:10px;font-size:12px;letter-spacing:0.16em;text-transform:uppercase;color:#8a4a32"><span style="width:8px;height:8px;border-radius:50%;background:#8a4a32"></span>Just posted</div>
-          <h2 style="font-size:clamp(34px,4.4vw,56px);line-height:1.05;letter-spacing:-0.015em;margin:0">This is what being featured looks like.</h2>
-          <p style="margin:0;font-size:17px;line-height:1.65;color:#4a4a4a;max-width:52ch">Every episode puts a business owner in front of the global Marathi community, on YouTube, Spotify and Apple Podcasts. The newest ones are below.</p>
-        </div>
-        <a class="btn btn-ghost" href="https://www.youtube.com/@american-bhau/videos" target="_blank" rel="noopener" style="color:#141414">All episodes on YouTube →</a>
-      </div>
-
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,360px),1fr));gap:clamp(16px,2vw,24px)">
-        <sc-for list="{{ leadList }}" as="L" hint-placeholder-count="0"><a href="{{ L.url }}" target="_blank" rel="noopener" style="display:flex;flex-direction:column;border-radius:12px;overflow:hidden;background:#161616;color:#f2f2f2;text-decoration:none;box-shadow:0 24px 48px -28px rgba(0,0,0,0.5);transition:transform 260ms cubic-bezier(.2,.8,.2,1)" style-hover="transform:translateY(-4px);color:#f2f2f2">
-          <div style="position:relative;aspect-ratio:16/9;background:#111">
-            <img src="{{ L.src }}" alt="{{ L.title }}" loading="lazy" decoding="async" style="display:block;width:100%;height:100%;object-fit:cover">
-            <span style="position:absolute;left:14px;top:14px;padding:6px 10px;border-radius:999px;background:#f5f3ee;color:#141414;font-size:11px;letter-spacing:0.12em;text-transform:uppercase">New</span>
-            <span style="position:absolute;right:14px;bottom:14px;display:grid;place-items:center;width:52px;height:52px;border-radius:50%;background:rgba(245,243,238,0.94);color:#141414"><svg width="18" height="18" viewBox="0 0 256 256" fill="currentColor"><path d="M240,128a15.74,15.74,0,0,1-7.6,13.51L88.32,229.65a16,16,0,0,1-16.2.3A15.86,15.86,0,0,1,64,216.13V39.87a15.86,15.86,0,0,1,8.12-13.82,16,16,0,0,1,16.2.3L232.4,114.49A15.74,15.74,0,0,1,240,128Z"></path></svg></span>
-          </div>
-          <div style="display:flex;flex-direction:column;gap:10px;padding:clamp(20px,2.4vw,28px)">
-            <span style="font-size:12px;letter-spacing:0.1em;text-transform:uppercase;color:#a9a39a">{{ L.date }}</span>
-            <h3 style="margin:0;font-size:clamp(22px,2.2vw,28px);line-height:1.25;letter-spacing:-0.01em">{{ L.title }}</h3>
-            <p style="margin:0;font-size:15px;line-height:1.6;color:#c9c5bd">{{ L.summary }}</p>
-          </div>
-        </a></sc-for>
-        <div style="display:flex;flex-direction:column;gap:clamp(16px,2vw,24px)">
-          <sc-for list="{{ rest }}" as="e" hint-placeholder-count="2">
-            <a href="{{ e.url }}" target="_blank" rel="noopener" style="flex:1;display:grid;grid-template-columns:minmax(0,0.9fr) minmax(0,1.1fr);border-radius:12px;overflow:hidden;background:#f5f3ee;color:#141414;text-decoration:none;box-shadow:inset 0 0 0 1px rgba(20,20,20,0.06);transition:transform 260ms cubic-bezier(.2,.8,.2,1)" style-hover="transform:translateY(-4px);color:#141414">
-              <div style="background:#111;min-height:150px"><img src="{{ e.src }}" alt="{{ e.title }}" loading="lazy" decoding="async" style="display:block;width:100%;height:100%;object-fit:cover"></div>
-              <div style="display:flex;flex-direction:column;gap:8px;padding:18px 20px">
-                <span style="font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:#767676">{{ e.date }}</span>
-                <h3 style="margin:0;font-size:17px;line-height:1.35;letter-spacing:-0.005em">{{ e.title }}</h3>
-                <span style="margin-top:auto;font-size:13px;color:#8a4a32">Watch →</span>
-              </div>
-            </a>
-          </sc-for>
-        </div>
-      </div>
-
-      <div style="display:flex;flex-direction:column;gap:16px">
-        <div style="display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap">
-          <span style="font-size:12px;letter-spacing:0.16em;text-transform:uppercase;color:#767676">More from the channel</span>
-          <div style="display:flex;gap:14px;font-size:13px">
-            <a href="https://open.spotify.com/show/4Pr4jZz9lXMZfQ38X34b3Y" target="_blank" rel="noopener" style="color:#3a3a3a">Spotify</a>
-            <a href="https://podcasts.apple.com/us/podcast/the-american-bhau-podcast/id1785251357" target="_blank" rel="noopener" style="color:#3a3a3a">Apple Podcasts</a>
-          </div>
-        </div>
-        <div style="display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:10px;margin:0 calc(-1 * clamp(20px,5vw,72px));padding-left:clamp(20px,5vw,72px);padding-right:clamp(20px,5vw,72px);scrollbar-width:thin">
-          <sc-for list="{{ channel }}" as="v" hint-placeholder-count="6">
-            <a href="{{ v.url }}" target="_blank" rel="noopener" style="flex:none;width:clamp(240px,24vw,280px);scroll-snap-align:start;display:flex;flex-direction:column;gap:10px;text-decoration:none;color:#141414" style-hover="color:#8a4a32">
-              <div style="aspect-ratio:16/9;border-radius:8px;overflow:hidden;background:#e2e2e2"><img src="{{ v.thumb }}" alt="{{ v.title }}" loading="lazy" decoding="async" style="display:block;width:100%;height:100%;object-fit:cover"></div>
-              <span style="font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:#767676">{{ v.kicker }}</span>
-              <span style="font-size:15px;line-height:1.4">{{ v.title }}</span>
-            </a>
-          </sc-for>
-        </div>
-      </div>
-    </section>
-
-    <section id="benefits" data-screen-label="What you get" style="scroll-margin-top:64px;background:radial-gradient(900px 480px at 90% -10%, rgba(216,185,120,0.12), transparent 60%), #1c1e27;color:#ecebe7">
-      <div style="max-width:1200px;margin:0 auto;padding:clamp(72px,9vw,128px) clamp(20px,5vw,72px);display:flex;flex-direction:column;gap:clamp(40px,6vw,72px)">
-        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:24px clamp(32px,6vw,96px);align-items:end">
-          <div style="display:flex;flex-direction:column;gap:18px">
-            <div style="display:flex;align-items:center;gap:12px;font-size:12px;letter-spacing:0.16em;text-transform:uppercase;color:#d8b978"><span style="width:28px;height:1px;background:#d8b978"></span>What you get</div>
-            <h2 style="font-size:clamp(36px,5vw,64px);line-height:1.04;letter-spacing:-0.015em;margin:0;color:#f4f1ea;max-width:14ch">You run the business. We make sure people see it.</h2>
-          </div>
-          <p style="margin:0;font-size:17px;line-height:1.7;color:#b5b3ad;max-width:46ch">Most small business owners know they should be on social media. Few have the time to plan it, film it, edit it and keep it going every week. This is what we take off your plate, and what you get back.</p>
-        </div>
-        <x-import component-from-global-scope="reveal-on" from="./reveal-on.js" each="" hint-size="100%,auto">
-          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr));gap:clamp(14px,1.6vw,20px);align-items:start">
-            <sc-for list="{{ benefits }}" as="b" hint-placeholder-count="4">
-              <article data-reveal-card="" style="display:flex;flex-direction:column;gap:18px;min-height:300px;box-sizing:border-box;padding:clamp(22px,2.4vw,30px);border-radius:14px;background:linear-gradient(180deg,rgba(244,241,234,0.06),rgba(244,241,234,0.02));box-shadow:inset 0 0 0 1px rgba(236,235,231,0.1);transition:box-shadow 300ms ease, transform 300ms cubic-bezier(.2,.8,.2,1)" style-hover="transform:translateY(-4px);box-shadow:inset 0 0 0 1px rgba(216,185,120,0.5)">
-                <div style="display:flex;justify-content:space-between;align-items:center">
-                  <span style="display:grid;place-items:center;width:40px;height:40px;border-radius:50%;box-shadow:inset 0 0 0 1px rgba(216,185,120,0.5);color:#d8b978">{{ b.icon }}</span>
-                  <span style="font-size:12px;color:#8d8b86;font-feature-settings:'tnum' 1">{{ b.num }}</span>
-                </div>
-                <h3 style="margin:0;font-size:clamp(22px,2vw,26px);line-height:1.18;letter-spacing:-0.01em;color:#f4f1ea">{{ b.title }}</h3>
-                <div style="display:flex;flex-direction:column;gap:6px">
-                  <span style="font-size:10px;letter-spacing:0.16em;text-transform:uppercase;color:#d8b978">You get</span>
-                  <p style="margin:0;font-family:'Crimson Pro', Georgia, serif;font-size:19px;line-height:1.4;color:#f4f1ea">{{ b.getting }}</p>
-                </div>
-                <div style="margin-top:auto;display:flex;flex-direction:column;gap:12px;padding-top:14px;border-top:1px solid rgba(236,235,231,0.1)">
-                  <button type="button" aria-expanded="{{ b.expanded }}" onClick="{{ b.toggle }}" style="display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:32px;padding:0;border:0;background:transparent;color:#b5b3ad;font:inherit;font-size:12px;letter-spacing:0.14em;text-transform:uppercase;cursor:pointer;text-align:left" style-hover="color:#f4f1ea"><span>How we do it</span><span style="display:grid;place-items:center;width:24px;height:24px;border-radius:50%;box-shadow:inset 0 0 0 1px rgba(236,235,231,0.25);font-size:15px;line-height:1;transform:rotate({{ b.rot }});transition:transform 260ms ease">+</span></button>
-                  <sc-if value="{{ b.open }}" hint-placeholder-val="{{ false }}"><p style="margin:0;font-size:15px;line-height:1.6;color:#c9c6bf">{{ b.doing }}</p></sc-if>
-                </div>
-              </article>
-            </sc-for>
-          </div>
-        </x-import>
-      </div>
-    </section>
-
-    <section id="fit" data-screen-label="Find your fit" style="scroll-margin-top:64px;max-width:1200px;margin:0 auto;padding:clamp(72px,9vw,128px) clamp(20px,5vw,72px);display:flex;flex-direction:column;gap:clamp(28px,4vw,40px)">
-      <div style="display:flex;flex-direction:column;gap:16px">
-        <div style="display:flex;align-items:center;gap:12px;font-size:12px;letter-spacing:0.16em;text-transform:uppercase;color:#8a4a32"><span style="width:28px;height:1px;background:#8a4a32"></span>Find your fit</div>
-        <h2 style="font-size:clamp(34px,4.4vw,56px);line-height:1.05;letter-spacing:-0.015em;margin:0">What are you trying to grow?</h2>
-      </div>
-      <div role="tablist" aria-label="Choose what describes you" style="display:flex;flex-wrap:wrap;gap:8px">
-        <sc-for list="{{ goals }}" as="g" hint-placeholder-count="4">
-          <button type="button" role="tab" aria-selected="{{ g.sel }}" onClick="{{ g.pick }}" style="min-height:44px;padding:0 20px;border-radius:999px;border:1px solid {{ g.border }};background:{{ g.bg }};color:{{ g.ink }};font:inherit;font-size:14px;white-space:nowrap;cursor:pointer;transition:background 200ms ease, color 200ms ease" style-hover="border-color:#141414">{{ g.tab }}</button>
-        </sc-for>
-      </div>
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));border-radius:14px;overflow:hidden;background:#f5f3ee;box-shadow:inset 0 0 0 1px rgba(20,20,20,0.06)">
-        <div style="display:flex;flex-direction:column;gap:12px;padding:clamp(24px,3.4vw,44px)">
-          <span style="font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:#767676">Where you are now</span>
-          <p style="margin:0;font-family:'Crimson Pro', Georgia, serif;font-size:clamp(22px,2.2vw,27px);line-height:1.35;color:#2b2721">{{ goal.now }}</p>
-        </div>
-        <div style="display:flex;flex-direction:column;gap:12px;padding:clamp(24px,3.4vw,44px);background:#efece5">
-          <span style="font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:#767676">What we do about it</span>
-          <ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px">
-            <sc-for list="{{ goal.doingList }}" as="d" hint-placeholder-count="2">
-              <li style="display:grid;grid-template-columns:22px minmax(0,1fr);gap:10px;padding:12px 14px;border-radius:10px;background:#fbfbfb;box-shadow:0 1px 2px rgba(40,34,24,0.06);font-size:15px;line-height:1.55;color:#3a3a3a"><span style="display:grid;place-items:center;width:22px;height:22px;border-radius:50%;background:#141414;color:#f5f3ee;font-size:11px;font-feature-settings:'tnum' 1">{{ d.n }}</span><span>{{ d.t }}</span></li>
-            </sc-for>
-          </ul>
-        </div>
-        <div style="display:flex;flex-direction:column;gap:12px;padding:clamp(24px,3.4vw,44px);background:#161616;color:#f2f2f2">
-          <span style="font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:#d8b978">Proof</span>
-          <p style="margin:0;font-size:16px;line-height:1.7;color:#d9d5cc">{{ goal.proof }}</p>
-          <div style="margin-top:auto;padding-top:18px;display:flex;flex-direction:column;gap:12px;border-top:1px solid rgba(242,242,242,0.14)">
-            <span style="font-size:13px;color:#a9a39a">Start with: <span style="color:#f2f2f2">{{ goal.start }}</span></span>
-            <div style="display:flex"><button type="button" class="btn btn-secondary" onClick="{{ goal.ask }}" style="color:#f2f2f2;border-color:#f2f2f2">Ask about this →</button></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="results" data-screen-label="Results" style="scroll-margin-top:64px;background:radial-gradient(700px 360px at 92% 4%, rgba(217,207,189,0.45), transparent 62%), #f5f3ee">
-      <div style="max-width:1200px;margin:0 auto;padding:clamp(72px,9vw,120px) clamp(20px,5vw,72px) clamp(40px,5vw,64px);display:flex;flex-direction:column;gap:clamp(36px,5vw,56px)">
-        <div style="display:flex;flex-direction:column;gap:16px;max-width:720px">
-          <div style="display:flex;align-items:center;gap:12px;font-size:12px;letter-spacing:0.16em;text-transform:uppercase;color:#8a4a32"><span style="width:28px;height:1px;background:#8a4a32"></span>Results</div>
-          <h2 style="font-size:clamp(34px,4.4vw,56px);line-height:1.05;letter-spacing:-0.015em;margin:0">You don’t have to build an audience <span style="color:#8a4a32;font-style:italic">from scratch.</span></h2>
-          <p style="margin:0;font-size:17px;line-height:1.65;color:#4a4a4a">You “borrow” ours to get instant trust, visibility, and new customers.</p>
-        </div>
-        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr));gap:clamp(18px,2vw,24px);padding-top:10px">
-          <sc-for list="{{ facts }}" as="f" hint-placeholder-count="4">
-            <div role="button" tabindex="0" aria-haspopup="dialog" onClick="{{ f.open }}" onKeyDown="{{ f.key }}" style="position:relative;cursor:pointer;display:flex;flex-direction:column;gap:12px;min-height:220px;box-sizing:border-box;padding:clamp(24px,2.6vw,30px);border-radius:12px;background:{{ f.bg }};color:{{ f.ink }};box-shadow:0 1px 2px rgba(40,34,24,0.08),0 22px 40px -26px rgba(40,34,24,0.45);transform:rotate({{ f.tilt }});transition:transform 300ms cubic-bezier(.2,.8,.2,1)" style-hover="transform:translateY(-6px) rotate(0deg)">
-              <span style="position:absolute;top:-11px;left:50%;margin-left:-38px;width:76px;height:22px;transform:rotate(-3deg);background:rgba(214,206,186,0.72);box-shadow:0 1px 2px rgba(0,0,0,0.06)"></span>
-              <span style="display:grid;place-items:center;width:38px;height:38px;border-radius:50%;color:{{ f.accent }};box-shadow:inset 0 0 0 1px {{ f.ring }}">{{ f.icon }}</span>
-              <span style="margin-top:auto;font-family:var(--font-heading);font-size:clamp(28px,2.8vw,36px);line-height:1.05;letter-spacing:-0.01em">{{ f.big }}</span>
-              <span style="width:28px;height:1px;background:{{ f.accent }}"></span>
-              <span style="font-size:14px;line-height:1.5;opacity:0.8">{{ f.small }}</span>
-              <span style="display:inline-flex;align-items:center;gap:8px;margin-top:4px;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:{{ f.accent }}">See more <span style="display:grid;place-items:center;width:20px;height:20px;border-radius:50%;box-shadow:inset 0 0 0 1px {{ f.ring }};font-size:13px;line-height:1">+</span></span>
-            </div>
-          </sc-for>
-        </div>
-      </div>
-      <div aria-label="Brands we have partnered with" style="overflow:hidden;padding:8px 0 clamp(40px,5vw,64px)" style-hover="--roll-state:paused">
-        <div style="display:flex;align-items:center;gap:clamp(18px,2.4vw,28px);width:max-content;padding:16px 0;animation:ab-roll 60s linear infinite;animation-play-state:var(--roll-state,running)">
-          <sc-for list="{{ brandRoll }}" as="b" hint-placeholder-count="12">
-            <a href="{{ b.url }}" target="_blank" rel="noopener" title="{{ b.name }}" style="flex:none;display:grid;place-items:center;box-sizing:border-box;width:clamp(104px,10vw,128px);height:clamp(104px,10vw,128px);padding:14px;border-radius:16px;background:#fdfcf9;box-shadow:0 1px 2px rgba(40,34,24,0.06),0 14px 28px -18px rgba(40,34,24,0.35);transition:transform 240ms ease, box-shadow 240ms ease" style-hover="transform:translateY(-6px);box-shadow:0 0 0 2px #d8b978,0 20px 32px -18px rgba(40,34,24,0.4)">
-              <img src="{{ b.src }}" alt="{{ b.name }} logo" loading="lazy" decoding="async" style="display:block;max-width:100%;max-height:100%;object-fit:contain">
-            </a>
-          </sc-for>
-        </div>
-      </div>
-      <div style="max-width:1200px;margin:0 auto;padding:0 clamp(20px,5vw,72px) clamp(72px,9vw,120px)">
-        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:clamp(20px,2.4vw,28px);padding-top:12px">
-          <sc-for list="{{ testimonials }}" as="t" hint-placeholder-count="3">
-            <figure style="position:relative;margin:0;display:flex;flex-direction:column;gap:18px;padding:clamp(26px,3vw,36px);border-radius:12px;background:{{ t.bg }};color:{{ t.ink }};box-shadow:0 1px 2px rgba(40,34,24,0.08),0 24px 44px -28px rgba(40,34,24,0.5);transform:rotate({{ t.tilt }});transition:transform 300ms cubic-bezier(.2,.8,.2,1)" style-hover="transform:translateY(-6px) rotate(0deg)">
-              <span style="position:absolute;top:-11px;left:50%;margin-left:-40px;width:80px;height:22px;transform:rotate(-3deg);background:rgba(214,206,186,0.75);box-shadow:0 1px 2px rgba(0,0,0,0.06)"></span>
-              <div style="display:flex;justify-content:space-between;align-items:flex-start">
-                <span style="font-family:var(--font-heading);font-size:64px;line-height:0.7;height:28px;color:{{ t.accent }}">“</span>
-                <span style="font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:{{ t.accent }}">{{ t.tag }}</span>
-              </div>
-              <blockquote style="margin:0;font-family:'Crimson Pro', Georgia, serif;font-size:19px;line-height:1.5;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:5;overflow:hidden">{{ t.quote }}</blockquote>
-              <sc-if value="{{ t.long }}" hint-placeholder-val="{{ false }}"><button type="button" aria-haspopup="dialog" onClick="{{ t.open }}" style="align-self:flex-start;display:inline-flex;align-items:center;gap:8px;padding:0;border:0;background:transparent;color:{{ t.accent }};font:inherit;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;cursor:pointer">Read full quote <span style="display:grid;place-items:center;width:20px;height:20px;border-radius:50%;box-shadow:inset 0 0 0 1px {{ t.ring }};font-size:13px;line-height:1">+</span></button></sc-if>
-              <figcaption style="margin-top:auto;display:flex;align-items:center;gap:12px;padding-top:16px;border-top:1px solid {{ t.ring }}">
-                <span style="display:grid;place-items:center;flex:none;width:40px;height:40px;border-radius:50%;background:{{ t.accent }};color:{{ t.bg2 }};font-family:var(--font-heading);font-size:18px">{{ t.initial }}</span>
-                <span style="display:flex;flex-direction:column;gap:2px"><span style="font-size:14px">{{ t.name }}</span><span style="font-size:13px;opacity:0.7">{{ t.role }}</span></span>
-              </figcaption>
-            </figure>
-          </sc-for>
-        </div>
-      </div>
-    </section>
-
-    <section id="work" data-screen-label="Ways to work together" style="scroll-margin-top:64px;max-width:1200px;margin:0 auto;padding:clamp(72px,9vw,128px) clamp(20px,5vw,72px);display:flex;flex-direction:column;gap:clamp(32px,5vw,56px)">
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:20px clamp(32px,6vw,96px);align-items:end">
-        <div style="display:flex;flex-direction:column;gap:16px">
-          <div style="display:flex;align-items:center;gap:12px;font-size:12px;letter-spacing:0.16em;text-transform:uppercase;color:#8a4a32"><span style="width:28px;height:1px;background:#8a4a32"></span>Ways to work together</div>
-          <h2 style="font-size:clamp(34px,4.4vw,56px);line-height:1.05;letter-spacing:-0.015em;margin:0">Start small, or hand us the whole thing.</h2>
-        </div>
-        <p style="margin:0;font-size:17px;line-height:1.65;color:#4a4a4a;max-width:46ch">Every option is shaped around your business on a first call. Pick the one closest to what you need and we’ll take it from there.</p>
-      </div>
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:clamp(16px,2vw,24px);align-items:stretch">
-        <sc-for list="{{ offers }}" as="o" hint-placeholder-count="3">
-          <article style="position:relative;display:flex;flex-direction:column;gap:20px;padding:clamp(26px,3vw,36px);border-radius:14px;background:{{ o.bg }};color:{{ o.ink }};box-shadow:{{ o.shadow }}">
-            <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;min-height:24px">
-              <span style="font-size:11px;letter-spacing:0.16em;text-transform:uppercase;opacity:0.7">{{ o.kicker }}</span>
-              <sc-if value="{{ o.featured }}" hint-placeholder-val="{{ false }}"><span style="flex:none;white-space:nowrap;padding:4px 10px;border-radius:999px;border:1px solid #d8b978;color:#d8b978;font-size:11px;letter-spacing:0.1em;text-transform:uppercase">Most complete</span></sc-if>
-            </div>
-            <h3 style="margin:0;font-size:clamp(26px,2.6vw,32px);line-height:1.1;letter-spacing:-0.01em">{{ o.title }}</h3>
-            <p style="margin:0;font-size:15px;line-height:1.6;opacity:0.82">{{ o.lead }}</p>
-            <ul style="list-style:none;margin:0;padding:18px 0 0;display:flex;flex-direction:column;gap:12px;border-top:1px solid {{ o.line }}">
-              <sc-for list="{{ o.items }}" as="it" hint-placeholder-count="3">
-                <li style="display:grid;grid-template-columns:18px minmax(0,1fr);gap:10px;font-size:15px;line-height:1.5"><svg width="16" height="16" viewBox="0 0 256 256" fill="currentColor" style="margin-top:3px;opacity:0.7"><path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"></path></svg><span>{{ it }}</span></li>
-              </sc-for>
-            </ul>
-            <div style="margin-top:auto;display:flex;flex-direction:column;gap:16px;padding-top:12px">
-              <span style="font-size:13px;line-height:1.5;opacity:0.7">Best for: {{ o.bestFor }}</span>
-              <div style="display:flex"><button type="button" class="btn btn-secondary" onClick="{{ o.ask }}" style="color:{{ o.ink }};border-color:{{ o.ink }}">Ask about this →</button></div>
-            </div>
-          </article>
-        </sc-for>
-      </div>
-
-      <div style="display:flex;flex-direction:column;gap:20px;padding-top:clamp(24px,4vw,48px)">
-        <span style="font-size:12px;letter-spacing:0.16em;text-transform:uppercase;color:#767676">How it works</span>
-        <ol style="list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr));gap:clamp(12px,1.6vw,18px)">
-          <sc-for list="{{ steps }}" as="s" hint-placeholder-count="4">
-            <li style="display:flex;flex-direction:column;gap:12px;padding:22px;border-radius:12px;background:#f5f3ee;box-shadow:inset 0 0 0 1px rgba(20,20,20,0.06)">
-              <span style="display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:#141414;color:#f5f3ee;font-size:12px;font-feature-settings:'tnum' 1">{{ s.num }}</span>
-              <span style="font-size:19px;line-height:1.3;letter-spacing:-0.005em">{{ s.title }}</span>
-              <span style="font-size:14.5px;line-height:1.6;color:#5a5a5a">{{ s.body }}</span>
-            </li>
-          </sc-for>
-        </ol>
-      </div>
-    </section>
-
-    <section data-screen-label="Closing pitch" style="background:radial-gradient(900px 420px at 85% -40%, rgba(216,185,120,0.14), transparent 64%), #1c1e27;color:#ecebe7">
-      <div style="max-width:1200px;margin:0 auto;padding:clamp(56px,7vw,88px) clamp(20px,5vw,72px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr));gap:clamp(24px,4vw,64px);align-items:center">
-        <div style="display:flex;flex-direction:column;gap:20px">
-          <div style="display:flex;align-items:center;gap:12px;font-size:12px;letter-spacing:0.16em;text-transform:uppercase;color:#d8b978"><span style="width:28px;height:1px;background:#d8b978"></span>Get featured</div>
-          <p style="font-family:var(--font-heading);font-size:clamp(32px,4vw,52px);line-height:1.1;letter-spacing:-0.012em;margin:0;max-width:16ch;color:#f4f1ea">Every day you stay quiet, you become invisible.</p>
-          <p style="font-size:17px;line-height:1.7;margin:0;max-width:46ch;color:#b5b3ad">People are scrolling through their phones right now, but are they stopping for you? Stop talking to an empty room! Instead, come stand on my stage.</p>
-          <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:8px"><a class="btn btn-secondary" href="#contact" style="color:#f4f1ea;border-color:#f4f1ea">Get your business featured</a></div>
-        </div>
-        <div style="height:clamp(420px,48vw,620px);position:relative">
-          <x-import component-from-global-scope="paper-sheet" from="./paper-sheet.js" accent="{{ paperAccent }}" style="position:absolute;inset:0" hint-size="100%,100%"></x-import>
-        </div>
-      </div>
-    </section>
-
-    <section id="team" data-screen-label="Who you work with" style="scroll-margin-top:64px;max-width:1200px;margin:0 auto;padding:clamp(72px,9vw,120px) clamp(20px,5vw,72px);display:flex;flex-direction:column;gap:clamp(32px,5vw,48px)">
-      <div style="display:flex;flex-direction:column;gap:16px">
-        <div style="display:flex;align-items:center;gap:12px;font-size:12px;letter-spacing:0.16em;text-transform:uppercase;color:#8a4a32"><span style="width:28px;height:1px;background:#8a4a32"></span>Who you’ll work with</div>
-        <h2 style="font-size:clamp(34px,4.4vw,56px);line-height:1.05;letter-spacing:-0.015em;margin:0;max-width:18ch">People from your community, not strangers.</h2>
-      </div>
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:clamp(16px,2vw,24px)">
-        <article style="display:grid;grid-template-columns:clamp(96px,10vw,128px) minmax(0,1fr);gap:24px;align-items:start;padding:clamp(22px,3vw,32px);border-radius:14px;background:#f5f3ee">
-          <img src="assets/team/rahul.webp" alt="Rahul Patil" loading="lazy" decoding="async" style="display:block;width:100%;aspect-ratio:1;border-radius:50%;object-fit:cover;background:#e2e2e2">
-          <div style="display:flex;flex-direction:column;gap:8px">
-            <span style="font-size:20px">Rahul Patil</span>
-            <span style="font-size:13px;color:#767676">Founder, American Bhau · Podcast host</span>
-            <p style="margin:6px 0 0;font-size:15px;line-height:1.65;color:#3a3a3a">Born near Dhule, Maharashtra. BITS Pilani, then a tech career at Atlassian. In 2023, he quit to start American Bhau and help Marathi people grow their businesses and tell their stories.</p>
-          </div>
-        </article>
-        <article style="display:grid;grid-template-columns:clamp(96px,10vw,128px) minmax(0,1fr);gap:24px;align-items:start;padding:clamp(22px,3vw,32px);border-radius:14px;background:#f5f3ee">
-          <img src="assets/team/pallavi.webp" alt="Pallavi Chivte-Patil" loading="lazy" decoding="async" style="display:block;width:100%;aspect-ratio:1;border-radius:50%;object-fit:cover;background:#e2e2e2">
-          <div style="display:flex;flex-direction:column;gap:8px">
-            <span style="font-size:20px">Pallavi Chivte-Patil</span>
-            <span style="font-size:13px;color:#767676">Creative Director &amp; Co-owner</span>
-            <p style="margin:6px 0 0;font-size:15px;line-height:1.65;color:#3a3a3a">Architect from JJ School of Arts, turned UI/UX designer. She manages the entire editing workflow; every cut and frame goes through her approval before it goes live.</p>
-          </div>
-        </article>
-      </div>
-      <div style="display:flex;flex-wrap:wrap;align-items:center;gap:20px 32px">
-        <sc-for list="{{ team }}" as="m" hint-placeholder-count="4">
-          <div style="display:flex;align-items:center;gap:12px">
-            <img src="{{ m.src }}" alt="{{ m.name }}" loading="lazy" decoding="async" style="display:block;width:48px;height:48px;border-radius:50%;object-fit:cover;background:#e2e2e2">
-            <div style="display:flex;flex-direction:column;gap:2px"><span style="font-size:15px">{{ m.name }}</span><span style="font-size:12px;color:#767676">{{ m.role }}</span></div>
-          </div>
-        </sc-for>
-      </div>
-    </section>
-
-    <section id="contact" data-screen-label="Contact" style="scroll-margin-top:64px;background:#f5f3ee">
-      <div style="max-width:1200px;margin:0 auto;padding:clamp(72px,9vw,120px) clamp(20px,5vw,72px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr));gap:clamp(40px,6vw,96px);align-items:start">
-        <div style="display:flex;flex-direction:column;gap:24px">
-          <div style="display:flex;align-items:center;gap:12px;font-size:12px;letter-spacing:0.16em;text-transform:uppercase;color:#8a4a32"><span style="width:28px;height:1px;background:#8a4a32"></span>Contact Us</div>
-          <h2 style="font-size:clamp(40px,5.4vw,72px);line-height:1.04;letter-spacing:-0.015em;margin:0">Ready to tell your story?</h2>
-          <p style="font-size:17px;line-height:1.65;margin:0;max-width:44ch;color:#4a4a4a">Contact American Bhau for social media consulting, podcast features &amp; content that actually works for your business!</p>
-          <div style="display:flex;flex-direction:column;gap:14px;margin-top:8px;font-size:15px">
-            <div style="display:flex;gap:16px;align-items:baseline"><span style="width:88px;flex:none;font-size:13px;color:#767676">Email</span><a href="mailto:rahul@americanbhau.com">rahul@americanbhau.com</a></div>
-            <div style="display:flex;gap:16px;align-items:baseline"><span style="width:88px;flex:none;font-size:13px;color:#767676">Instagram</span><a href="https://www.instagram.com/american_bhau/" target="_blank" rel="noopener">@american_bhau</a></div>
-            <div style="display:flex;gap:16px;align-items:baseline"><span style="width:88px;flex:none;font-size:13px;color:#767676">YouTube</span><a href="https://www.youtube.com/@american-bhau" target="_blank" rel="noopener">@american-bhau</a></div>
-            <div style="display:flex;gap:16px;align-items:baseline"><span style="width:88px;flex:none;font-size:13px;color:#767676">LinkedIn</span><a href="https://www.linkedin.com/in/americanbhau/" target="_blank" rel="noopener">in/americanbhau</a></div>
-          </div>
-        </div>
-        <div style="padding:clamp(24px,3vw,40px);border-radius:14px;background:#fbfbfb;box-shadow:0 1px 2px rgba(40,34,24,0.06),0 24px 48px -28px rgba(40,34,24,0.3)">
-          <h3 style="font-size:24px;margin:0 0 16px">Get in touch</h3>
-          <bird-popup project-id="37ab73f2-ef33-4047-b523-ce1c1e4e9dfb" workspace-id="3e095f83-870c-4703-ba19-cd605dcb93d1"></bird-popup>
-        </div>
-      </div>
-    </section>
-    <sc-if value="{{ popOpen }}" hint-placeholder-val="{{ false }}">
-      <div role="presentation" onClick="{{ closePop }}" style="position:fixed;inset:0;z-index:80;display:grid;place-items:center;padding:20px;background:rgba(20,18,14,0.55);backdrop-filter:blur(6px)">
-        <div role="dialog" aria-modal="true" aria-label="{{ pop.big }}" onClick="{{ stopPop }}" style="position:relative;width:min(100%,560px);max-height:86vh;overflow:auto;box-sizing:border-box;padding:clamp(28px,4vw,44px);border-radius:14px;background:{{ pop.bg }};color:{{ pop.ink }};box-shadow:0 40px 80px -30px rgba(0,0,0,0.6);display:flex;flex-direction:column;gap:18px">
-          <span style="position:absolute;top:-11px;left:50%;margin-left:-44px;width:88px;height:24px;transform:rotate(-3deg);background:rgba(214,206,186,0.8)"></span>
-          <div style="display:flex;justify-content:space-between;align-items:center;gap:16px">
-            <span style="display:grid;place-items:center;width:42px;height:42px;border-radius:50%;color:{{ pop.accent }};box-shadow:inset 0 0 0 1px {{ pop.ring }}">{{ pop.icon }}</span>
-            <button type="button" onClick="{{ closePop }}" aria-label="Close" style="display:grid;place-items:center;width:40px;height:40px;padding:0;border-radius:50%;border:1px solid {{ pop.ring }};background:transparent;color:inherit;cursor:pointer;font-size:18px;line-height:1" style-hover="background:rgba(127,127,127,0.12)">×</button>
-          </div>
-          <span style="font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:{{ pop.accent }}">{{ pop.kicker }}</span>
-          <h3 style="margin:0;font-size:clamp(32px,4vw,44px);line-height:1.05;letter-spacing:-0.01em">{{ pop.big }}</h3>
-          <p style="margin:0;font-family:'Crimson Pro', Georgia, serif;font-size:19px;line-height:1.5;opacity:0.92">{{ pop.body }}</p>
-          <sc-if value="{{ pop.hasLogos }}" hint-placeholder-val="{{ false }}">
-            <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(72px,1fr));gap:10px">
-              <sc-for list="{{ pop.logos }}" as="lg" hint-placeholder-count="10">
-                <div title="{{ lg.name }}" style="display:grid;place-items:center;aspect-ratio:1;padding:8px;box-sizing:border-box;border-radius:10px;background:#fdfcf9;box-shadow:0 1px 2px rgba(40,34,24,0.08)"><img src="{{ lg.src }}" alt="{{ lg.name }} logo" loading="lazy" style="display:block;max-width:100%;max-height:100%;object-fit:contain"></div>
-              </sc-for>
-            </div>
-          </sc-if>
-          <sc-if value="{{ pop.hasLinks }}" hint-placeholder-val="{{ false }}">
-            <div style="display:flex;flex-wrap:wrap;gap:10px">
-              <sc-for list="{{ pop.links }}" as="lk" hint-placeholder-count="3">
-                <a href="{{ lk.url }}" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;min-height:40px;padding:0 18px;border-radius:999px;border:1px solid {{ pop.ring }};color:inherit;font-size:14px" style-hover="background:rgba(127,127,127,0.12);color:inherit">{{ lk.label }} ↗</a>
-              </sc-for>
-            </div>
-          </sc-if>
-          <div style="display:flex;padding-top:8px;border-top:1px solid {{ pop.ring }}"><button type="button" onClick="{{ pop.cta }}" style="margin-top:14px;display:inline-flex;align-items:center;min-height:44px;padding:0 22px;border-radius:999px;border:0;background:{{ pop.accent }};color:{{ pop.bg2 }};font:inherit;font-size:14px;cursor:pointer" style-hover="opacity:0.9">Get your business featured →</button></div>
-        </div>
-      </div>
-    </sc-if>
-    <sc-if value="{{ quoteOpen }}" hint-placeholder-val="{{ false }}">
-      <div role="presentation" onClick="{{ closeQuote }}" style="position:fixed;inset:0;z-index:80;display:grid;place-items:center;padding:20px;background:rgba(20,18,14,0.55);backdrop-filter:blur(6px)">
-        <figure role="dialog" aria-modal="true" aria-label="{{ qpop.name }}" onClick="{{ stopPop }}" style="position:relative;margin:0;width:min(100%,620px);max-height:86vh;overflow:auto;box-sizing:border-box;padding:clamp(30px,4.4vw,52px);border-radius:14px;background:{{ qpop.bg }};color:{{ qpop.ink }};box-shadow:0 40px 80px -30px rgba(0,0,0,0.6);display:flex;flex-direction:column;gap:22px">
-          <span style="position:absolute;top:-11px;left:50%;margin-left:-44px;width:88px;height:24px;transform:rotate(-3deg);background:rgba(214,206,186,0.8)"></span>
-          <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:16px">
-            <span style="font-family:var(--font-heading);font-size:80px;line-height:0.7;height:36px;color:{{ qpop.accent }}">“</span>
-            <button type="button" onClick="{{ closeQuote }}" aria-label="Close" style="display:grid;place-items:center;width:40px;height:40px;padding:0;border-radius:50%;border:1px solid {{ qpop.ring }};background:transparent;color:inherit;cursor:pointer;font-size:18px;line-height:1" style-hover="background:rgba(127,127,127,0.12)">×</button>
-          </div>
-          <blockquote style="margin:0;font-family:'Crimson Pro', Georgia, serif;font-size:clamp(20px,2vw,24px);line-height:1.5">{{ qpop.quote }}</blockquote>
-          <figcaption style="display:flex;align-items:center;gap:12px;padding-top:18px;border-top:1px solid {{ qpop.ring }}">
-            <span style="display:grid;place-items:center;flex:none;width:44px;height:44px;border-radius:50%;background:{{ qpop.accent }};color:{{ qpop.bg2 }};font-family:var(--font-heading);font-size:20px">{{ qpop.initial }}</span>
-            <span style="display:flex;flex-direction:column;gap:2px"><span style="font-size:15px">{{ qpop.name }}</span><span style="font-size:13px;opacity:0.7">{{ qpop.role }}</span></span>
-          </figcaption>
-        </figure>
-      </div>
-    </sc-if>
-  </main>
-
-  <footer style="max-width:1200px;width:100%;box-sizing:border-box;margin:0 auto;padding:0 clamp(20px,5vw,72px)">
-    <div style="display:flex;flex-wrap:wrap;gap:24px 56px;justify-content:space-between;padding:40px 0 48px;font-size:13px;color:#767676">
-      <div style="display:flex;flex-direction:column;gap:10px">
-        <span style="font-family:var(--font-heading);font-size:18px;color:#141414">American Bhau</span>
-        <a href="mailto:rahul@americanbhau.com" style="color:#5a5a5a">rahul@americanbhau.com</a>
-      </div>
-      <div style="display:flex;gap:20px;flex-wrap:wrap;align-items:start">
-        <a href="#latest" style="color:inherit">Just posted</a>
-        <a href="#benefits" style="color:inherit">What you get</a>
-        <a href="#results" style="color:inherit">Results</a>
-        <a href="#work" style="color:inherit">Ways to work</a>
-        <a href="#team" style="color:inherit">Team</a>
-        <a href="#contact" style="color:inherit">Contact</a>
-      </div>
-      <span style="width:100%">© {{ year }} American Bhau</span>
+<main id="top">
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap">
+    <span class="pill eyebrow">Media &amp; marketing for desi businesses in the US</span>
+    <h1>Stop being the <em>best-kept secret</em> in town.</h1>
+    <p class="lead">Your work is good. People just don't know about it yet. We put your story on YouTube, the podcast and social, so the right customers find you and remember you.</p>
+    <div class="cta-row">
+      <a href="#consulting" class="btn btn-blue arrow">Get featured</a>
+      <a href="#challenge" class="btn btn-ghost arrow">Take the Bhau Challenge</a>
     </div>
-  </footer>
-</div>
-</x-dc>
-<script type="text/x-dc" data-dc-script data-props="{&quot;showHeroPhoto&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;},&quot;paperAccent&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;lime&quot;,&quot;mono&quot;],&quot;default&quot;:&quot;lime&quot;,&quot;tsType&quot;:&quot;string&quot;}}">
-class Component extends DCLogic {
-  state = { goal: 0, ben: -1, quote: -1, pop: -1 };
-  componentDidMount() { this.onEsc = e => { if (e.key !== 'Escape') return; document.documentElement.style.overflow = ''; if (this.state.pop >= 0) this.setState({ pop: -1 }); if (this.state.quote >= 0) this.setState({ quote: -1 }); }; addEventListener('keydown', this.onEsc); }
-  componentWillUnmount() { removeEventListener('keydown', this.onEsc); document.documentElement.style.overflow = ''; }
-  ico(d) { return React.createElement('svg', { width: 18, height: 18, viewBox: '0 0 256 256', fill: 'currentColor' }, React.createElement('path', { d })); }
-  ask() {
-    const el = document.getElementById('contact');
-    if (el) window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY - 64, behavior: 'smooth' });
+    <div class="proof">
+      <div class="faces logos"><img src="assets/brands/02.webp" alt="Tikka House" width="34" height="34" loading="lazy" decoding="async"><img src="assets/brands/10.webp" alt="Spicy Tango" width="34" height="34" loading="lazy" decoding="async"><img src="assets/brands/05.webp" alt="Pav Bhaji Express" width="34" height="34" loading="lazy" decoding="async"><img src="assets/brands/01.webp" alt="Soul Foods" width="34" height="34" loading="lazy" decoding="async"><img src="assets/brands/21.webp" alt="Austin Vada Pav" width="34" height="34" loading="lazy" decoding="async"></div>
+      <span>Trusted by 25+ Marathi-owned brands across the U.S.</span>
+    </div>
+    <div class="stats" aria-label="American Bhau in numbers">
+      <div class="stat"><b>#1</b><span>Marathi podcast in America</span></div>
+      <div class="stat"><b data-count="25" data-suffix="+">25+</b><span>brands featured</span></div>
+      <div class="stat"><b>Millions</b><span>of views on YouTube &amp; Instagram</span></div>
+      <div class="stat"><b>2023</b><span>the year we started</span></div>
+    </div>
+  </div>
+  <div class="deva-bg" aria-hidden="true">अमेरिकन भाऊ</div>
+</section>
+
+<!-- BRANDS -->
+<section class="brands" aria-label="Brands we have worked with">
+  <p class="eyebrow" style="text-align:center">Brands we've worked with</p>
+  <div class="marquee"><div class="track"><img src="assets/brands/01.webp" alt="Soul Foods" width="72" height="72" loading="lazy" decoding="async"><img src="assets/brands/02.webp" alt="Tikka House" width="72" height="72" loading="lazy" decoding="async"><img src="assets/brands/03.webp" alt="Marathi Grocery" width="72" height="72" loading="lazy" decoding="async"><img src="assets/brands/04.webp" alt="7 Monk’s Cafe" width="72" height="72" loading="lazy" decoding="async"><img src="assets/brands/05.webp" alt="Pav Bhaji Express" width="72" height="72" loading="lazy" decoding="async"><img src="assets/brands/06.webp" alt="The Paratha Rollers" width="72" height="72" loading="lazy" decoding="async"><img src="assets/brands/07.webp" alt="Lotus" width="72" height="72" loading="lazy" decoding="async"><img src="assets/brands/08.webp" alt="Paan &amp; Pearls" width="72" height="72" loading="lazy" decoding="async"><img src="assets/brands/09.webp" alt="Inheritage" width="72" height="72" loading="lazy" decoding="async"><img src="assets/brands/10.webp" alt="Spicy Tango" width="72" height="72" loading="lazy" decoding="async"><img src="assets/brands/11.webp" alt="La Prima Montessori" width="72" height="72" loading="lazy" decoding="async"><img src="assets/brands/12.webp" alt="Fresh Mangoes" width="72" height="72" loading="lazy" decoding="async"><img src="assets/brands/13.webp" alt="Infinity Content Creations" width="72" height="72" loading="lazy" decoding="async"><img src="assets/brands/14.webp" alt="SecureLayer7" width="72" height="72" loading="lazy" decoding="async"><img src="assets/brands/15.webp" alt="Mudra" width="72" height="72" loading="lazy" decoding="async"><img src="assets/brands/16.webp" alt="Brazos Smiles" width="72" height="72" loading="lazy" decoding="async"><img src="assets/brands/17.webp" alt="Samay" width="72" height="72" loading="lazy" decoding="async"><img src="assets/brands/18.webp" alt="Two Brothers Organic Farms" width="72" height="72" loading="lazy" decoding="async"><img src="assets/brands/19.webp" alt="Farm to Table" width="72" height="72" loading="lazy" decoding="async"><img src="assets/brands/20.webp" alt="AyurNutrition" width="72" height="72" loading="lazy" decoding="async"><img src="assets/brands/21.webp" alt="Austin Vada Pav" width="72" height="72" loading="lazy" decoding="async"><img src="assets/brands/22.webp" alt="Chugh" width="72" height="72" loading="lazy" decoding="async"><img src="assets/brands/23.webp" alt="NAFA Film Club" width="72" height="72" loading="lazy" decoding="async"><img src="assets/brands/24.webp" alt="Zatka Vada Pav" width="72" height="72" loading="lazy" decoding="async"><img src="assets/brands/25.webp" alt="Indie Sportsplex" width="72" height="72" loading="lazy" decoding="async"><img src="assets/brands/01.webp" alt="Soul Foods" width="72" height="72" loading="lazy" decoding="async"><img src="assets/brands/02.webp" alt="Tikka House" width="72" height="72" loading="lazy" decoding="async"><img src="assets/brands/03.webp" alt="Marathi Grocery" width="72" height="72" loading="lazy" decoding="async"><img src="assets/brands/04.webp" alt="7 Monk’s Cafe" width="72" height="72" loading="lazy" decoding="async"><img src="assets/brands/05.webp" alt="Pav Bhaji Express" width="72" height="72" loading="lazy" decoding="async"><img src="assets/brands/06.webp" alt="The Paratha Rollers" width="72" height="72" loading="lazy" decoding="async"><img src="assets/brands/07.webp" alt="Lotus" width="72" height="72" loading="lazy" decoding="async"><img src="assets/brands/08.webp" alt="Paan &amp; Pearls" width="72" height="72" loading="lazy" decoding="async"><img src="assets/brands/09.webp" alt="Inheritage" width="72" height="72" loading="lazy" decoding="async"><img src="assets/brands/10.webp" alt="Spicy Tango" width="72" height="72" loading="lazy" decoding="async"><img src="assets/brands/11.webp" alt="La Prima Montessori" width="72" height="72" loading="lazy" decoding="async"><img src="assets/brands/12.webp" alt="Fresh Mangoes" width="72" height="72" loading="lazy" decoding="async"><img src="assets/brands/13.webp" alt="Infinity Content Creations" width="72" height="72" loading="lazy" decoding="async"><img src="assets/brands/14.webp" alt="SecureLayer7" width="72" height="72" loading="lazy" decoding="async"><img src="assets/brands/15.webp" alt="Mudra" width="72" height="72" loading="lazy" decoding="async"><img src="assets/brands/16.webp" alt="Brazos Smiles" width="72" height="72" loading="lazy" decoding="async"><img src="assets/brands/17.webp" alt="Samay" width="72" height="72" loading="lazy" decoding="async"><img src="assets/brands/18.webp" alt="Two Brothers Organic Farms" width="72" height="72" loading="lazy" decoding="async"><img src="assets/brands/19.webp" alt="Farm to Table" width="72" height="72" loading="lazy" decoding="async"><img src="assets/brands/20.webp" alt="AyurNutrition" width="72" height="72" loading="lazy" decoding="async"><img src="assets/brands/21.webp" alt="Austin Vada Pav" width="72" height="72" loading="lazy" decoding="async"><img src="assets/brands/22.webp" alt="Chugh" width="72" height="72" loading="lazy" decoding="async"><img src="assets/brands/23.webp" alt="NAFA Film Club" width="72" height="72" loading="lazy" decoding="async"><img src="assets/brands/24.webp" alt="Zatka Vada Pav" width="72" height="72" loading="lazy" decoding="async"><img src="assets/brands/25.webp" alt="Indie Sportsplex" width="72" height="72" loading="lazy" decoding="async"></div></div>
+</section>
+
+<!-- START HERE -->
+<section id="start" style="padding-top:40px">
+  <div class="wrap">
+    <div class="path">
+      <div>
+        <span class="eyebrow">Start here</span>
+        <h2 style="margin-top:12px">Not sure where to start? Pick a path.</h2>
+        <p>Every path is built for owners who are great at the work and too busy to market it.</p>
+      </div>
+      <div class="chips">
+        <a class="chip" href="#consulting">Get my business featured</a>
+        <a class="chip" href="#challenge">Grow my socials in 30 days</a>
+        <a class="chip" href="#events">Meet the community</a>
+        <a class="chip" href="#club">Join the Bhau Club</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BELIEFS -->
+<section style="padding-top:40px">
+  <div class="wrap">
+    <div class="head">
+      <span class="eyebrow">What we believe</span>
+      <h2>Your competition isn't better than you.<br>They're just louder.</h2>
+    </div>
+    <div class="beliefs">
+      <div class="belief"><span class="n">Belief 1</span><h3>Louder beats better</h3><p>Quality wins only when people hear about it. Visibility is part of the job, not an extra.</p></div>
+      <div class="belief"><span class="n">Belief 2</span><h3>Stories over ads</h3><p>Customers buy from people they know. A real conversation on camera does more than a banner ever will.</p></div>
+      <div class="belief"><span class="n">Belief 3</span><h3>Marathi roots, American market</h3><p>We speak both languages, so your story lands with the community and with everyone else in town.</p></div>
+      <div class="belief"><span class="n">Belief 4</span><h3>Show up every week</h3><p>Consistency builds trust. Small posts every week beat one big launch every year.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT WE DO -->
+<section id="work" style="padding-top:20px">
+  <div class="wrap">
+    <div class="head">
+      <span class="eyebrow">What we do</span>
+      <h2>Free content and programs that get you heard</h2>
+    </div>
+    <div class="offers">
+      <article class="offer"><span class="eyebrow">Weekly episodes</span><h3>YouTube</h3><p>Behind-the-scenes stories of desi founders in the US: how they started, what worked and what they'd do differently.</p><a class="btn btn-white btn-sm arrow" href="https://www.youtube.com/@american-bhau" target="_blank" rel="noopener">Watch</a></article>
+      <article class="offer"><span class="eyebrow">Marathi podcast</span><h3>Podcast</h3><p>Practical, honest conversations in Marathi for the community in America. On Spotify and Apple Podcasts.</p><a class="btn btn-white btn-sm arrow" href="https://open.spotify.com/show/4Pr4jZz9lXMZfQ38X34b3Y" target="_blank" rel="noopener">Listen</a></article>
+      <article class="offer"><span class="eyebrow">For businesses</span><h3>Brand features</h3><p>A professionally shot story of your business, cut for YouTube, Reels and Shorts, and shared with our audience.</p><a class="btn btn-white btn-sm arrow" href="#consulting">Get featured</a></article>
+      <article class="offer"><span class="eyebrow">30-day sprint</span><h3>Bhau Challenge</h3><p>Thirty days of daily prompts, weekly reviews and accountability to make posting a habit.</p><a class="btn btn-white btn-sm arrow" href="#challenge">Join the challenge</a></article>
+      <article class="offer"><span class="eyebrow">1:1 sessions</span><h3>Consulting</h3><p>A focused strategy call on your content, offer and local marketing, with a written plan after.</p><a class="btn btn-white btn-sm arrow" href="#consulting">Book a call</a></article>
+      <article class="offer" id="club"><span class="eyebrow">Community</span><h3>Bhau Club</h3><p>A members' circle of owners who trade what's working, meet up in person and send each other customers.</p><a class="btn btn-white btn-sm arrow" href="#newsletter">Join the waitlist</a></article>
+    </div>
+  </div>
+</section>
+
+<!-- CHALLENGE -->
+<section id="challenge" class="band">
+  <div class="wrap">
+    <div class="challenge">
+      <div>
+        <div class="count" aria-live="polite">NEXT COHORT IN <b id="cd-d">00</b>D <b id="cd-h">00</b>H <b id="cd-m">00</b>M <b id="cd-s">00</b>S</div>
+        <span class="eyebrow">The Bhau Challenge</span>
+        <h2 style="margin-top:12px;font-size:clamp(2.2rem,4.8vw,3.5rem)">Thirty days. One post a day. A business people talk about.</h2>
+        <p class="lead" style="margin-top:18px">A guided sprint for owners who keep meaning to post and never do. Daily prompts, a private group and weekly live reviews with Bhau.</p>
+        <div class="cta-row" style="justify-content:flex-start;margin-top:26px">
+          <a href="#newsletter" class="btn btn-white arrow">Join the waitlist</a>
+          <a href="#challenge-steps" class="btn arrow" style="color:#fff;border-color:rgba(255,255,255,.4)">See how it works</a>
+        </div>
+      </div>
+      <a class="video" href="https://www.youtube.com/@american-bhau" target="_blank" rel="noopener" aria-label="Watch the Bhau Challenge intro on YouTube">
+        <span class="tag">● CLICK TO WATCH</span>
+        <span class="play">▶</span>
+        <span class="deva" aria-hidden="true">भाऊ</span>
+      </a>
+    </div>
+    <div class="steps" id="challenge-steps">
+      <div class="step"><span class="n">1</span><h3>Week 1: Find your story</h3><p>Pin down what makes you different and who you're talking to.</p></div>
+      <div class="step"><span class="n">2</span><h3>Weeks 2–3: Post daily</h3><p>Short videos from simple prompts. No studio, just your phone.</p></div>
+      <div class="step"><span class="n">3</span><h3>Week 4: Turn views into sales</h3><p>Add offers, reviews and a clear next step for new customers.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- EVENTS + CONSULTING -->
+<section id="events">
+  <div class="wrap">
+    <div class="head">
+      <span class="eyebrow">Events &amp; consulting</span>
+      <h2>Meet us in person, or get a plan built for you</h2>
+    </div>
+    <div class="split">
+      <div class="panel tint">
+        <h3>Upcoming events</h3>
+        <div class="event">
+          <div class="date"><span>DATE</span><b>TBA</b></div>
+          <div><span class="badge">Live show · Austin, TX</span><h3>Watch Mandar Bhide Live @ Austin</h3><p>An evening of stories, laughs and community. Limited seats.</p></div>
+        </div>
+        <div class="event">
+          <div class="date"><span>MONTHLY</span><b>☕</b></div>
+          <div><span class="badge">Meetup · Bhau Club</span><h3>Business owners' chai meetup</h3><p>Swap wins and referrals with other owners in your city.</p></div>
+        </div>
+        <a class="btn btn-blue arrow" href="#consulting" style="align-self:flex-start">Ask about tickets</a>
+      </div>
+
+      <div class="panel" id="consulting">
+        <span class="eyebrow">1:1 Strategy call</span>
+        <h3 style="font-size:1.6rem">Book a session with Bhau</h3>
+        <ul class="list">
+          <li>60-minute call on your content, offer and local reach</li>
+          <li>Review of your Instagram, YouTube and Google profile</li>
+          <li>A written 30-day plan sent within 48 hours</li>
+          <li>Option to be considered for a brand feature</li>
+        </ul>
+        <div class="bird-card"><bird-popup project-id="37ab73f2-ef33-4047-b523-ce1c1e4e9dfb" workspace-id="3e095f83-870c-4703-ba19-cd605dcb93d1"></bird-popup></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" style="background:var(--tint)">
+  <div class="wrap">
+    <div class="host">
+      <div class="portrait">
+        <img src="assets/podcast-host.jpg" alt="Rahul Patil, American Bhau, at the podcast desk" width="1600" height="1200" loading="lazy" style="object-position:58% 30%">
+        <div><small>Host &amp; founder</small><b>Rahul Patil</b></div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:20px">
+        <span class="eyebrow">About</span>
+        <h2>A Marathi voice for business owners in America</h2>
+        <p class="lead">American Bhau started with one idea: the community is full of owners doing excellent work that nobody hears about. So we started telling their stories on camera, in Marathi and English, and sharing them with people who want to support them.</p>
+        <p class="lead">Today that's a YouTube channel, a podcast, in-person events and programs that help owners get loud on their own.</p>
+        <div class="socials">
+          <a href="https://www.youtube.com/@american-bhau" target="_blank" rel="noopener">YouTube</a>
+          <a href="https://www.instagram.com/american_bhau/" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://open.spotify.com/show/4Pr4jZz9lXMZfQ38X34b3Y" target="_blank" rel="noopener">Spotify</a>
+          <a href="https://podcasts.apple.com/us/podcast/the-american-bhau-podcast/id1785251357" target="_blank" rel="noopener">Apple Podcasts</a>
+          <a href="https://www.linkedin.com/in/americanbhau/" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section>
+  <div class="wrap">
+    <div class="head">
+      <span class="eyebrow">What owners say</span>
+      <h2>Featured once, remembered for months</h2>
+      </div>
+    <div class="quotes">
+      <div class="quote"><p>Pallavi and Rahul are true rockstars! Partnering with American Bhau became a turning point for Spicy Tango. Rahul didn't just give us a platform, he gave us a voice that connected deeply with the community, boosted our visibility, and drove real sales.</p><div class="who"><img src="assets/brands/10.webp" alt="" width="34" height="34"><div>Spicy Tango<span>Brand partner</span></div></div></div>
+      <div class="quote"><p>During the 2025 mango import crisis, it was crucial to explain the realities of USDA regulations and export challenges. Rahul provided a professional, authentic platform to share these hard-earned lessons. The response from fellow business owners has been overwhelming.</p><div class="who"><i>MI</i><div>Mango importer<span>Business owner, U.S.</span></div></div></div>
+      <div class="quote"><p>Sharing our journey on the American Bhau Podcast was soulful and uplifting, reflecting the real struggles and growth of a Maharashtrian building a business in the U.S. Rahul's ability to bring out authentic stories with heart makes this platform truly meaningful.</p><div class="who"><i>PG</i><div>Podcast guest<span>Marathi entrepreneur, U.S.</span></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- NEWSLETTER -->
+<section id="newsletter" class="band news">
+  <div class="wrap">
+    <span class="pill eyebrow" style="background:rgba(255,255,255,.14);color:#fff">Stay in the loop</span>
+    <h2>Get loud with American Bhau</h2>
+    <p class="lead">Leave your email and WhatsApp and we'll tell you when new episodes drop, when the next Bhau Challenge opens, and when we're in your city.</p>
+    <div class="bird-card" style="width:min(460px,100%)"><bird-popup project-id="37ab73f2-ef33-4047-b523-ce1c1e4e9dfb" workspace-id="3e095f83-870c-4703-ba19-cd605dcb93d1"></bird-popup></div>
+    <p style="color:#dbe7ff;font-size:.9rem">No spam. Just new episodes, the next Bhau Challenge and events.</p>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="ring" aria-hidden="true">भाऊ</div>
+  <div class="wrap">
+    <div class="fgrid">
+      <div style="display:flex;flex-direction:column;gap:16px">
+        <a href="#top" class="logo"><span class="mark">भा</span><span>American Bhau<small>Get loud</small></span></a>
+        <p style="color:#dbe7ff;font-size:.92rem;max-width:34ch">Media and marketing for business owners who are too good to stay a secret.</p>
+      </div>
+      <div><h4>Explore</h4><ul><li><a href="#start">Start here</a></li><li><a href="#work">What we do</a></li><li><a href="#about">About</a></li><li><a href="#newsletter">Newsletter</a></li></ul></div>
+      <div><h4>Programs</h4><ul><li><a href="#challenge">Bhau Challenge</a></li><li><a href="#consulting">Consulting</a></li><li><a href="#events">Events</a></li><li><a href="#club">Bhau Club</a></li></ul></div>
+      <div><h4>Follow</h4><ul><li><a href="https://www.youtube.com/@american-bhau" target="_blank" rel="noopener">YouTube</a></li><li><a href="https://www.instagram.com/american_bhau/" target="_blank" rel="noopener">Instagram</a></li><li><a href="mailto:rahul@americanbhau.com">rahul@americanbhau.com</a></li></ul></div>
+    </div>
+    <div class="fbase"><span>© <span id="yr">2026</span> American Bhau. All rights reserved.</span><span>Made with chai in Pune &amp; Austin</span></div>
+  </div>
+</footer>
+
+<button class="totop" id="totop" aria-label="Back to top">↑</button>
+
+<script>
+(()=>{
+  const $=s=>document.querySelector(s);
+  $('#yr').textContent=new Date().getFullYear();
+
+  // nav state + mobile menu
+  const nav=$('#nav'),top=$('#totop');
+  const onScroll=()=>{const y=scrollY>20;nav.classList.toggle('scrolled',y);top.classList.toggle('show',scrollY>700)};
+  addEventListener('scroll',onScroll,{passive:true});onScroll();
+  top.onclick=()=>scrollTo({top:0,behavior:'smooth'});
+  const links=$('#links'),burger=$('#burger');
+  burger.onclick=()=>{const o=links.classList.toggle('open');burger.setAttribute('aria-expanded',o)};
+  links.querySelectorAll('a').forEach(a=>a.onclick=()=>{links.classList.remove('open');burger.setAttribute('aria-expanded',false)});
+
+  // stat count-up (final values are written immediately for reduced motion)
+  const fmt=(v,d)=>d?v.toFixed(d):Math.round(v).toLocaleString('en-US');
+  const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  document.querySelectorAll('[data-count]').forEach(el=>{
+    const end=+el.dataset.count,d=+(el.dataset.dec||0),suf=el.dataset.suffix||'';
+    if(reduce){el.textContent=fmt(end,d)+suf;return}
+    const t0=performance.now(),dur=1400;
+    const tick=t=>{const p=Math.min(1,(t-t0)/dur),e=1-Math.pow(1-p,3);el.textContent=fmt(end*e,d)+suf;if(p<1)requestAnimationFrame(tick)};
+    requestAnimationFrame(tick);
+  });
+
+  // countdown: set the next cohort start here
+  const COHORT_START=new Date('2026-11-01T09:00:00-05:00');
+  const pad=n=>String(n).padStart(2,'0');
+  const cd=()=>{let s=Math.max(0,(COHORT_START-Date.now())/1000|0);
+    $('#cd-d').textContent=pad(s/86400|0);$('#cd-h').textContent=pad(s%86400/3600|0);$('#cd-m').textContent=pad(s%3600/60|0);$('#cd-s').textContent=pad(s%60)};
+  cd();setInterval(cd,1000);
+
+  // reveal sections as they scroll into view
+  if(!reduce&&'IntersectionObserver' in window){
+    const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12,rootMargin:'0px 0px -6% 0px'});
+    document.querySelectorAll('.head,.path,.belief,.offer,.step,.panel,.host,.quote').forEach((el,i)=>{el.classList.add('rv');el.style.transitionDelay=(i%3)*80+'ms';io.observe(el)});
   }
-  // Newest first. Add each new post at the top of this list.
-  posts = [
-    { src: 'assets/episodes/ep-1.webp', url: 'https://www.youtube.com/@american-bhau/search?query=Gauri%20Deshmukh', date: 'December 28, 2025', title: 'From Master’s Degrees to YouTube Stardom: Gauri Deshmukh on the American Bhau Podcast', summary: 'Gauri Deshmukh shares her unconventional journey from higher education to YouTube success, creativity, consistency, and personal branding insights.' },
-    { src: 'assets/episodes/ep-2.webp', url: 'https://www.youtube.com/@american-bhau/search?query=Round%20Table', date: 'December 20, 2025', title: 'The American Dream: Insights from the Marathi Entrepreneurs’ Round Table', summary: 'Marathi entrepreneurs discuss challenges, opportunities, failures, and mindset shifts required to build successful businesses in the United States.' },
-    { src: 'assets/episodes/ep-3.webp', url: 'https://www.youtube.com/@american-bhau/search?query=Sonali%20Patil', date: 'December 16, 2025', title: 'From Cancer Research to Classrooms: How Sonali Patil Built a Montessori Legacy in Texas', summary: 'Sonali Patil’s inspiring transition from cancer research to founding a successful Montessori education ecosystem in Texas.' }
-  ];
-  channel = [
-    ['97Axl8vcTpM', 'Health & tradition', 'Ancient Ayurveda and Modern America: Gauri Junnarkar'],
-    ['VfeScbPywyA', 'Restaurants', 'How We Run Multiple Indian Restaurants Business in USA'],
-    ['DrpAseiNxKQ', 'Career change', 'My Journey From IT to Food Truck Business'],
-    ['c3LQkLSpNOc', 'Social startup', 'How My Social Startup Is Changing Lives in India'],
-    ['_U8lV5oD57A', 'Small business', 'Petrol Pump Business in USA'],
-    ['8opYYrGFTac', 'In English', 'The American Bhau Story on Safe Simple Sound']
-  ].map(([id, kicker, title]) => ({ url: 'https://www.youtube.com/watch?v=' + id, thumb: 'https://i.ytimg.com/vi/' + id + '/hqdefault.jpg', kicker, title }));
-  goalList = [
-    { tab: 'Restaurant or food brand', start: 'Community showcase',
-      now: 'Great food and loyal regulars, but a social feed that hardly anyone sees.',
-      doing: 'We come to your location, shoot your kitchen, your people and your story, including drone footage. Then we feature you across our videos, vlogs, podcast and reels so our community knows where to go.',
-      proof: '“Partnering with American Bhau became a turning point for Spicy Tango… boosted our visibility, and drove real sales.” Also on the podcast: how Tikka House grew to five restaurants across Texas in 12 months.' },
-    { tab: 'Local or service business', start: 'Growth partnership',
-      now: 'Most customers find you by word of mouth, and growth stops where your network ends.',
-      doing: 'We set up your entire social media strategy, make professional videos that position you as the premium choice, and run targeted ads to reach the right people.',
-      proof: 'La Prima Montessori, Brazos Smiles, SecureLayer7 and AyurNutrition are among the 25 brands that have partnered with American Bhau.' },
-    { tab: 'Professional or creator', start: '#BhauChallenge',
-      now: 'You know you should post. You don’t know what to say, or you stop after a week.',
-      doing: '#BhauChallenge is a 30-day challenge where you learn to show up on social media, tell your story and build a real audience. No fancy gear. No experience needed. Just your phone, your story, and a community behind you.',
-      proof: 'Business owners from Austin to Pune, from Canada to Germany have gone through it. Some have gone from zero presence to thousands of followers.' },
-    { tab: 'Podcast guest', start: 'Podcast feature',
-      now: 'You have a story worth telling and lessons other business owners need to hear.',
-      doing: 'A full conversation on the American Bhau Podcast, published on YouTube, Spotify and Apple Podcasts, with shorts cut from it for the community.',
-      proof: '“Rahul provided a professional, authentic platform to share these hard-earned lessons. The response from fellow business owners has been overwhelming.” — Mango importer' }
-  ];
-  brandNames = ['Soul Foods', 'Tikka House', 'Marathi Grocery', '7 Monk’s Cafe', 'Pav Bhaji Express', 'The Paratha Rollers', 'Lotus', 'Paan & Pearls', 'Inheritage', 'Spicy Tango', 'La Prima Montessori', 'Fresh Mangoes', 'Infinity Content Creations', 'SecureLayer7', 'Mudra', 'Brazos Smiles', 'Samay', 'Two Brothers Organic Farms', 'Farm to Table', 'AyurNutrition', 'Austin Vada Pav', 'Chugh', 'NAFA Film Club', 'Zatka Vada Pav', 'Indie Sportsplex'];
-  renderVals() {
-    const gi = this.state.goal, g = this.goalList[gi];
-    const brands = this.brandNames.map((name, i) => ({ name, src: 'assets/brands/' + String(i + 1).padStart(2, '0') + '.png', url: 'https://www.google.com/search?q=' + encodeURIComponent(name + ' instagram') }));
-    const dark = { bg: '#1c1e27', ink: '#f4f1ea', line: 'rgba(244,241,234,0.16)', shadow: '0 30px 60px -30px rgba(20,22,30,0.6)' };
-    const light = { bg: '#f5f3ee', ink: '#141414', line: 'rgba(20,20,20,0.12)', shadow: 'inset 0 0 0 1px rgba(20,20,20,0.06)' };
-    return {
-      year: new Date().getFullYear(),
-      showHeroPhoto: this.props.showHeroPhoto ?? true,
-      paperAccent: (this.props.paperAccent ?? 'lime') === 'lime' ? '#c6f432' : '#d0d0d0',
-      leadList: this.posts.slice(0, 1), rest: this.posts.slice(1, 3), channel: this.channel,
-      benefits: (() => { const icons = ['M117.25,157.92a60,60,0,1,0-66.5,0A95.83,95.83,0,0,0,3.53,195.63a8,8,0,1,0,13.4,8.74,80,80,0,0,1,134.14,0,8,8,0,0,0,13.4-8.74A95.83,95.83,0,0,0,117.25,157.92ZM40,108a44,44,0,1,1,44,44A44.05,44.05,0,0,1,40,108Zm210.14,98.7a8,8,0,0,1-11.07-2.33A79.83,79.83,0,0,0,172,168a8,8,0,0,1,0-16,44,44,0,1,0-16.34-84.87,8,8,0,1,1-5.94-14.85,60,60,0,0,1,55.53,105.64,95.83,95.83,0,0,1,47.22,37.71A8,8,0,0,1,250.14,206.7Z', 'M251.77,73a8,8,0,0,0-8.21.39L208,97.05V72a16,16,0,0,0-16-16H32A16,16,0,0,0,16,72V184a16,16,0,0,0,16,16H192a16,16,0,0,0,16-16V159l35.56,23.71A8,8,0,0,0,248,184a8,8,0,0,0,8-8V80A8,8,0,0,0,251.77,73ZM192,184H32V72H192V184Zm48-22.95-32-21.33V116.28L240,95Z', 'M232,208a8,8,0,0,1-8,8H32a8,8,0,0,1-8-8V48a8,8,0,0,1,16,0v94.37L90.73,98a8,8,0,0,1,10.07-.38l58.81,44.11L218.73,90a8,8,0,1,1,10.54,12l-64,56a8,8,0,0,1-10.07.38L96.39,114.29,40,163.63V200H224A8,8,0,0,1,232,208Z', 'M216,48H40A16,16,0,0,0,24,64V224a15.84,15.84,0,0,0,9.25,14.5A16.05,16.05,0,0,0,40,240a15.89,15.89,0,0,0,10.25-3.78l.09-.07L83,208H216a16,16,0,0,0,16-16V64A16,16,0,0,0,216,48ZM216,192H80a8,8,0,0,0-5.23,1.95L40,224V64H216Z']; return [
-        { num: '01', title: 'An audience that already trusts you', doing: 'We showcase your business to our massive, loyal community through our videos, vlogs, podcasts and reels/shorts.', getting: 'Instant trust, visibility, and new customers, without building an audience from scratch.' },
-        { num: '02', title: 'Video that makes you look premium', doing: 'We come to your location, shoot your story and create professional videos, including drone footage.', getting: 'Your business stands out as a premium brand.' },
-        { num: '03', title: 'Social media that sells while you work', doing: 'We set up your entire social media strategy and run targeted ads to reach the right people.', getting: 'Your social media goes from a “ghost town” to a lead-generation machine that brings in sales while you sleep.' },
-        { num: '04', title: 'Told in your language, by your people', doing: 'Content in Marathi and English, made by a team that understands our culture and the community you’re selling to.', getting: 'Customers who stop scrolling, because the story sounds like them.' }
-      ].map((b, i) => { const open = this.state.ben === i; return { ...b, icon: this.ico(icons[i]), open, expanded: open ? 'true' : 'false', rot: open ? '45deg' : '0deg', toggle: () => this.setState({ ben: open ? -1 : i }) }; }); })(),
-      goals: this.goalList.map((x, i) => {
-        const on = i === gi;
-        return { tab: x.tab, sel: on ? 'true' : 'false', bg: on ? '#141414' : 'transparent', ink: on ? '#f5f3ee' : '#141414', border: on ? '#141414' : 'rgba(20,20,20,0.22)', pick: () => this.setState({ goal: i }) };
-      }),
-      goal: { ...g, doingList: g.doing.split(/(?<=\.)\s+(?=[A-Z#])/).map((t, k) => ({ n: k + 1, t })), ask: () => this.ask(g.start === 'Growth partnership' ? 'Growth partnership' : g.start) },
-      ...(() => { const F = [
-        { big: 'Millions of views', small: 'A deeply engaged global audience across YouTube and Instagram', bg: 'url("data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'160\' height=\'160\'%3E%3Cfilter id=\'n\'%3E%3CfeTurbulence type=\'fractalNoise\' baseFrequency=\'.9\' numOctaves=\'3\' stitchTiles=\'stitch\'/%3E%3CfeColorMatrix values=\'0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .08 0\'/%3E%3C/filter%3E%3Crect width=\'160\' height=\'160\' filter=\'url(%23n)\'/%3E%3C/svg%3E"),#fdfcf9', ink: '#2b2721', accent: '#8a4a32', ring: 'rgba(138,74,50,0.4)', tilt: '-1deg', icon: this.ico('M247.31,124.76c-.35-.79-8.82-19.58-27.65-38.41C194.57,61.26,162.88,48,128,48S61.43,61.26,36.34,86.35C17.51,105.18,9,124,8.69,124.76a8,8,0,0,0,0,6.5c.35.79,8.82,19.57,27.65,38.4C61.43,194.74,93.12,208,128,208s66.57-13.26,91.66-38.34c18.83-18.83,27.3-37.61,27.65-38.4A8,8,0,0,0,247.31,124.76ZM128,192c-30.78,0-57.67-11.19-79.93-33.25A133.47,133.47,0,0,1,25,128,133.33,133.33,0,0,1,48.07,97.25C70.33,75.19,97.22,64,128,64s57.67,11.19,79.93,33.25A133.46,133.46,0,0,1,231.05,128C223.84,141.46,192.43,192,128,192Zm0-112a48,48,0,1,0,48,48A48.05,48.05,0,0,0,128,80Zm0,80a32,32,0,1,1,32-32A32,32,0,0,1,128,160Z') },
-        { big: 'America’s #1', small: 'Marathi podcast, on YouTube, Spotify and Apple Podcasts', bg: '#1c1e27', ink: '#f4f1ea', accent: '#d8b978', ring: 'rgba(216,185,120,0.5)', tilt: '0.8deg', icon: this.ico('M128,176a48.05,48.05,0,0,0,48-48V64a48,48,0,0,0-96,0v64A48.05,48.05,0,0,0,128,176ZM96,64a32,32,0,0,1,64,0v64a32,32,0,0,1-64,0Zm40,143.6V232a8,8,0,0,1-16,0V207.6A80.11,80.11,0,0,1,48,128a8,8,0,0,1,16,0,64,64,0,0,0,128,0,8,8,0,0,1,16,0A80.11,80.11,0,0,1,136,207.6Z') },
-        { big: '25 brands', small: 'Restaurants, schools, clinics and makers have partnered with us', bg: 'url("data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'160\' height=\'160\'%3E%3Cfilter id=\'n\'%3E%3CfeTurbulence type=\'fractalNoise\' baseFrequency=\'.9\' numOctaves=\'3\' stitchTiles=\'stitch\'/%3E%3CfeColorMatrix values=\'0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .08 0\'/%3E%3C/filter%3E%3Crect width=\'160\' height=\'160\' filter=\'url(%23n)\'/%3E%3C/svg%3E"),#fdfcf9', ink: '#2b2721', accent: '#8a4a32', ring: 'rgba(138,74,50,0.4)', tilt: '-0.6deg', icon: this.ico('M232,96a7.89,7.89,0,0,0-.3-2.2L217.35,43.6A16.07,16.07,0,0,0,202,32H54A16.07,16.07,0,0,0,38.65,43.6L24.31,93.8A7.89,7.89,0,0,0,24,96v16a40,40,0,0,0,16,32v64a16,16,0,0,0,16,16H200a16,16,0,0,0,16-16V144a40,40,0,0,0,16-32ZM54,48H202l11.42,40H42.61Zm50,56h48v8a24,24,0,0,1-48,0Zm-16,0v8a24,24,0,0,1-48,0v-8ZM200,208H56V151.2a40.57,40.57,0,0,0,8,.8,40,40,0,0,0,32-16,40,40,0,0,0,64,0,40,40,0,0,0,32,16,40.57,40.57,0,0,0,8-.8Zm-8-72a24,24,0,0,1-24-24v-8h48v8A24,24,0,0,1,192,136Z') },
-        { big: 'Austin to Pune', small: 'Business owners from Canada to Germany in our community', bg: '#1c1e27', ink: '#f4f1ea', accent: '#d8b978', ring: 'rgba(216,185,120,0.5)', tilt: '1deg', icon: this.ico('M128,24h0A104,104,0,1,0,232,128,104.12,104.12,0,0,0,128,24Zm87.62,96H175.79C174,83.49,159.94,57.67,148.41,42.4A88.19,88.19,0,0,1,215.62,120ZM96.23,136h63.54c-2.31,41.61-22.23,67.11-31.77,77C118.45,203.1,98.54,177.6,96.23,136Zm0-16C98.54,78.39,118.46,52.89,128,43c9.55,9.93,29.46,35.43,31.77,77Zm11.36-77.6C96.06,57.67,82,83.49,80.21,120H40.37A88.19,88.19,0,0,1,107.59,42.4ZM40.37,136H80.21c1.82,36.51,15.85,62.33,27.38,77.6A88.19,88.19,0,0,1,40.37,136Zm108,77.6c11.53-15.27,25.56-41.09,27.38-77.6h39.84A88.19,88.19,0,0,1,148.41,213.6Z') }
-      ];
-      const more = [
-        { kicker: 'Our reach', body: 'American Bhau has millions of views and a deeply engaged global audience. When we feature your business, it goes in front of people who already watch, trust and share what we post.', links: [{ label: 'YouTube', url: 'https://www.youtube.com/@american-bhau' }, { label: 'Instagram', url: 'https://www.instagram.com/american_bhau/' }] },
-        { kicker: 'The podcast', body: 'Real conversations with business owners, creators and professionals from the global Marathi diaspora, hosted by Rahul ‘American Bhau’ Patil and creatively led by Pallavi Patil.', links: [{ label: 'YouTube', url: 'https://www.youtube.com/@american-bhau/videos' }, { label: 'Spotify', url: 'https://open.spotify.com/show/4Pr4jZz9lXMZfQ38X34b3Y' }, { label: 'Apple Podcasts', url: 'https://podcasts.apple.com/us/podcast/the-american-bhau-podcast/id1785251357' }] },
-        { kicker: 'Brands we have partnered with', body: 'You don’t have to build an audience from scratch. You “borrow” ours to get instant trust, visibility, and new customers.', logos: brands },
-        { kicker: '#BhauChallenge', body: 'Business owners from Austin to Pune, from Canada to Germany have gone through #BhauChallenge, a 30-day challenge to show up on social media, tell their stories, and build real audiences. Some have gone from zero presence to thousands of followers.' }
-      ];
-      const pi = this.state.pop, setPop = i => { document.documentElement.style.overflow = i >= 0 ? 'hidden' : ''; this.setState({ pop: i }); };
-      const facts = F.map((f, i) => ({ ...f, open: () => setPop(i), key: e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); setPop(i); } } }));
-      const cur = pi >= 0 ? { ...F[pi], ...more[pi] } : null;
-      return {
-        facts, popOpen: pi >= 0,
-        pop: cur ? { ...cur, bg: cur.ink === '#2b2721' ? '#fdfcf9' : '#1c1e27', bg2: cur.ink === '#2b2721' ? '#fdfcf9' : '#1c1e27', hasLogos: !!cur.logos, logos: cur.logos || [], hasLinks: !!cur.links, links: cur.links || [], cta: () => { setPop(-1); this.ask('Community showcase'); } } : { logos: [], links: [] },
-        closePop: () => setPop(-1), stopPop: e => e.stopPropagation()
-      }; })(),
-      brandRoll: [...brands, ...brands],
-      testimonials: this._t = [
-        { quote: 'Rahul didn’t just give us a platform—he gave us a voice that connected deeply with the community, boosted our visibility, and drove real sales.', name: 'Spicy Tango', role: 'Brand partner' },
-        { quote: 'During the 2025 mango import crisis, it was crucial to explain the realities of USDA regulations and export challenges. Rahul provided a professional, authentic platform to share these hard-earned lessons. The response from fellow business owners has been overwhelming.', name: 'Mango importer', role: 'Podcast guest' },
-        { quote: 'Sharing our journey on the American Bhau Podcast was soulful and uplifting, reflecting the real struggles and growth of a Maharashtrian building a business in the U.S.', name: 'Podcast guest', role: 'Business owner, U.S.' }
-      ].map((t, i) => { const dk = i % 2 === 1; return { ...t, long: t.quote.length > 200, initial: t.name.charAt(0), tag: ['Brand partner', 'Podcast guest', 'Podcast guest'][i], bg: dk ? '#1c1e27' : 'url("data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'160\' height=\'160\'%3E%3Cfilter id=\'n\'%3E%3CfeTurbulence type=\'fractalNoise\' baseFrequency=\'.9\' numOctaves=\'3\' stitchTiles=\'stitch\'/%3E%3CfeColorMatrix values=\'0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .08 0\'/%3E%3C/filter%3E%3Crect width=\'160\' height=\'160\' filter=\'url(%23n)\'/%3E%3C/svg%3E"), #fdfcf9', bg2: dk ? '#1c1e27' : '#fdfcf9', ink: dk ? '#f4f1ea' : '#2b2721', accent: dk ? '#d8b978' : '#8a4a32', ring: dk ? 'rgba(216,185,120,0.35)' : 'rgba(138,74,50,0.25)', tilt: ['-0.8deg', '0.6deg', '-0.4deg'][i], open: () => { document.documentElement.style.overflow = 'hidden'; this.setState({ quote: i }); } }; }),
-      quoteOpen: this.state.quote >= 0,
-      qpop: this._t[this.state.quote] || { quote: '', name: '', role: '', tag: '', initial: '', bg: '#fdfcf9', bg2: '#fdfcf9', ink: '#2b2721', accent: '#8a4a32', ring: 'rgba(138,74,50,0.25)' },
-      closeQuote: () => { document.documentElement.style.overflow = ''; this.setState({ quote: -1 }); },
-      offers: [
-        { ...light, kicker: 'Be heard', title: 'Podcast feature', featured: false, lead: 'Tell your story on America’s #1 Marathi podcast.', items: ['A full episode on YouTube, Spotify and Apple Podcasts', 'Shorts and reels cut from your conversation', 'Shared with our community'], bestFor: 'founders with a story and lessons to share', ask: () => this.ask('Podcast feature') },
-        { ...light, kicker: 'Be seen', title: 'Community showcase', featured: false, lead: 'Put your business in front of our community.', items: ['On-location shoot, including drone footage', 'Featured in our videos, vlogs and reels/shorts', 'Professional videos of your business'], bestFor: 'restaurants, food brands and local shops', ask: () => this.ask('Community showcase') },
-        { ...dark, kicker: 'Be chosen', title: 'Growth partnership', featured: true, lead: 'We run your social media as a sales channel.', items: ['Everything in the community showcase', 'Your entire social media strategy, set up for you', 'Targeted ads to reach the right people', 'Regular check-ins: keep what brings enquiries, change what doesn’t'], bestFor: 'businesses ready to make social media bring in customers', ask: () => this.ask('Growth partnership') }
-      ],
-      steps: [
-        { num: '01', title: 'Understand your business', body: 'A call to learn who your customers are, what sets you apart and what you want social media to do for you.' },
-        { num: '02', title: 'Build the plan', body: 'Which platforms, what to post, how often, and the story your brand should tell.' },
-        { num: '03', title: 'Create and publish', body: 'We film on location, edit, and publish across our channels and yours.' },
-        { num: '04', title: 'Grow what works', body: 'Targeted ads and regular check-ins. We keep what brings in enquiries and change what doesn’t.' }
-      ],
-      team: [
-        { name: 'Piyush N.', role: 'Community Lead', src: 'assets/team/piyush.webp' },
-        { name: 'Chetan M.', role: 'Video Editor', src: 'assets/team/chetan.webp' },
-        { name: 'Mohit C.', role: 'Shorts / Reels Editor', src: 'assets/team/mohit.webp' },
-        { name: 'Jayesh S.', role: 'Shorts / Reels Editor', src: 'assets/team/jayesh.webp' }
-      ]
-    };
-  }
-}
+})();
 </script>
+
 <!-- Bird "Get In Touch" form -->
 <script src="https://embeddables.p.mbirdcdn.net/sdk/v0/bird-sdk.js" data-config-url="https://api.bird.com/workspaces/3e095f83-870c-4703-ba19-cd605dcb93d1/applications/9a964d06-4262-47cf-96e6-9d3fec842dcf/signature/2024-06-17T17-12-51_3eb34a0fff"></script>
-</body>
-</html>
+</body></html>
