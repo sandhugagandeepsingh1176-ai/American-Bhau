@@ -1,35 +1,33 @@
-// Local stand-in for Hostinger: serves the site and handles POST /contact.php like contact.php does.
-// Run: node dev-server.js   (set BIRD_KEY to really send mail; without it the enquiry is just logged)
+// Local stand-in for Hostinger: serves the site and answers POST /contact.php like contact.php does.
+// Run: node dev-server.js   (set BIRD_KEY to really send mail; without it enquiries are only logged)
 const http = require('http'), fs = require('fs'), path = require('path');
 const cfg = { key: process.env.BIRD_KEY, from: process.env.BIRD_FROM || 'onboarding@messagebird.dev', to: process.env.BIRD_TO || 'rahul@americanbhau.com' };
-const types = { '.html': 'text/html', '.js': 'text/javascript', '.css': 'text/css', '.png': 'image/png', '.jpg': 'image/jpeg', '.webp': 'image/webp', '.json': 'application/json' };
+const types = { '.html': 'text/html', '.js': 'text/javascript', '.css': 'text/css', '.png': 'image/png', '.jpg': 'image/jpeg', '.webp': 'image/webp', '.json': 'application/json', '.xml': 'application/xml', '.txt': 'text/plain' };
 const esc = s => String(s || '').trim().replace(/[&<>"']/g, c => '&#' + c.charCodeAt(0) + ';');
+const FIELDS = ['form', 'name', 'business', 'email', 'phone', 'city', 'service', 'seats', 'event', 'message'];
 
-async function contact(body) {
-  const p = new URLSearchParams(body);
-  if (p.get('website')) return 200; // honeypot
-  const f = Object.fromEntries(['name', 'business', 'contact', 'need', 'message'].map(k => [k, esc(p.get(k))]));
-  if (!f.name || !f.contact) return 400;
-  if (!cfg.key) { console.log('[dry-run] enquiry:', f); return 200; }
+async function contact(p) {
+  if (p.get('website')) return [200, { ok: true }]; // honeypot
+  const f = Object.fromEntries(FIELDS.map(k => [k, esc(p.get(k))]));
+  if (!f.name || !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(f.email)) return [400, { ok: false, message: 'Please add your name and a valid email.' }];
+  if (!cfg.key) { console.log('[dry-run] enquiry:', f); return [200, { ok: true }]; }
   const r = await fetch('https://us1.platform.bird.com/email', {
     method: 'POST',
     headers: { Authorization: 'Bearer ' + cfg.key, 'Content-Type': 'application/json' },
     body: JSON.stringify({
-      from: { email: cfg.from, name: 'American Bhau Website' }, to: [cfg.to], subject: 'New enquiry: ' + f.name,
-      html: Object.entries(f).map(([k, v]) => `<p><b>${k}:</b> ${v}</p>`).join(''),
+      from: { email: cfg.from, name: 'American Bhau Website' }, to: [cfg.to], replyTo: f.email, subject: 'New enquiry: ' + f.name,
+      html: Object.entries(f).filter(([, v]) => v).map(([k, v]) => `<p><b>${k}:</b> ${v}</p>`).join(''),
     }),
   });
-  return r.status === 202 ? 200 : 502;
+  return r.status === 202 ? [200, { ok: true }] : [502, { ok: false, message: 'Could not send' }];
 }
 
 http.createServer(async (req, res) => {
   const url = req.url.split('?')[0];
   if (req.method === 'POST' && url === '/contact.php') {
     let body = ''; for await (const c of req) body += c;
-    // multipart from FormData: pull name="x" values out; fine for plain text fields
-    const fields = new URLSearchParams();
-    for (const m of body.matchAll(/name="([^"]+)"\r\n\r\n([\s\S]*?)\r\n--/g)) fields.append(m[1], m[2]);
-    res.writeHead(await contact(fields)).end();
+    const [code, json] = await contact(new URLSearchParams(body));
+    res.writeHead(code, { 'Content-Type': 'application/json' }).end(JSON.stringify(json));
     return;
   }
   if (url === '/youtube.php') return res.writeHead(502, { 'Content-Type': 'application/json' }).end('{"items":[]}'); // PHP only runs on Hostinger
